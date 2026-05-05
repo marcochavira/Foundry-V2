@@ -301,6 +301,57 @@ img{display:block}
 .btn-fcta{background:var(--gold);color:#fff;font-size:14px;font-weight:500;padding:15px 44px;border-radius:32px;border:none;cursor:pointer;position:relative;transition:background .18s}
 .btn-fcta:hover{background:#9a7d42}
 
+/* ══ GUIDE / EBOOK SECTION ══ */
+.guide-section{background:#0D0C09;padding:100px 52px;border-top:0.5px solid rgba(168,134,60,0.1)}
+.guide-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1.4fr;gap:80px;align-items:center}
+.guide-cover{width:220px;height:300px;background:#1C1A14;border:0.5px solid rgba(168,134,60,0.25);padding:32px 24px;display:flex;align-items:stretch;position:relative}
+.guide-cover::before{content:'';position:absolute;inset:6px;border:0.5px solid rgba(168,134,60,0.1);pointer-events:none}
+.guide-cover-inner{display:flex;flex-direction:column;justify-content:space-between;width:100%}
+.guide-cover-eye{font-size:7px;letter-spacing:0.3em;text-transform:uppercase;color:rgba(168,134,60,0.5);font-family:'Jost',sans-serif}
+.guide-cover-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:#F5F0E8;line-height:1.2}
+.guide-cover-title em{font-style:italic;color:#A8863C}
+.guide-cover-sub{font-size:7.5px;letter-spacing:0.15em;color:rgba(245,240,232,0.25);font-family:'Jost',sans-serif;line-height:1.6}
+.guide-cover-rule{height:0.5px;background:rgba(168,134,60,0.3)}
+.guide-cover-foot{font-size:7px;letter-spacing:0.25em;text-transform:uppercase;color:rgba(168,134,60,0.4);font-family:'Jost',sans-serif}
+.guide-eye{font-size:9px;letter-spacing:0.4em;text-transform:uppercase;color:#A8863C;margin-bottom:20px;font-family:'Jost',sans-serif;font-weight:400}
+.guide-h{font-family:'Cormorant Garamond',serif;font-size:clamp(38px,4vw,54px);font-weight:300;color:#F5F0E8;line-height:1.05;margin-bottom:20px}
+.guide-h em{font-style:italic;color:#A8863C}
+.guide-p{font-size:13px;color:rgba(245,240,232,0.45);line-height:1.85;margin-bottom:28px;font-family:'Jost',sans-serif;font-weight:300;max-width:420px}
+.guide-list{list-style:none;margin-bottom:36px}
+.guide-list li{font-size:11px;color:rgba(245,240,232,0.35);font-family:'Jost',sans-serif;font-weight:300;padding:9px 0;border-bottom:0.5px solid rgba(168,134,60,0.08);letter-spacing:0.02em}
+.guide-list li::before{content:'—';color:#A8863C;margin-right:12px;font-size:10px}
+.guide-btn{display:inline-block;font-family:'Jost',sans-serif;font-size:10px;letter-spacing:0.28em;text-transform:uppercase;padding:17px 44px;background:#A8863C;color:#0D0C09;text-decoration:none;font-weight:600;transition:background 0.2s;margin-bottom:14px}
+.guide-btn:hover{background:#C9A84C}
+.guide-note{font-size:8px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(245,240,232,0.18);font-family:'Jost',sans-serif}
+
+/* ══ JOURNAL SECTION ══ */
+.journal-section{background:#F5F0E8;padding:100px 52px}
+.journal-header{max-width:1100px;margin:0 auto 60px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end}
+.journal-eye{font-size:9px;letter-spacing:0.4em;text-transform:uppercase;color:#A8863C;margin-bottom:16px;font-family:'Jost',sans-serif;font-weight:400;grid-column:1/-1}
+.journal-h{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,4vw,56px);font-weight:300;color:#1C1A14;line-height:1.05}
+.journal-h em{font-style:italic;color:#A8863C}
+.journal-sub{font-size:13px;color:rgba(28,26,20,0.45);line-height:1.85;font-family:'Jost',sans-serif;font-weight:300;align-self:end}
+.journal-grid{max-width:1100px;margin:0 auto 48px;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(168,134,60,0.15)}
+.journal-card{background:#F5F0E8;padding:36px 32px;text-decoration:none;transition:background 0.2s;display:flex;flex-direction:column;gap:16px}
+.journal-card:hover{background:#EDE8DF}
+.journal-card-cat{font-size:8px;letter-spacing:0.3em;text-transform:uppercase;color:#A8863C;font-family:'Jost',sans-serif;font-weight:400}
+.journal-card-title{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;color:#1C1A14;line-height:1.25;flex:1}
+.journal-card-title em{font-style:italic;color:#A8863C}
+.journal-card-arrow{font-size:16px;color:rgba(168,134,60,0.5);margin-top:auto;transition:color 0.2s}
+.journal-card:hover .journal-card-arrow{color:#A8863C}
+.journal-cta{max-width:1100px;margin:0 auto;text-align:right}
+.journal-link{font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:#1C1A14;text-decoration:none;font-family:'Jost',sans-serif;font-weight:500;border-bottom:0.5px solid rgba(28,26,20,0.3);padding-bottom:2px;transition:color 0.2s,border-color 0.2s}
+.journal-link:hover{color:#A8863C;border-color:#A8863C}
+
+@media(max-width:768px){
+  .guide-inner{grid-template-columns:1fr;gap:40px}
+  .guide-cover{width:180px;height:240px}
+  .journal-header{grid-template-columns:1fr}
+  .journal-grid{grid-template-columns:1fr}
+  .guide-section{padding:72px 24px}
+  .journal-section{padding:72px 24px}
+}
+
 footer{background:#070504;padding:56px 52px 28px}
 .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:52px;padding-bottom:44px;border-bottom:1px solid rgba(255,255,255,.04);margin-bottom:24px}
 .foot-logo{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;letter-spacing:.14em;color:#fff;display:flex;align-items:center;gap:7px;margin-bottom:14px}
@@ -718,9 +769,72 @@ footer{background:#070504;padding:56px 52px 28px}
       <li><div class="inc-dot"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1 4l2 2.5 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Side effect management &amp; support</li>
     </ul>
     <a href="products.html" class="btn-gold" style="text-decoration:none;display:inline-block;padding:14px 28px;background:var(--gold);color:#fff;font-size:13.5px;font-weight:500;border-radius:32px;">Start now</a>
-
   </div>
 </div>
+
+<!-- ══════════════════════════════════════════
+  EBOOK / PROTOCOL GUIDE
+══════════════════════════════════════════ -->
+<section class="guide-section">
+  <div class="guide-inner">
+    <div class="guide-left">
+      <div class="guide-cover">
+        <div class="guide-cover-inner">
+          <div class="guide-cover-eye">Foundry RX · 2026</div>
+          <div class="guide-cover-title">The Consumer's<br>Guide to<br><em>Peptide Therapy</em></div>
+          <div class="guide-cover-sub">GLP-1 · Weight Loss · Longevity · Brain Function</div>
+          <div class="guide-cover-rule"></div>
+          <div class="guide-cover-foot">19 Pages · Complimentary</div>
+        </div>
+      </div>
+    </div>
+    <div class="guide-right">
+      <div class="guide-eye">Members Protocol Guide</div>
+      <h2 class="guide-h">The science,<br><em>decoded.</em></h2>
+      <p class="guide-p">Everything you need to understand GLP-1 therapy, peptide co-protocols, and what physician-supervised treatment actually looks like. 19 pages. No fluff.</p>
+      <ul class="guide-list">
+        <li>Why 99% of peptide sources fail the standard</li>
+        <li>How GLP-1 actually works in the body</li>
+        <li>Muscle preservation during rapid weight loss</li>
+        <li>Longevity, beauty &amp; brain function protocols</li>
+        <li>How to access your prescription</li>
+      </ul>
+      <a href="ebook.html" class="guide-btn">Download the Protocol Guide →</a>
+      <div class="guide-note">PDF · Complimentary · No obligation</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+  THE JOURNAL
+══════════════════════════════════════════ -->
+<section class="journal-section">
+  <div class="journal-header">
+    <div class="journal-eye">The Journal</div>
+    <h2 class="journal-h">Intelligence,<br><em>not noise.</em></h2>
+    <p class="journal-sub">Clinical insight, protocol science, and the research shaping modern performance medicine.</p>
+  </div>
+  <div class="journal-grid">
+    <a href="blog.html" class="journal-card">
+      <div class="journal-card-cat">GLP-1</div>
+      <h3 class="journal-card-title">Compounded Semaglutide vs. Ozempic:<br><em>What's the Difference?</em></h3>
+      <div class="journal-card-arrow">→</div>
+    </a>
+    <a href="blog.html" class="journal-card">
+      <div class="journal-card-cat">Peptide Science</div>
+      <h3 class="journal-card-title">BPC-157: The Recovery Peptide<br><em>Elite Athletes Keep Quiet</em></h3>
+      <div class="journal-card-arrow">→</div>
+    </a>
+    <a href="blog.html" class="journal-card">
+      <div class="journal-card-cat">Performance</div>
+      <h3 class="journal-card-title">GLP-1 and Muscle Preservation:<br><em>What You Need to Protect</em></h3>
+      <div class="journal-card-arrow">→</div>
+    </a>
+  </div>
+  <div class="journal-cta">
+    <a href="blog.html" class="journal-link">Read The Journal →</a>
+  </div>
+</section>
 
 <!-- TRUST -->
 <div class="trust">
