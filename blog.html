@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="shortcut icon" href="/favicon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Journal | GLP-1 & Peptide Therapy Insights — Foundry RX</title>
+<meta name="description" content="Expert insights on GLP-1 therapy, peptide protocols, and precision health. Written for people who take their health seriously.">
+<meta name="keywords" content="GLP-1 therapy guide, peptide therapy explained, semaglutide vs ozempic, compounded peptides, 503B pharmacy, telehealth peptides">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://foundryrx.co/blog.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://foundryrx.co/blog.html">
+<meta property="og:title" content="The Journal | Foundry RX">
+<meta property="og:description" content="Expert insights on GLP-1 therapy, peptide protocols, and precision health.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Journal | Foundry RX">
+<meta name="twitter:description" content="Expert insights on GLP-1 therapy, peptide protocols, and precision health.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "The Journal — Foundry RX",
+  "url": "https://foundryrx.co/blog.html",
+  "description": "Expert insights on GLP-1 therapy, peptide protocols, and precision health from Foundry RX.",
+  "publisher": {"@type": "Organization", "name": "Foundry RX", "url": "https://foundryrx.co"}
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #F5F0E8;
+    --bone: #EDE6D6;
+    --parchment: #E4DAC4;
+    --gold: #A8863C;
+    --gold-light: #C9A84C;
+    --ink: #1C1A14;
+    --ink-mid: #3A3628;
+    --muted: #8C8272;
+    --muted-light: #B8AE9C;
+    --charcoal: #0F0E0A;
+    --border: rgba(168,134,60,0.15);
+    --border-soft: rgba(28,26,20,0.08);
+    --border-dark: rgba(245,240,232,0.07);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--cream); color: var(--ink); font-family: 'Jost', sans-serif; font-weight: 300; overflow-x: hidden; }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(15,14,10,0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(245,240,232,0.07);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 56px; height: 68px;
+  }
+  .nav-logo { display: flex; flex-direction: column; gap: 0; }
+  .nav-logo-top { display: flex; align-items: baseline; gap: 6px; }
+  .nav-wordmark { font-size: 13px; font-weight: 500; letter-spacing: 0.3em; text-transform: uppercase; color: var(--cream); }
+  .nav-rx { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 15px; color: var(--gold); }
+  .nav-cross { color: var(--gold); font-size: 14px; margin-right: 2px; font-weight: 300; }
+  .nav-links { display: flex; list-style: none; gap: 36px; align-items: center; }
+  .nav-links a { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(245,240,232,0.4); text-decoration: none; font-weight: 400; transition: color 0.2s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--cream); }
+  .nav-cta { font-family: 'Jost', sans-serif; font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; padding: 14px 28px; font-weight: 600; background: var(--gold); color: var(--cream); text-decoration: none; white-space: nowrap; border: 2px solid var(--gold); transition: all 0.2s; }
+  .nav-cta:hover { background: transparent; color: var(--gold); }
+
+  /* ── HERO ── */
+  .hero {
+    padding: 160px 56px 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: end;
+  }
+  .hero-eyebrow {
+    font-size: 8.5px; letter-spacing: 0.44em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 20px; font-weight: 400;
+  }
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(48px, 5vw, 72px);
+    font-weight: 300; line-height: 1.0;
+    color: var(--ink); letter-spacing: -0.01em;
+  }
+  .hero h1 em { font-style: italic; color: var(--gold); }
+  .hero-right {
+    padding-bottom: 8px;
+  }
+  .hero-desc {
+    font-size: 14px; color: var(--muted); line-height: 1.9;
+    max-width: 380px; margin-bottom: 32px;
+  }
+  .hero-divider {
+    width: 48px; height: 1px; background: var(--gold); opacity: 0.4; margin-bottom: 24px;
+  }
+  .hero-meta {
+    font-size: 9.5px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--muted-light); font-weight: 400;
+  }
+
+  /* ── SECTION DIVIDER ── */
+  .section-rule {
+    max-width: 1200px; margin: 0 auto;
+    padding: 0 56px;
+    border-top: 1px solid var(--border-soft);
+  }
+
+  /* ── FEATURED ARTICLE ── */
+  .featured {
+    max-width: 1200px; margin: 0 auto;
+    padding: 64px 56px;
+  }
+  .section-label {
+    font-size: 8px; letter-spacing: 0.4em; text-transform: uppercase;
+    color: var(--gold); font-weight: 400; margin-bottom: 32px;
+  }
+  .featured-card {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 0;
+    background: var(--bone);
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .featured-card:hover { background: var(--parchment); }
+  .featured-image {
+    background: var(--ink);
+    min-height: 360px;
+    display: flex; align-items: center; justify-content: center;
+    position: relative; overflow: hidden;
+  }
+  .featured-image-inner {
+    text-align: center; padding: 48px;
+  }
+  .featured-image-label {
+    font-size: 8px; letter-spacing: 0.4em; text-transform: uppercase;
+    color: var(--gold); font-weight: 400; margin-bottom: 24px;
+  }
+  .featured-image-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px; font-weight: 300; color: var(--cream);
+    line-height: 1.1;
+  }
+  .featured-image-title em { font-style: italic; color: var(--gold); }
+  .featured-content {
+    padding: 52px 48px;
+    display: flex; flex-direction: column; justify-content: space-between;
+  }
+  .article-tag {
+    display: inline-block;
+    font-size: 8px; letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--gold); font-weight: 400;
+    border: 1px solid rgba(168,134,60,0.3);
+    padding: 5px 12px; margin-bottom: 24px;
+  }
+  .article-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px; font-weight: 300; color: var(--ink);
+    line-height: 1.15; margin-bottom: 20px;
+  }
+  .article-title em { font-style: italic; color: var(--gold); }
+  .article-excerpt {
+    font-size: 13px; color: var(--muted); line-height: 1.85;
+    margin-bottom: 36px; flex: 1;
+  }
+  .article-footer {
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .article-meta {
+    font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--muted-light);
+  }
+  .article-read {
+    font-size: 9.5px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--ink); font-weight: 500;
+    border-bottom: 1px solid var(--ink);
+    padding-bottom: 2px; transition: color 0.2s, border-color 0.2s;
+  }
+  .featured-card:hover .article-read { color: var(--gold); border-color: var(--gold); }
+
+  /* ── ARTICLE GRID ── */
+  .articles {
+    max-width: 1200px; margin: 0 auto;
+    padding: 0 56px 100px;
+  }
+  .articles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+  .article-card {
+    background: var(--bone);
+    padding: 40px 36px;
+    text-decoration: none;
+    display: flex; flex-direction: column;
+    transition: background 0.2s;
+    min-height: 320px;
+  }
+  .article-card:hover { background: var(--parchment); }
+  .article-card .article-tag { margin-bottom: 20px; }
+  .article-card .article-title {
+    font-size: 22px; margin-bottom: 16px; flex: 1;
+  }
+  .article-card .article-excerpt {
+    font-size: 12px; margin-bottom: 28px;
+  }
+  .article-card .article-meta { font-size: 9px; color: var(--muted-light); letter-spacing: 0.15em; text-transform: uppercase; }
+
+  /* Coming soon card */
+  .article-card.coming-soon {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    opacity: 0.6;
+    cursor: default;
+  }
+  .article-card.coming-soon:hover { background: var(--cream); }
+  .coming-label {
+    font-size: 8px; letter-spacing: 0.35em; text-transform: uppercase;
+    color: var(--muted-light); font-weight: 400; margin-top: auto;
+  }
+
+  /* ── CTA BAND ── */
+  .cta-band {
+    background: var(--ink);
+    padding: 80px 56px;
+    text-align: center;
+  }
+  .cta-band-eyebrow {
+    font-size: 8.5px; letter-spacing: 0.44em; text-transform: uppercase;
+    color: var(--gold); font-weight: 400; margin-bottom: 20px;
+  }
+  .cta-band h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(32px, 3.5vw, 48px); font-weight: 300;
+    color: var(--cream); line-height: 1.1; margin-bottom: 32px;
+  }
+  .cta-band h2 em { font-style: italic; color: var(--gold); }
+  .btn-gold {
+    display: inline-block;
+    font-family: 'Jost', sans-serif; font-size: 10px;
+    letter-spacing: 0.28em; text-transform: uppercase;
+    padding: 18px 48px; background: var(--gold); color: var(--ink);
+    text-decoration: none; font-weight: 600;
+    transition: all 0.2s;
+  }
+  .btn-gold:hover { background: var(--gold-light); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--charcoal); border-top: 1px solid rgba(245,240,232,0.06);
+    padding: 48px 56px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .footer-logo { display: flex; align-items: center; gap: 8px; }
+  .footer-wordmark { font-size: 11px; font-weight: 500; letter-spacing: 0.3em; text-transform: uppercase; color: rgba(245,240,232,0.5); }
+  .footer-rx { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 13px; color: var(--gold); }
+  .footer-note { font-size: 10px; color: rgba(245,240,232,0.25); letter-spacing: 0.1em; }
+  .footer-back { font-size: 9.5px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(245,240,232,0.4); text-decoration: none; transition: color 0.2s; }
+  .footer-back:hover { color: var(--gold); }
+
+  /* ── MOBILE ── */
+  @media (max-width: 768px) {
+    nav { padding: 0 24px; }
+    .nav-links { display: none; }
+    .hero { grid-template-columns: 1fr; padding: 120px 24px 60px; gap: 32px; }
+    .featured { padding: 48px 24px; }
+    .featured-card { grid-template-columns: 1fr; }
+    .featured-image { min-height: 240px; }
+    .featured-content { padding: 36px 28px; }
+    .articles { padding: 0 24px 80px; }
+    .articles-grid { grid-template-columns: 1fr; }
+    .cta-band { padding: 60px 24px; }
+    footer { padding: 36px 24px; flex-direction: column; gap: 16px; text-align: center; }
+    .section-rule { padding: 0 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Nav -->
+<nav>
+  <a href="/" style="text-decoration:none;display:flex;align-items:center;gap:12px;">
+    <svg width="18" height="18" viewBox="0 0 22 22" fill="none">
+      <line x1="11" y1="2" x2="11" y2="20" stroke="#A8863C" stroke-width="0.9"/>
+      <line x1="2" y1="11" x2="20" y2="11" stroke="#A8863C" stroke-width="0.9"/>
+    </svg>
+    <div class="nav-logo">
+      <div class="nav-logo-top">
+        <span class="nav-wordmark">Foundry</span>
+        <span class="nav-rx">Rx</span>
+      </div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="products.html">Treatments</a></li>
+    <li><a href="blog.html" class="active">The Journal</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+  </ul>
+  <a href="https://tally.so/r/WOPa6P" target="_blank" class="nav-cta">Apply for Membership</a>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">Foundry RX</div>
+    <h1>The<br><em>Journal.</em></h1>
+  </div>
+  <div class="hero-right">
+    <div class="hero-divider"></div>
+    <p class="hero-desc">Precision health, explained plainly. GLP-1 protocols, peptide science, and sourcing standards — written for people who want to understand what they're putting in their body.</p>
+    <div class="hero-meta">New articles weekly</div>
+  </div>
+</section>
+
+<div class="section-rule"></div>
+
+<!-- Featured Article -->
+<section class="featured">
+  <div class="section-label">Featured</div>
+  <a href="blog-semaglutide-vs-ozempic.html" class="featured-card">
+    <div class="featured-image">
+      <div class="featured-image-inner">
+        <div class="featured-image-label">GLP-1 Explained</div>
+        <div class="featured-image-title">Compounded<br>Semaglutide<br>vs. <em>Ozempic</em></div>
+      </div>
+    </div>
+    <div class="featured-content">
+      <div>
+        <span class="article-tag">GLP-1</span>
+        <h2 class="article-title">Compounded Semaglutide vs. Ozempic:<br><em>What's the Difference?</em></h2>
+        <p class="article-excerpt">Ozempic costs over $1,000 a month without insurance. Compounded semaglutide can deliver the same active molecule for a fraction of the price — legally, through a physician, from an FDA-registered facility. Here is what you need to know before you decide.</p>
+      </div>
+      <div class="article-footer">
+        <span class="article-meta">GLP-1 &nbsp;·&nbsp; 6 min read</span>
+        <span class="article-read">Read Article →</span>
+      </div>
+    </div>
+  </a>
+</section>
+
+<div class="section-rule"></div>
+
+<!-- Article Grid -->
+<section class="articles">
+  <div class="section-label" style="padding-top:48px;">All Articles</div>
+  <div class="articles-grid">
+
+    <!-- Article 2 -->
+    <a href="blog-sourcing.html" class="article-card">
+      <span class="article-tag">Sourcing</span>
+      <h2 class="article-title">Medical-Grade Is the Floor.<br><em>Here Is the Ceiling.</em></h2>
+      <p class="article-excerpt">Three tiers of peptide quality. Most providers will not tell you which one they are on.</p>
+      <div class="article-footer" style="margin-top:auto;">
+        <span class="article-meta">Sourcing &nbsp;·&nbsp; 5 min read</span>
+      </div>
+    </a>
+
+    <!-- Article - Retatrutide -->
+    <a href="blog-retatrutide.html" class="article-card">
+      <span class="article-tag">Next-Gen GLP-1</span>
+      <h2 class="article-title">Retatrutide: The Triple Agonist<br><em>Redefining GLP-1 Therapy</em></h2>
+      <p class="article-excerpt">Three receptors, one molecule. Phase 2 trials show up to 24% body weight reduction — the most significant results in the history of metabolic peptide therapy.</p>
+      <div class="article-footer" style="margin-top:auto;">
+        <span class="article-meta">GLP-1 &nbsp;·&nbsp; 7 min read</span>
+      </div>
+    </a>
+
+    <!-- Article - New to Peptides -->
+    <a href="blog-new-to-peptides.html" class="article-card">
+      <span class="article-tag">Peptides</span>
+      <h2 class="article-title">New to Peptides?<br><em>Start Here.</em></h2>
+      <p class="article-excerpt">From insulin's discovery to GLP-1 breakthroughs and today's advanced delivery methods — a plain-language guide for people just getting started.</p>
+      <div class="article-footer" style="margin-top:auto;">
+        <span class="article-meta">Peptides &nbsp;·&nbsp; 7 min read</span>
+      </div>
+    </a>
+
+    <!-- Article - BPC-157 -->
+    <a href="blog-bpc157.html" class="article-card">
+      <span class="article-tag">Recovery</span>
+      <h2 class="article-title">BPC-157: The Recovery Peptide<br><em>Elite Athletes Keep Quiet</em></h2>
+      <p class="article-excerpt">From obscure research compound to mainstream recovery tool. Here is what the science actually shows about tendon healing, gut repair, and inflammation control.</p>
+      <div class="article-footer" style="margin-top:auto;"><span class="article-meta">Peptides · 6 min read</span></div>
+    </a>
+
+    <!-- Article - Next Decade -->
+    <a href="blog-next-decade.html" class="article-card">
+      <span class="article-tag">Culture</span>
+      <h2 class="article-title">The Next Decade of Health:<br><em>Building Around the System</em></h2>
+      <p class="article-excerpt">Healthcare is not collapsing — it is being outpaced. Year 1, Year 5, and Year 10 of the new precision health paradigm.</p>
+      <div class="article-footer" style="margin-top:auto;"><span class="article-meta">Culture · 5 min read</span></div>
+    </a>
+
+    <!-- New: NAD+ Article -->
+    <a href="blog-nad-cellular-energy.html" class="article-card">
+      <span class="article-tag">Longevity</span>
+      <h2 class="article-title">NAD+ and the Cellular Energy<br><em>Collapse Nobody Talks About</em></h2>
+      <p class="article-excerpt">NAD+ drops 50% by your 40s. The supplement industry built a $1B+ category on this fact. Here is why delivery method is the variable nobody in the supplement aisle will explain to you.</p>
+      <div class="article-footer" style="margin-top:auto;">
+        <span class="article-meta">Longevity &nbsp;·&nbsp; 7 min read</span>
+      </div>
+    </a>
+
+
+    <!-- New SEO Articles -->
+    <a href="blog-how-glp1-works.html" class="article-card">
+      <span class="article-tag">GLP-1</span>
+      <h2 class="article-title">How GLP-1 Drugs Work:<br><em>The Science Behind the Results</em></h2>
+      <p class="article-excerpt">GLP-1 receptor agonists are producing weight loss results once thought to require surgery. Here is exactly how the mechanism works.</p>
+      <div class="article-footer" style="margin-top:auto;"><span class="article-meta">GLP-1 &nbsp;·&nbsp; 6 min read</span></div>
+    </a>
+
+    <a href="blog-semaglutide-vs-tirzepatide.html" class="article-card">
+      <span class="article-tag">GLP-1</span>
+      <h2 class="article-title">Semaglutide vs. Tirzepatide:<br><em>Which Is Right for You?</em></h2>
+      <p class="article-excerpt">Two drugs, different mechanisms, different average outcomes. An honest comparison based on clinical trial data.</p>
+      <div class="article-footer" style="margin-top:auto;"><span class="article-meta">GLP-1 &nbsp;·&nbsp; 7 min read</span></div>
+    </a>
+
+    <a href="blog-ozempic-vs-wegovy.html" class="article-card">
+      <span class="article-tag">GLP-1</span>
+      <h2 class="article-title">Ozempic vs. Wegovy:<br><em>Same Drug. Different Purpose.</em></h2>
+      <p class="article-excerpt">Same molecule — semaglutide — but different approvals, different doses, and different access pathways. Here is what separates them.</p>
+      <div class="article-footer" style="margin-top:auto;"><span class="article-meta">GLP-1 &nbsp;·&nbsp; 5 min read</span></div>
+    </a>
+
+    <a href="blog-glp1-side-effects.html" class="article-card">
+      <span class="article-tag">GLP-1</span>
+      <h2 class="article-title">GLP-1 Side Effects:<br><em>What to Expect and How to Manage Them</em></h2>
+      <p class="article-excerpt">Nausea is real but manageable. Most people who stop early do so because of poorly managed titration — not because the drug is intolerable.</p>
+      <div class="article-footer" style="margin-top:auto;"><span class="article-meta">GLP-1 &nbsp;·&nbsp; 6 min read</span></div>
+    </a>
+
+    <a href="blog-semaglutide-weight-loss-results.html" class="article-card">
+      <span class="article-tag">GLP-1</span>
+      <h2 class="article-title">How Much Weight Can You Lose<br><em>on Semaglutide?</em></h2>
+      <p class="article-excerpt">The STEP trials showed 15% average weight loss. Here is what drives the difference between patients and what to realistically expect.</p>
+      <div class="article-footer" style="margin-top:auto;"><span class="article-meta">GLP-1 &nbsp;·&nbsp; 6 min read</span></div>
+    </a>
+
+    <a href="blog-is-compounded-semaglutide-safe.html" class="article-card">
+      <span class="article-tag">Compounding</span>
+      <h2 class="article-title">Is Compounded Semaglutide<br><em>Actually Safe?</em></h2>
+      <p class="article-excerpt">The answer depends entirely on where it comes from. Here is what makes 503B-sourced compounding safe — and what to avoid.</p>
+      <div class="article-footer" style="margin-top:auto;"><span class="article-meta">Compounding &nbsp;·&nbsp; 7 min read</span></div>
+    </a>
+
+    <a href="blog-mounjaro-vs-zepbound.html" class="article-card">
+      <span class="article-tag">GLP-1</span>
+      <h2 class="article-title">Mounjaro vs. Zepbound:<br><em>Same Molecule. Different Door.</em></h2>
+      <p class="article-excerpt">Both are tirzepatide. What differs is the approved indication, the dose ceiling, and how insurance covers each product.</p>
+      <div class="article-footer" style="margin-top:auto;"><span class="article-meta">GLP-1 &nbsp;·&nbsp; 5 min read</span></div>
+    </a>
+
+    <a href="blog-glp1-muscle-preservation.html" class="article-card">
+      <span class="article-tag">GLP-1</span>
+      <h2 class="article-title">GLP-1 and Muscle Preservation:<br><em>What You Need to Protect</em></h2>
+      <p class="article-excerpt">GLP-1 drugs drive fat loss — but without the right approach, they also drive muscle loss. Here is what the evidence says.</p>
+      <div class="article-footer" style="margin-top:auto;"><span class="article-meta">GLP-1 &nbsp;·&nbsp; 6 min read</span></div>
+    </a>
+
+    <a href="blog-liraglutide-vs-semaglutide.html" class="article-card">
+      <span class="article-tag">GLP-1</span>
+      <h2 class="article-title">Liraglutide vs. Semaglutide:<br><em>Why the Field Moved On</em></h2>
+      <p class="article-excerpt">Liraglutide was the GLP-1 standard before semaglutide arrived. A generation-by-generation comparison of how outcomes improved.</p>
+      <div class="article-footer" style="margin-top:auto;"><span class="article-meta">GLP-1 &nbsp;·&nbsp; 6 min read</span></div>
+    </a>
+
+    <a href="blog-what-is-503b-pharmacy.html" class="article-card">
+      <span class="article-tag">Compounding</span>
+      <h2 class="article-title">What Is a 503B Pharmacy<br><em>and Why Does It Matter?</em></h2>
+      <p class="article-excerpt">Not all compounding pharmacies operate under the same standard. Here is the difference that determines whether your compound is pharmaceutical-grade.</p>
+      <div class="article-footer" style="margin-top:auto;"><span class="article-meta">Compounding &nbsp;·&nbsp; 6 min read</span></div>
+    </a>
+
+    <a href="blog-how-to-get-semaglutide-online.html" class="article-card">
+      <span class="article-tag">Telehealth</span>
+      <h2 class="article-title">How to Get Semaglutide Online:<br><em>What the Process Should Look Like</em></h2>
+      <p class="article-excerpt">Telehealth access to compounded semaglutide is legitimate — and it requires real clinical oversight. Here is how to evaluate a provider.</p>
+      <div class="article-footer" style="margin-top:auto;"><span class="article-meta">Telehealth &nbsp;·&nbsp; 6 min read</span></div>
+    </a>
+
+    <a href="blog-best-glp1-for-weight-loss.html" class="article-card">
+      <span class="article-tag">GLP-1</span>
+      <h2 class="article-title">Best GLP-1 for Weight Loss:<br><em>A Direct Answer</em></h2>
+      <p class="article-excerpt">With multiple GLP-1 drugs available, which produces the best outcomes? A direct answer based on clinical trial data — with honest caveats.</p>
+      <div class="article-footer" style="margin-top:auto;"><span class="article-meta">GLP-1 &nbsp;·&nbsp; 5 min read</span></div>
+    </a>
+
+    <a href="blog-glp1-telehealth-membership.html" class="article-card">
+      <span class="article-tag">Telehealth</span>
+      <h2 class="article-title">GLP-1 Telehealth Membership:<br><em>What It Should Include</em></h2>
+      <p class="article-excerpt">A membership is a clinical relationship, not a product subscription. Here is what a well-structured protocol actually includes.</p>
+      <div class="article-footer" style="margin-top:auto;"><span class="article-meta">Telehealth &nbsp;·&nbsp; 6 min read</span></div>
+    </a>
+
+    <a href="blog-compounded-vs-brand-semaglutide.html" class="article-card">
+      <span class="article-tag">Compounding</span>
+      <h2 class="article-title">Compounded vs. Brand Semaglutide:<br><em>What Is Actually Different</em></h2>
+      <p class="article-excerpt">Same active molecule, different manufacturer, different device, different price. An honest breakdown of every variable that matters.</p>
+      <div class="article-footer" style="margin-top:auto;"><span class="article-meta">Compounding &nbsp;·&nbsp; 6 min read</span></div>
+    </a>
+
+    <a href="blog-compounded-tirzepatide-online.html" class="article-card">
+      <span class="article-tag">GLP-1</span>
+      <h2 class="article-title">Compounded Tirzepatide:<br><em>Access, Availability, and What to Know</em></h2>
+      <p class="article-excerpt">Tirzepatide compounding access has been one of the most frequently changing areas in GLP-1 therapy. Here is the current landscape.</p>
+      <div class="article-footer" style="margin-top:auto;"><span class="article-meta">GLP-1 &nbsp;·&nbsp; 6 min read</span></div>
+    </a>
+
+  </div>
+</section>
+
+<!-- CTA Band -->
+<section class="cta-band">
+  <div class="cta-band-eyebrow">Ready to begin</div>
+  <h2>Your protocol is<br><em>waiting.</em></h2>
+  <a href="https://tally.so/r/WOPa6P" target="_blank" class="btn-gold">Apply for Membership →</a>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-logo">
+    <svg width="16" height="16" viewBox="0 0 22 22" fill="none">
+      <line x1="11" y1="2" x2="11" y2="20" stroke="#A8863C" stroke-width="0.9"/>
+      <line x1="2" y1="11" x2="20" y2="11" stroke="#A8863C" stroke-width="0.9"/>
+    </svg>
+    <span class="footer-wordmark">Foundry</span>
+    <span class="footer-rx">Rx</span>
+  </div>
+  <span class="footer-note">For informational purposes only. Not medical advice.</span>
+  <a href="/" class="footer-back">← Back to Site</a>
+</footer>
+
+</body>
+</html>
