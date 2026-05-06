@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ — Foundry RX</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bone: #F5F0E8;
+      --cream: #FAF7F2;
+      --ink: #1A1A18;
+      --gold: #B8975A;
+      --gold-light: #D4B483;
+      --muted: #6B6560;
+      --border: #E2DAD0;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--cream);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 48px;
+      height: 72px;
+      background: rgba(250, 247, 242, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .nav-logo span { color: var(--gold); }
+
+    .nav-links {
+      display: flex;
+      gap: 36px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--ink); }
+
+    .nav-cta {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-decoration: none;
+      border: 1px solid var(--gold);
+      padding: 10px 24px;
+      transition: all 0.25s;
+    }
+
+    .nav-cta:hover { background: var(--gold); color: var(--cream); }
+
+    /* PAGE HEADER */
+    .page-header {
+      padding: 120px 48px 56px;
+      max-width: 1200px;
+      margin: 0 auto;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 0.1s;
+    }
+
+    .header-eyebrow {
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .header-eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 32px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .page-header h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(52px, 6vw, 80px);
+      font-weight: 300;
+      line-height: 1.0;
+      color: var(--ink);
+    }
+
+    .page-header h1 em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    /* SEARCH BAR */
+    .search-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 48px 48px;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 0.2s;
+    }
+
+    .search-input-wrap {
+      position: relative;
+      max-width: 480px;
+    }
+
+    .search-input-wrap input {
+      width: 100%;
+      background: var(--bone);
+      border: 1px solid var(--border);
+      border-radius: 0;
+      padding: 16px 48px 16px 20px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--ink);
+      outline: none;
+      transition: border-color 0.2s;
+      letter-spacing: 0.02em;
+    }
+
+    .search-input-wrap input::placeholder { color: var(--muted); }
+    .search-input-wrap input:focus { border-color: var(--gold); }
+
+    .search-icon {
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 16px;
+      stroke: var(--muted);
+      fill: none;
+      pointer-events: none;
+    }
+
+    /* DIVIDER */
+    .divider {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 48px;
+      border-top: 1px solid var(--border);
+    }
+
+    /* MAIN LAYOUT */
+    .faq-layout {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 48px 120px;
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    /* CATEGORY NAV */
+    .category-nav {
+      position: sticky;
+      top: 100px;
+      padding-top: 48px;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 0.3s;
+    }
+
+    .category-nav-label {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .category-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .category-list li button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--muted);
+      padding: 10px 16px;
+      text-align: left;
+      width: 100%;
+      transition: all 0.2s;
+      letter-spacing: 0.02em;
+      position: relative;
+    }
+
+    .category-list li button::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 2px;
+      height: 0;
+      background: var(--gold);
+      transition: height 0.2s;
+    }
+
+    .category-list li button:hover { color: var(--ink); }
+
+    .category-list li button.active {
+      color: var(--ink);
+      font-weight: 400;
+    }
+
+    .category-list li button.active::before { height: 20px; }
+
+    /* FAQ CONTENT */
+    .faq-content {
+      padding-top: 48px;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 0.4s;
+    }
+
+    .faq-category {
+      display: none;
+    }
+
+    .faq-category.active {
+      display: block;
+    }
+
+    .faq-category-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 32px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* ACCORDION */
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 0;
+      text-align: left;
+      gap: 24px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--ink);
+      letter-spacing: 0.01em;
+      line-height: 1.4;
+      transition: color 0.2s;
+    }
+
+    .faq-question:hover { color: var(--gold); }
+
+    .faq-question.open { color: var(--ink); font-weight: 400; }
+
+    .faq-toggle {
+      width: 28px;
+      height: 28px;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all 0.3s;
+    }
+
+    .faq-question.open .faq-toggle {
+      background: var(--ink);
+      border-color: var(--ink);
+    }
+
+    .faq-toggle svg {
+      width: 10px;
+      height: 10px;
+      stroke: var(--ink);
+      fill: none;
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      transition: transform 0.3s, stroke 0.3s;
+    }
+
+    .faq-question.open .faq-toggle svg {
+      stroke: var(--cream);
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s ease;
+    }
+
+    .faq-answer.open {
+      max-height: 400px;
+    }
+
+    .faq-answer-inner {
+      padding-bottom: 28px;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.8;
+      color: var(--muted);
+      max-width: 640px;
+    }
+
+    .faq-answer-inner a {
+      color: var(--gold);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(184, 151, 90, 0.3);
+      transition: border-color 0.2s;
+    }
+
+    .faq-answer-inner a:hover { border-color: var(--gold); }
+
+    /* NO RESULTS */
+    .no-results {
+      display: none;
+      padding: 64px 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 300;
+    }
+
+    /* CTA STRIP */
+    .cta-strip {
+      background: var(--bone);
+      border-top: 1px solid var(--border);
+      padding: 64px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+    }
+
+    .cta-strip-text h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 32px;
+      font-weight: 300;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+
+    .cta-strip-text h3 em { font-style: italic; color: var(--gold); }
+
+    .cta-strip-text p {
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--muted);
+    }
+
+    .btn-primary {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--cream);
+      background: var(--ink);
+      padding: 18px 48px;
+      text-decoration: none;
+      transition: all 0.25s;
+      border: 1px solid var(--ink);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .btn-primary:hover { background: var(--gold); border-color: var(--gold); }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 40px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+
+    .footer-logo span { color: var(--gold); }
+
+    .footer-disclaimer {
+      font-size: 11px;
+      color: var(--muted);
+      font-weight: 300;
+      max-width: 500px;
+      line-height: 1.6;
+      text-align: right;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 0 24px; }
+      .nav-links { display: none; }
+      .page-header { padding: 110px 24px 40px; }
+      .search-wrap { padding: 0 24px 40px; }
+      .divider { padding: 0 24px; }
+      .faq-layout { padding: 0 24px 80px; grid-template-columns: 1fr; gap: 0; }
+      .category-nav { position: static; padding-top: 32px; }
+      .category-list { flex-direction: row; flex-wrap: wrap; gap: 8px; }
+      .category-list li button { padding: 8px 16px; border: 1px solid var(--border); font-size: 12px; }
+      .category-list li button::before { display: none; }
+      .category-list li button.active { background: var(--ink); color: var(--cream); }
+      .cta-strip { flex-direction: column; text-align: center; padding: 48px 24px; }
+      footer { flex-direction: column; gap: 20px; padding: 32px 24px; text-align: center; }
+      .footer-disclaimer { text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="nav-logo">Foundry <span>RX</span></a>
+    <ul class="nav-links">
+      <li><a href="/products">Protocols</a></li>
+      <li><a href="/blog">The Journal</a></li>
+      <li><a href="/ebook">GLP-1 Guide</a></li>
+      <li><a href="/#membership">Membership</a></li>
+    </ul>
+    <a href="https://tally.so/r/WOPa6P" class="nav-cta">Begin</a>
+  </nav>
+
+  <div class="page-header">
+    <div class="header-eyebrow">Support</div>
+    <h1>Common <em>Questions.</em></h1>
+  </div>
+
+  <div class="search-wrap">
+    <div class="search-input-wrap">
+      <input type="text" id="faqSearch" placeholder="Search questions..." autocomplete="off" />
+      <svg class="search-icon" viewBox="0 0 16 16" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+        <circle cx="6.5" cy="6.5" r="5"/><line x1="10.5" y1="10.5" x2="14" y2="14"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="faq-layout">
+
+    <!-- CATEGORY NAV -->
+    <aside class="category-nav">
+      <div class="category-nav-label">Topic</div>
+      <ul class="category-list">
+        <li><button class="active" data-category="common">Most Common</button></li>
+        <li><button data-category="glp1">GLP-1</button></li>
+        <li><button data-category="peptides">Peptides</button></li>
+        <li><button data-category="membership">Membership</button></li>
+        <li><button data-category="consultations">Consultations</button></li>
+        <li><button data-category="account">Account</button></li>
+      </ul>
+    </aside>
+
+    <!-- FAQ CONTENT -->
+    <div class="faq-content">
+
+      <div class="no-results" id="noResults">No questions match your search.</div>
+
+      <!-- MOST COMMON -->
+      <div class="faq-category active" data-category="common">
+        <div class="faq-category-title">Most Common</div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What is Foundry RX?
+            <span class="faq-toggle"><svg viewBox="0 0 10 10"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg></span>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Foundry RX is a physician-supervised telehealth membership built for people who expect more than a prescription and a pamphlet. We provide personalized GLP-1 and peptide protocols designed and overseen by board-certified clinicians, delivered directly to your door.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Do I need a prescription?
+            <span class="faq-toggle"><svg viewBox="0 0 10 10"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg></span>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Yes. All GLP-1 medications require a valid prescription from a licensed clinician. As part of your Foundry RX membership, a provider reviews your intake, evaluates your candidacy, and issues a prescription if appropriate. You do not need to bring a prescription from another provider.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Is Foundry RX available in my state?
+            <span class="faq-toggle"><svg viewBox="0 0 10 10"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg></span>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Foundry RX operates through AyaRx Providers PC, a professional corporation holding telemedicine registrations across multiple states. During your consultation, your provider will confirm whether services are currently available in your state. We are actively expanding coverage.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            How is Foundry RX different from other telehealth providers?
+            <span class="faq-toggle"><svg viewBox="0 0 10 10"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg></span>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Most telehealth platforms optimize for volume. Foundry RX is built for precision. Every protocol is individualized, every member has direct access to their clinician, and every compound is sourced from an FDA-registered 503B pharmacy. We do not use automated protocols or one-size-fits-all dosing.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            How long does it take to get started?
+            <span class="faq-toggle"><svg viewBox="0 0 10 10"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg></span>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Most members complete intake and receive their protocol within 3 to 5 business days. After your provider approves your prescription, your medication ships directly from our pharmacy partner with complimentary delivery included in your membership.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Are the compounds FDA-approved?
+            <span class="faq-toggle"><svg viewBox="0 0 10 10"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg></span>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Foundry RX medications are compounded at Greenwich Pharmacy, an FDA-registered 503B outsourcing facility. Compounded medications are not FDA-approved in the same way branded drugs are, but they are prepared under strict sterile standards in a federally regulated facility. Your provider will discuss this with you during your consultation.</div></div>
+        </div>
+
+      </div>
+
+      <!-- GLP-1 -->
+      <div class="faq-category" data-category="glp1">
+        <div class="faq-category-title">GLP-1</div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What is a GLP-1 and how does it work?
+            <span class="faq-toggle"><svg viewBox="0 0 10 10"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg></span>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">GLP-1 (glucagon-like peptide-1) receptor agonists are a class of medications that mimic a hormone your body produces naturally after eating. They regulate appetite, slow gastric emptying, and improve insulin sensitivity. The result for most people is reduced hunger, better blood sugar control, and meaningful weight loss over time.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What GLP-1 medications does Foundry RX offer?
+            <span class="faq-toggle"><svg viewBox="0 0 10 10"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg></span>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Foundry RX offers physician-supervised semaglutide and tirzepatide protocols, compounded at an FDA-registered 503B facility. Your provider will determine which medication and starting dose is appropriate based on your health history, goals, and candidacy.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            How long does it take to see results with GLP-1?
+            <span class="faq-toggle"><svg viewBox="0 0 10 10"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg></span>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Most members notice a reduction in appetite within the first two to four weeks. Measurable weight changes typically become apparent at weeks four to eight. Meaningful results — typically 10 to 20 percent of body weight — are seen over a three to six month period with consistent adherence to your protocol.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What are the common side effects?
+            <span class="faq-toggle"><svg viewBox="0 0 10 10"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg></span>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">The most common side effects are gastrointestinal — nausea, mild bloating, or changes in bowel habits — particularly in the first few weeks as your body adjusts. These typically resolve as your dose is titrated. Your provider will walk you through what to expect and how to manage any symptoms that arise.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Do I stay on GLP-1 indefinitely?
+            <span class="faq-toggle"><svg viewBox="0 0 10 10"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg></span>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">That depends on your goals and how your body responds. Some members use GLP-1 as a short-term intervention to reach a target weight, then transition to a maintenance protocol. Others continue long term. Your clinician will guide you through what makes sense for your situation — there is no one-size-fits-all answer.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What happens if I stop taking GLP-1?
+            <span class="faq-toggle"><svg viewBox="0 0 10 10"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg></span>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Appetite regulation and hunger suppression typically return to baseline after discontinuation. Some weight regain is common without lifestyle interventions in place. Foundry RX providers work with members on exit strategies and maintenance protocols to help sustain results beyond the active treatment period.</div></div>
+        </div>
+
+      </div>
+
+      <!-- PEPTIDES -->
+      <div class="faq-category" data-category="peptides">
+        <div class="faq-category-title">Peptides</div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What are peptides?
+            <span class="faq-toggle"><svg viewBox="0 0 10 10"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg></span>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Peptides are short chains of amino acids — the building blocks of proteins — that act as signaling molecules in the body. They can influence hormone production, cellular repair, immune response, and metabolic function. Foundry RX offers a curated range of research-grade peptide protocols supervised by board-certified clinicians.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Are peptides safe?
+            <span class="faq-toggle"><svg viewBox="0 0 10 10"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg></span>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">When prescribed and dosed by a qualified clinician, peptides have a strong safety profile. Like any compound, individual response varies. Foundry RX providers conduct a thorough intake review before recommending any peptide protocol and monitor members throughout their treatment.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            How are peptides administered?
+            <span class="faq-toggle"><svg viewBox="0 0 10 10"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg></span>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Most Foundry RX peptide protocols are administered via subcutaneous injection — a small needle into the fatty tissue, typically at the abdomen. Some peptides are available in other forms. Your provider will review administration instructions with you and ensure you are comfortable before you begin.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What peptide protocols does Foundry RX offer?
+            <span class="faq-toggle"><svg viewBox="0 0 10 10"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg></span>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Our current catalog includes protocols in categories such as growth hormone secretagogues, recovery and repair, metabolic support, cognitive performance, and immune optimization. Availability is subject to regulatory status and physician discretion. Visit our <a href="/products">protocols page</a> for the current full catalog.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Where are your peptides sourced from?
+            <span class="faq-toggle"><svg viewBox="0 0 10 10"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg></span>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">All compounds are sourced exclusively through Greenwich Pharmacy, an FDA-registered 503B outsourcing facility. This means your medication is prepared under strict sterile, pharmaceutical-grade conditions — not sourced from unregulated suppliers.</div></div>
+        </div>
+
+      </div>
+
+      <!-- MEMBERSHIP -->
+      <div class="faq-category" data-category="membership">
+        <div class="faq-category-title">Membership</div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What is The Foundry Club?
+            <span class="faq-toggle"><svg viewBox="0 0 10 10"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg></span>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">The Foundry Club is our core membership at $60 per month. It includes direct physician access, complimentary delivery on all orders, preferred pricing on protocols, and ongoing clinical oversight throughout your treatment. It is not a subscription box — it is a relationship with a clinician.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Does membership include the medication itself?
+            <span class="faq-toggle"><svg viewBox="0 0 10 10"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg></span>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Membership covers physician access, clinical oversight, and complimentary delivery. Medication is priced separately at preferred member rates. Your provider will outline protocol costs during your consultation before any commitment is made.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Why do I need to be approved for membership?
+            <span class="faq-toggle"><svg viewBox="0 0 10 10"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg></span>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Foundry RX is a physician-supervised practice, not an open marketplace. Approval ensures that every member receives care appropriate to their health history and goals. We do not prescribe to everyone — and that is intentional. It is how we maintain clinical standards.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Can I cancel my membership?
+            <span class="faq-toggle"><svg viewBox="0 0 10 10"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg></span>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Yes. You may cancel your membership at any time by contacting us at <a href="mailto:members@foundryrx.co">members@foundryrx.co</a>. Cancellation takes effect at the end of your current billing cycle. We recommend discussing any protocol changes with your provider before discontinuing.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Is my medication delivered automatically?
+            <span class="faq-toggle"><svg viewBox="0 0 10 10"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg></span>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Refills are coordinated through your patient portal and require clinician review. Your provider will confirm your protocol before each refill is processed. Delivery is complimentary and included in your membership.</div></div>
+        </div>
+
+      </div>
+
+      <!-- CONSULTATIONS -->
+      <div class="faq-category" data-category="consultations">
+        <div class="faq-category-title">Consultations</div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What happens during a consultation?
+            <span class="faq-toggle"><svg viewBox="0 0 10 10"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg></span>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Your initial consultation is a clinical intake with a Foundry RX provider. They will review your health history, current medications, goals, and any contraindications. If you are a candidate for a protocol, they will outline your options and next steps. There is no obligation to proceed.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Is the initial consultation complimentary?
+            <span class="faq-toggle"><svg viewBox="0 0 10 10"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg></span>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Yes. Your initial consultation with a Foundry RX clinician is complimentary. We believe the decision to begin a protocol should be made with complete information and no financial pressure upfront.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            How do I meet with my provider?
+            <span class="faq-toggle"><svg viewBox="0 0 10 10"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg></span>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Consultations and ongoing provider communication take place through our secure telehealth platform. After completing your intake form, you will receive instructions to access your patient portal and schedule your consultation.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Can I reach my provider between appointments?
+            <span class="faq-toggle"><svg viewBox="0 0 10 10"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg></span>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Yes. Direct physician access is a core component of The Foundry Club membership. Members can message their provider through the patient portal for protocol questions, side effect management, or dosing adjustments. This is not a chatbot — it is a clinician.</div></div>
+        </div>
+
+      </div>
+
+      <!-- ACCOUNT -->
+      <div class="faq-category" data-category="account">
+        <div class="faq-category-title">Account</div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            How do I access my patient portal?
+            <span class="faq-toggle"><svg viewBox="0 0 10 10"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg></span>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Your patient portal is accessible at <a href="https://patient-foundry-rx.uniloop.co/patient/login" target="_blank">patient-foundry-rx.uniloop.co/patient/login</a>. You will receive login credentials after your intake is complete. The portal is where you manage your protocol, communicate with your provider, and track your prescriptions.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            How do I update my health information?
+            <span class="faq-toggle"><svg viewBox="0 0 10 10"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg></span>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Health information updates can be submitted through your patient portal or by contacting your provider directly. It is important to inform your clinician of any changes to medications, diagnoses, or health status before continuing your protocol.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            How do I contact Foundry RX support?
+            <span class="faq-toggle"><svg viewBox="0 0 10 10"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg></span>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">You can reach us at <a href="mailto:members@foundryrx.co">members@foundryrx.co</a>. For clinical questions, use your patient portal to message your provider directly. For billing or membership inquiries, email is the fastest path.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Is my information secure?
+            <span class="faq-toggle"><svg viewBox="0 0 10 10"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg></span>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Yes. Foundry RX operates through a HIPAA-compliant telehealth infrastructure. Your health information is encrypted, handled according to all applicable federal privacy regulations, and never sold or shared with third parties for marketing purposes.</div></div>
+        </div>
+
+      </div>
+
+    </div><!-- /faq-content -->
+  </div><!-- /faq-layout -->
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">Foundry <span>RX</span></div>
+    <div class="footer-disclaimer">Foundry RX is not a substitute for in-person medical care. All protocols require clinician approval. Results vary by individual. &copy; 2026 Algorithm Management Inc. DBA Foundry RX.</div>
+  </footer>
+
+  <script>
+    // Category switching
+    const catButtons = document.querySelectorAll('.category-list button');
+    const catPanels = document.querySelectorAll('.faq-category');
+
+    catButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        catButtons.forEach(b => b.classList.remove('active'));
+        catPanels.forEach(p => p.classList.remove('active'));
+        btn.classList.add('active');
+        document.querySelector(`.faq-category[data-category="${btn.dataset.category}"]`).classList.add('active');
+        document.getElementById('faqSearch').value = '';
+        document.getElementById('noResults').style.display = 'none';
+      });
+    });
+
+    // Accordion
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const answer = btn.nextElementSibling;
+        const isOpen = btn.classList.contains('open');
+
+        // Close all in same category
+        btn.closest('.faq-category').querySelectorAll('.faq-question').forEach(q => {
+          q.classList.remove('open');
+          q.nextElementSibling.classList.remove('open');
+        });
+
+        if (!isOpen) {
+          btn.classList.add('open');
+          answer.classList.add('open');
+        }
+      });
+    });
+
+    // Search
+    const searchInput = document.getElementById('faqSearch');
+    searchInput.addEventListener('input', () => {
+      const query = searchInput.value.toLowerCase().trim();
+
+      if (!query) {
+        // Restore active category view
+        catPanels.forEach(p => {
+          p.style.display = '';
+          p.querySelectorAll('.faq-item').forEach(item => item.style.display = '');
+        });
+        const activeBtn = document.querySelector('.category-list button.active');
+        catPanels.forEach(p => p.classList.remove('active'));
+        document.querySelector(`.faq-category[data-category="${activeBtn.dataset.category}"]`).classList.add('active');
+        document.getElementById('noResults').style.display = 'none';
+        return;
+      }
+
+      // Show all categories, filter items
+      catPanels.forEach(p => {
+        p.classList.add('active');
+        p.style.display = 'block';
+      });
+
+      let totalVisible = 0;
+      document.querySelectorAll('.faq-item').forEach(item => {
+        const q = item.querySelector('.faq-question').textContent.toLowerCase();
+        const a = item.querySelector('.faq-answer-inner').textContent.toLowerCase();
+        const match = q.includes(query) || a.includes(query);
+        item.style.display = match ? '' : 'none';
+        if (match) totalVisible++;
+      });
+
+      // Hide empty categories
+      catPanels.forEach(p => {
+        const visible = [...p.querySelectorAll('.faq-item')].some(i => i.style.display !== 'none');
+        p.style.display = visible ? 'block' : 'none';
+      });
+
+      document.getElementById('noResults').style.display = totalVisible === 0 ? 'block' : 'none';
+    });
+  </script>
+</body>
+</html>
