@@ -301,55 +301,88 @@ img{display:block}
 .btn-fcta{background:var(--gold);color:#fff;font-size:14px;font-weight:500;padding:15px 44px;border-radius:32px;border:none;cursor:pointer;position:relative;transition:background .18s}
 .btn-fcta:hover{background:#9a7d42}
 
-/* ══ GUIDE / EBOOK SECTION ══ */
-.guide-section{background:#0D0C09;padding:100px 52px;border-top:0.5px solid rgba(168,134,60,0.1)}
-.guide-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1.4fr;gap:80px;align-items:center}
-.guide-cover{width:220px;height:300px;background:#1C1A14;border:0.5px solid rgba(168,134,60,0.25);padding:32px 24px;display:flex;align-items:stretch;position:relative}
-.guide-cover::before{content:'';position:absolute;inset:6px;border:0.5px solid rgba(168,134,60,0.1);pointer-events:none}
-.guide-cover-inner{display:flex;flex-direction:column;justify-content:space-between;width:100%}
-.guide-cover-eye{font-size:7px;letter-spacing:0.3em;text-transform:uppercase;color:rgba(168,134,60,0.5);font-family:'Jost',sans-serif}
-.guide-cover-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:#F5F0E8;line-height:1.2}
-.guide-cover-title em{font-style:italic;color:#A8863C}
-.guide-cover-sub{font-size:7.5px;letter-spacing:0.15em;color:rgba(245,240,232,0.25);font-family:'Jost',sans-serif;line-height:1.6}
-.guide-cover-rule{height:0.5px;background:rgba(168,134,60,0.3)}
-.guide-cover-foot{font-size:7px;letter-spacing:0.25em;text-transform:uppercase;color:rgba(168,134,60,0.4);font-family:'Jost',sans-serif}
-.guide-eye{font-size:9px;letter-spacing:0.4em;text-transform:uppercase;color:#A8863C;margin-bottom:20px;font-family:'Jost',sans-serif;font-weight:400}
-.guide-h{font-family:'Cormorant Garamond',serif;font-size:clamp(38px,4vw,54px);font-weight:300;color:#F5F0E8;line-height:1.05;margin-bottom:20px}
-.guide-h em{font-style:italic;color:#A8863C}
-.guide-p{font-size:13px;color:rgba(245,240,232,0.45);line-height:1.85;margin-bottom:28px;font-family:'Jost',sans-serif;font-weight:300;max-width:420px}
-.guide-list{list-style:none;margin-bottom:36px}
-.guide-list li{font-size:11px;color:rgba(245,240,232,0.35);font-family:'Jost',sans-serif;font-weight:300;padding:9px 0;border-bottom:0.5px solid rgba(168,134,60,0.08);letter-spacing:0.02em}
-.guide-list li::before{content:'—';color:#A8863C;margin-right:12px;font-size:10px}
-.guide-btn{display:inline-block;font-family:'Jost',sans-serif;font-size:10px;letter-spacing:0.28em;text-transform:uppercase;padding:17px 44px;background:#A8863C;color:#0D0C09;text-decoration:none;font-weight:600;transition:background 0.2s;margin-bottom:14px}
-.guide-btn:hover{background:#C9A84C}
-.guide-note{font-size:8px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(245,240,232,0.18);font-family:'Jost',sans-serif}
+/* ══ PROTOCOL GUIDE ══ */
+.rx-guide{background:#0A0906;padding:120px 52px;position:relative;overflow:hidden}
+.rx-guide::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(168,134,60,0.4),transparent)}
+.rx-guide-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1.5fr;gap:100px;align-items:center}
 
-/* ══ JOURNAL SECTION ══ */
-.journal-section{background:#F5F0E8;padding:100px 52px}
-.journal-header{max-width:1100px;margin:0 auto 60px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end}
-.journal-eye{font-size:9px;letter-spacing:0.4em;text-transform:uppercase;color:#A8863C;margin-bottom:16px;font-family:'Jost',sans-serif;font-weight:400;grid-column:1/-1}
-.journal-h{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,4vw,56px);font-weight:300;color:#1C1A14;line-height:1.05}
-.journal-h em{font-style:italic;color:#A8863C}
-.journal-sub{font-size:13px;color:rgba(28,26,20,0.45);line-height:1.85;font-family:'Jost',sans-serif;font-weight:300;align-self:end}
-.journal-grid{max-width:1100px;margin:0 auto 48px;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(168,134,60,0.15)}
-.journal-card{background:#F5F0E8;padding:36px 32px;text-decoration:none;transition:background 0.2s;display:flex;flex-direction:column;gap:16px}
-.journal-card:hover{background:#EDE8DF}
-.journal-card-cat{font-size:8px;letter-spacing:0.3em;text-transform:uppercase;color:#A8863C;font-family:'Jost',sans-serif;font-weight:400}
-.journal-card-title{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;color:#1C1A14;line-height:1.25;flex:1}
-.journal-card-title em{font-style:italic;color:#A8863C}
-.journal-card-arrow{font-size:16px;color:rgba(168,134,60,0.5);margin-top:auto;transition:color 0.2s}
-.journal-card:hover .journal-card-arrow{color:#A8863C}
-.journal-cta{max-width:1100px;margin:0 auto;text-align:right}
-.journal-link{font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:#1C1A14;text-decoration:none;font-family:'Jost',sans-serif;font-weight:500;border-bottom:0.5px solid rgba(28,26,20,0.3);padding-bottom:2px;transition:color 0.2s,border-color 0.2s}
-.journal-link:hover{color:#A8863C;border-color:#A8863C}
+/* Book */
+.rx-guide-book{position:relative;display:flex;align-items:stretch}
+.rx-book-spine{width:18px;background:linear-gradient(180deg,#2C2820 0%,#1A1710 50%,#2C2820 100%);border-left:0.5px solid rgba(168,134,60,0.2);flex-shrink:0}
+.rx-book-face{width:200px;height:280px;background:linear-gradient(160deg,#1E1B14 0%,#141209 100%);border:0.5px solid rgba(168,134,60,0.2);padding:28px 24px;display:flex;flex-direction:column;justify-content:space-between;position:relative}
+.rx-book-face::after{content:'';position:absolute;inset:8px;border:0.5px solid rgba(168,134,60,0.08);pointer-events:none}
+.rx-book-shadow{width:12px;background:linear-gradient(90deg,rgba(0,0,0,0.5),transparent);align-self:stretch}
+.rx-book-top{display:flex;flex-direction:column;gap:10px}
+.rx-book-cross{opacity:0.6}
+.rx-book-brand{font-family:'Jost',sans-serif;font-size:9px;letter-spacing:0.35em;text-transform:uppercase;color:rgba(245,240,232,0.4)}
+.rx-book-brand em{font-family:'Cormorant Garamond',serif;font-style:italic;color:#A8863C;font-size:11px}
+.rx-book-mid{display:flex;flex-direction:column;gap:12px}
+.rx-book-rule{height:0.5px;background:linear-gradient(90deg,rgba(168,134,60,0.5),transparent)}
+.rx-book-title{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;color:#F5F0E8;line-height:1.15}
+.rx-book-title em{font-style:italic;color:#A8863C}
+.rx-book-bottom{display:flex;flex-direction:column;gap:6px}
+.rx-book-tags{font-size:7px;letter-spacing:0.15em;color:rgba(168,134,60,0.5);font-family:'Jost',sans-serif}
+.rx-book-pages{font-size:7px;letter-spacing:0.25em;text-transform:uppercase;color:rgba(245,240,232,0.2);font-family:'Jost',sans-serif}
 
-@media(max-width:768px){
-  .guide-inner{grid-template-columns:1fr;gap:40px}
-  .guide-cover{width:180px;height:240px}
-  .journal-header{grid-template-columns:1fr}
-  .journal-grid{grid-template-columns:1fr}
-  .guide-section{padding:72px 24px}
-  .journal-section{padding:72px 24px}
+/* Copy */
+.rx-guide-kicker{font-size:9px;letter-spacing:0.45em;text-transform:uppercase;color:#A8863C;margin-bottom:20px;font-family:'Jost',sans-serif;font-weight:400}
+.rx-guide-h{font-family:'Cormorant Garamond',serif;font-size:clamp(42px,4.5vw,60px);font-weight:300;color:#F5F0E8;line-height:1.0;margin-bottom:20px}
+.rx-guide-h em{font-style:italic;color:#A8863C}
+.rx-guide-p{font-size:13px;color:rgba(245,240,232,0.4);line-height:1.9;margin-bottom:36px;font-family:'Jost',sans-serif;font-weight:300;max-width:400px}
+.rx-guide-features{display:flex;flex-direction:column;gap:0;margin-bottom:40px;border-top:0.5px solid rgba(168,134,60,0.1)}
+.rx-feat{display:flex;align-items:baseline;gap:20px;padding:13px 0;border-bottom:0.5px solid rgba(168,134,60,0.08)}
+.rx-feat-num{font-family:'Cormorant Garamond',serif;font-size:11px;color:rgba(168,134,60,0.4);flex-shrink:0;font-style:italic}
+.rx-feat-text{font-size:11px;color:rgba(245,240,232,0.35);font-family:'Jost',sans-serif;font-weight:300;letter-spacing:0.02em;line-height:1.5}
+.rx-guide-actions{display:flex;flex-direction:column;gap:12px}
+.rx-guide-btn{display:inline-flex;align-items:center;gap:12px;font-family:'Jost',sans-serif;font-size:10px;letter-spacing:0.28em;text-transform:uppercase;padding:18px 40px;background:transparent;color:#A8863C;border:0.8px solid rgba(168,134,60,0.4);text-decoration:none;font-weight:500;transition:all 0.25s;width:fit-content}
+.rx-guide-btn:hover{background:#A8863C;color:#0A0906;border-color:#A8863C}
+.rx-guide-meta{font-size:8px;letter-spacing:0.25em;text-transform:uppercase;color:rgba(245,240,232,0.15);font-family:'Jost',sans-serif}
+
+/* ══ JOURNAL ══ */
+.rx-journal{background:#F5F0E8;padding:120px 52px}
+.rx-journal-top{max-width:1100px;margin:0 auto 64px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end}
+.rx-journal-kicker{font-size:9px;letter-spacing:0.45em;text-transform:uppercase;color:#A8863C;margin-bottom:16px;font-family:'Jost',sans-serif;font-weight:400}
+.rx-journal-h{font-family:'Cormorant Garamond',serif;font-size:clamp(44px,4.5vw,62px);font-weight:300;color:#1C1A14;line-height:1.0}
+.rx-journal-h em{font-style:italic;color:#A8863C}
+.rx-journal-right{display:flex;flex-direction:column;justify-content:flex-end;gap:24px;padding-bottom:6px}
+.rx-journal-sub{font-size:13px;color:rgba(28,26,20,0.45);line-height:1.85;font-family:'Jost',sans-serif;font-weight:300;max-width:380px}
+.rx-journal-link{font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:#1C1A14;text-decoration:none;font-family:'Jost',sans-serif;font-weight:500;display:inline-flex;align-items:center;gap:8px;border-bottom:0.5px solid rgba(28,26,20,0.25);padding-bottom:3px;width:fit-content;transition:color 0.2s,border-color 0.2s}
+.rx-journal-link:hover{color:#A8863C;border-color:#A8863C}
+
+/* Grid: 1 large card + 5 small */
+.rx-journal-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:auto auto;gap:2px}
+.rx-jcard{background:#EDE8DF;padding:36px 32px;text-decoration:none;display:flex;flex-direction:column;gap:14px;transition:background 0.2s;position:relative;overflow:hidden}
+.rx-jcard::before{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:#A8863C;transition:width 0.3s}
+.rx-jcard:hover{background:#E6E0D5}
+.rx-jcard:hover::before{width:100%}
+.rx-jcard--large{grid-column:1;grid-row:1/3;background:#1C1A14;padding:48px 40px}
+.rx-jcard--large:hover{background:#141210}
+.rx-jcard--large .rx-jcard-tag{color:rgba(168,134,60,0.7)}
+.rx-jcard--large .rx-jcard-title{font-size:26px;color:#F5F0E8}
+.rx-jcard--large .rx-jcard-title em{color:#A8863C}
+.rx-jcard--large .rx-jcard-excerpt{font-size:12px;color:rgba(245,240,232,0.35);line-height:1.8;font-family:'Jost',sans-serif;font-weight:300;flex:1}
+.rx-jcard--large .rx-jcard-read{color:rgba(245,240,232,0.25)}
+.rx-jcard--large .rx-jcard-arrow{color:rgba(168,134,60,0.5)}
+.rx-jcard--large:hover .rx-jcard-arrow{color:#A8863C}
+.rx-jcard-tag{font-size:8px;letter-spacing:0.3em;text-transform:uppercase;color:#A8863C;font-family:'Jost',sans-serif;font-weight:400}
+.rx-jcard-title{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:300;color:#1C1A14;line-height:1.2;flex:1}
+.rx-jcard-title em{font-style:italic;color:#A8863C}
+.rx-jcard-foot{display:flex;justify-content:space-between;align-items:center;margin-top:auto}
+.rx-jcard-read{font-size:8px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(28,26,20,0.3);font-family:'Jost',sans-serif}
+.rx-jcard-arrow{font-size:16px;color:rgba(168,134,60,0.4);transition:color 0.2s,transform 0.2s}
+.rx-jcard:hover .rx-jcard-arrow{color:#A8863C;transform:translateX(3px)}
+
+@media(max-width:900px){
+  .rx-guide-inner{grid-template-columns:1fr;gap:52px}
+  .rx-journal-top{grid-template-columns:1fr}
+  .rx-journal-grid{grid-template-columns:1fr 1fr}
+  .rx-jcard--large{grid-column:1/3;grid-row:auto}
+  .rx-guide{padding:80px 24px}
+  .rx-journal{padding:80px 24px}
+}
+@media(max-width:560px){
+  .rx-journal-grid{grid-template-columns:1fr}
+  .rx-jcard--large{grid-column:1}
 }
 
 footer{background:#070504;padding:56px 52px 28px}
@@ -769,70 +802,151 @@ footer{background:#070504;padding:56px 52px 28px}
       <li><div class="inc-dot"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1 4l2 2.5 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Side effect management &amp; support</li>
     </ul>
     <a href="products.html" class="btn-gold" style="text-decoration:none;display:inline-block;padding:14px 28px;background:var(--gold);color:#fff;font-size:13.5px;font-weight:500;border-radius:32px;">Start now</a>
+
   </div>
 </div>
 
 <!-- ══════════════════════════════════════════
-  EBOOK / PROTOCOL GUIDE
+  PROTOCOL GUIDE — elevated
 ══════════════════════════════════════════ -->
-<section class="guide-section">
-  <div class="guide-inner">
-    <div class="guide-left">
-      <div class="guide-cover">
-        <div class="guide-cover-inner">
-          <div class="guide-cover-eye">Foundry RX · 2026</div>
-          <div class="guide-cover-title">The Consumer's<br>Guide to<br><em>Peptide Therapy</em></div>
-          <div class="guide-cover-sub">GLP-1 · Weight Loss · Longevity · Brain Function</div>
-          <div class="guide-cover-rule"></div>
-          <div class="guide-cover-foot">19 Pages · Complimentary</div>
+<section class="rx-guide">
+  <div class="rx-guide-inner">
+
+    <div class="rx-guide-book">
+      <div class="rx-book-spine"></div>
+      <div class="rx-book-face">
+        <div class="rx-book-top">
+          <div class="rx-book-cross">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+              <line x1="14" y1="3" x2="14" y2="25" stroke="#A8863C" stroke-width="0.8"/>
+              <line x1="3" y1="14" x2="25" y2="14" stroke="#A8863C" stroke-width="0.8"/>
+            </svg>
+          </div>
+          <div class="rx-book-brand">FOUNDRY <em>Rx</em></div>
+        </div>
+        <div class="rx-book-mid">
+          <div class="rx-book-rule"></div>
+          <div class="rx-book-title">The Consumer's<br>Guide to<br><em>Peptide Therapy</em></div>
+          <div class="rx-book-rule"></div>
+        </div>
+        <div class="rx-book-bottom">
+          <div class="rx-book-tags">GLP-1 · Longevity · Weight Loss</div>
+          <div class="rx-book-pages">19 Pages</div>
         </div>
       </div>
+      <div class="rx-book-shadow"></div>
     </div>
-    <div class="guide-right">
-      <div class="guide-eye">Members Protocol Guide</div>
-      <h2 class="guide-h">The science,<br><em>decoded.</em></h2>
-      <p class="guide-p">Everything you need to understand GLP-1 therapy, peptide co-protocols, and what physician-supervised treatment actually looks like. 19 pages. No fluff.</p>
-      <ul class="guide-list">
-        <li>Why 99% of peptide sources fail the standard</li>
-        <li>How GLP-1 actually works in the body</li>
-        <li>Muscle preservation during rapid weight loss</li>
-        <li>Longevity, beauty &amp; brain function protocols</li>
-        <li>How to access your prescription</li>
-      </ul>
-      <a href="ebook.html" class="guide-btn">Download the Protocol Guide →</a>
-      <div class="guide-note">PDF · Complimentary · No obligation</div>
+
+    <div class="rx-guide-copy">
+      <div class="rx-guide-kicker">Members Protocol Guide</div>
+      <h2 class="rx-guide-h">The science,<br><em>in your hands.</em></h2>
+      <p class="rx-guide-p">19 pages covering everything the industry won't put in plain language — GLP-1 biology, why sourcing matters, peptide co-protocols, and how to access your prescription.</p>
+      <div class="rx-guide-features">
+        <div class="rx-feat">
+          <div class="rx-feat-num">01</div>
+          <div class="rx-feat-text">Why 99% of peptide sources fail the standard</div>
+        </div>
+        <div class="rx-feat">
+          <div class="rx-feat-num">02</div>
+          <div class="rx-feat-text">How GLP-1 actually works inside the body</div>
+        </div>
+        <div class="rx-feat">
+          <div class="rx-feat-num">03</div>
+          <div class="rx-feat-text">Muscle preservation during rapid weight loss</div>
+        </div>
+        <div class="rx-feat">
+          <div class="rx-feat-num">04</div>
+          <div class="rx-feat-text">Longevity, beauty &amp; cognitive protocols</div>
+        </div>
+        <div class="rx-feat">
+          <div class="rx-feat-num">05</div>
+          <div class="rx-feat-text">How to access your prescription today</div>
+        </div>
+      </div>
+      <div class="rx-guide-actions">
+        <a href="ebook.html" class="rx-guide-btn">
+          <span>Download the Protocol Guide</span>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 2v8M4 7l3 3 3-3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><line x1="2" y1="12" x2="12" y2="12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+        </a>
+        <div class="rx-guide-meta">PDF · 19 pages · Complimentary</div>
+      </div>
     </div>
+
   </div>
 </section>
 
 <!-- ══════════════════════════════════════════
-  THE JOURNAL
+  THE JOURNAL — elevated
 ══════════════════════════════════════════ -->
-<section class="journal-section">
-  <div class="journal-header">
-    <div class="journal-eye">The Journal</div>
-    <h2 class="journal-h">Intelligence,<br><em>not noise.</em></h2>
-    <p class="journal-sub">Clinical insight, protocol science, and the research shaping modern performance medicine.</p>
+<section class="rx-journal">
+  <div class="rx-journal-top">
+    <div class="rx-journal-left">
+      <div class="rx-journal-kicker">The Journal</div>
+      <h2 class="rx-journal-h">Intelligence,<br><em>not noise.</em></h2>
+    </div>
+    <div class="rx-journal-right">
+      <p class="rx-journal-sub">Clinical insight and protocol science for people who demand more from modern medicine.</p>
+      <a href="blog.html" class="rx-journal-link">Read all articles →</a>
+    </div>
   </div>
-  <div class="journal-grid">
-    <a href="blog.html" class="journal-card">
-      <div class="journal-card-cat">GLP-1</div>
-      <h3 class="journal-card-title">Compounded Semaglutide vs. Ozempic:<br><em>What's the Difference?</em></h3>
-      <div class="journal-card-arrow">→</div>
+
+  <div class="rx-journal-grid">
+
+    <a href="blog-best-glp1-for-weight-loss.html" class="rx-jcard rx-jcard--large">
+      <div class="rx-jcard-tag">GLP-1</div>
+      <h3 class="rx-jcard-title">Best GLP-1 for Weight Loss:<br><em>The Honest Answer</em></h3>
+      <p class="rx-jcard-excerpt">Tirzepatide, semaglutide, liraglutide — a direct answer based on clinical trial data and what it actually means for your decision.</p>
+      <div class="rx-jcard-foot">
+        <span class="rx-jcard-read">6 min read</span>
+        <span class="rx-jcard-arrow">→</span>
+      </div>
     </a>
-    <a href="blog.html" class="journal-card">
-      <div class="journal-card-cat">Peptide Science</div>
-      <h3 class="journal-card-title">BPC-157: The Recovery Peptide<br><em>Elite Athletes Keep Quiet</em></h3>
-      <div class="journal-card-arrow">→</div>
+
+    <a href="blog-glp1-muscle-preservation.html" class="rx-jcard">
+      <div class="rx-jcard-tag">Performance</div>
+      <h3 class="rx-jcard-title">GLP-1 and Muscle Preservation:<br><em>What You Need to Protect</em></h3>
+      <div class="rx-jcard-foot">
+        <span class="rx-jcard-read">5 min read</span>
+        <span class="rx-jcard-arrow">→</span>
+      </div>
     </a>
-    <a href="blog.html" class="journal-card">
-      <div class="journal-card-cat">Performance</div>
-      <h3 class="journal-card-title">GLP-1 and Muscle Preservation:<br><em>What You Need to Protect</em></h3>
-      <div class="journal-card-arrow">→</div>
+
+    <a href="blog-sourcing.html" class="rx-jcard">
+      <div class="rx-jcard-tag">Standards</div>
+      <h3 class="rx-jcard-title">Medical-Grade Is the Floor.<br><em>Here's the Ceiling</em></h3>
+      <div class="rx-jcard-foot">
+        <span class="rx-jcard-read">6 min read</span>
+        <span class="rx-jcard-arrow">→</span>
+      </div>
     </a>
-  </div>
-  <div class="journal-cta">
-    <a href="blog.html" class="journal-link">Read The Journal →</a>
+
+    <a href="blog-semaglutide-vs-tirzepatide.html" class="rx-jcard">
+      <div class="rx-jcard-tag">GLP-1</div>
+      <h3 class="rx-jcard-title">Semaglutide vs. Tirzepatide:<br><em>Which Is Right for You?</em></h3>
+      <div class="rx-jcard-foot">
+        <span class="rx-jcard-read">6 min read</span>
+        <span class="rx-jcard-arrow">→</span>
+      </div>
+    </a>
+
+    <a href="blog-bpc157.html" class="rx-jcard">
+      <div class="rx-jcard-tag">Peptide Science</div>
+      <h3 class="rx-jcard-title">BPC-157: The Recovery Peptide<br><em>Elite Athletes Keep Quiet</em></h3>
+      <div class="rx-jcard-foot">
+        <span class="rx-jcard-read">5 min read</span>
+        <span class="rx-jcard-arrow">→</span>
+      </div>
+    </a>
+
+    <a href="blog-nad-cellular-energy.html" class="rx-jcard">
+      <div class="rx-jcard-tag">Longevity</div>
+      <h3 class="rx-jcard-title">NAD+ and Cellular Energy:<br><em>The Mitochondrial Case</em></h3>
+      <div class="rx-jcard-foot">
+        <span class="rx-jcard-read">5 min read</span>
+        <span class="rx-jcard-arrow">→</span>
+      </div>
+    </a>
+
   </div>
 </section>
 
