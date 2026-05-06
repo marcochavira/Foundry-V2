@@ -3,7 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Foundry RX — Modern Wellness</title>
+<meta name="description" content="Physician-supervised GLP-1 and peptide protocols. US-licensed doctors, 503B-certified compounds, delivered to all 50 states. GLP-1 starting at $169/month.">
+<meta property="og:title" content="Foundry RX — GLP-1 &amp; Peptide Protocols">
+<meta property="og:description" content="Physician-supervised GLP-1 and peptide therapy. Lose weight, recover faster, age slower. US-licensed physicians. Ships to all 50 states.">
+<meta property="og:image" content="https://foundryrx.co/og-image.jpg">
+<meta property="og:url" content="https://foundryrx.co">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Foundry RX — GLP-1 &amp; Peptide Protocols">
+<meta name="twitter:description" content="Physician-supervised GLP-1 and peptide therapy. GLP-1 starting at $169/month."
+<title>Foundry RX — GLP-1 &amp; Peptide Protocols | Physician-Supervised Telehealth</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
@@ -434,6 +443,24 @@ footer{background:#070504;padding:56px 52px 28px}
 .btn-strip:disabled:hover{background:var(--ink)}
 .btn-gold:disabled:hover,.btn-fcta:disabled:hover{background:var(--gold)}
 
+/* ══ MOBILE STICKY CTA BAR ══ */
+.sticky-cta-bar{
+  display:none;
+  position:fixed;bottom:0;left:0;right:0;z-index:500;
+  background:#fff;border-top:1px solid var(--border);
+  padding:12px 20px 16px;
+  align-items:center;justify-content:space-between;gap:12px;
+  box-shadow:0 -4px 24px rgba(0,0,0,.08);
+}
+.sticky-cta-bar .scb-copy{font-size:12px;color:var(--muted);line-height:1.4}
+.sticky-cta-bar .scb-copy strong{color:var(--ink);display:block;font-size:13px}
+.sticky-cta-bar a{flex-shrink:0;background:var(--gold);color:#fff;font-size:13px;font-weight:500;padding:12px 22px;border-radius:28px;text-decoration:none;white-space:nowrap}
+
+@media(max-width:768px){
+  .sticky-cta-bar{display:flex}
+  body{padding-bottom:72px}
+}
+
 /* ══ RESPONSIVE ══ */
 @media(max-width:1000px){
   .nav{padding:0 24px;height:56px}
@@ -474,7 +501,7 @@ footer{background:#070504;padding:56px 52px 28px}
 <body>
 
 <!-- PROMO BAR -->
-<div class="pbar">Physician-supervised GLP-1 &amp; peptide protocols. <a href="products.html">See protocols →</a></div>
+<div class="pbar">First month consultation included. <a href="https://tally.so/r/WOPa6P">Apply now →</a></div>
 
 <!-- NAV -->
 <nav class="nav">
@@ -494,7 +521,7 @@ footer{background:#070504;padding:56px 52px 28px}
   </ul>
   <div class="nav-r">
     <a href="https://patient-foundry-rx.uniloop.co/patient/login" class="nav-login" style="text-decoration:none">Member login</a>
-    <a href="products.html" class="nav-cta" style="text-decoration:none">Start now</a>
+    <a href="https://tally.so/r/WOPa6P" class="nav-cta" style="text-decoration:none">Start now</a>
   </div>
 </nav>
 
@@ -506,32 +533,37 @@ footer{background:#070504;padding:56px 52px 28px}
 
 <div class="hero-hdr">
   <h1 class="h1">Foundry,<br><em>modern wellness</em></h1>
+  <div>
   <ul class="checks">
     <li><div class="chk"><svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M1.5 4.5l2 2.5 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>US-sourced. US-compounded. 503B certified, 99.9%+ purity</li>
     <li><div class="chk"><svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M1.5 4.5l2 2.5 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Physician-supervised GLP-1 &amp; peptide protocols</li>
     <li><div class="chk"><svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M1.5 4.5l2 2.5 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Real licensed US providers. Unlimited follow-up included</li>
     <li><div class="chk"><svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M1.5 4.5l2 2.5 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Get started 100% online. Delivered to all 50 states</li>
   </ul>
+  <div style="margin-top:28px;display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+    <a href="https://tally.so/r/WOPa6P" style="display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:#fff;font-size:14px;font-weight:500;padding:14px 30px;border-radius:32px;text-decoration:none;transition:background .18s" onmouseover="this.style.background='#333'" onmouseout="this.style.background='var(--ink)'">Start now →</a>
+    <span style="font-size:12px;color:var(--muted)">GLP-1 starting at <strong style="color:var(--ink)">$169/month</strong></span>
+  </div>
+  </div>
 </div>
 
-<!-- Hero cards: warm serenity left, raw power right -->
 <div class="hero-cards">
-  <a class="hcard" href="products.html#glp1">
+  <a class="hcard" href="https://tally.so/r/WOPa6P">
     <div class="hp" style="background-image:url('p-beach-glow.jpg');background-position:center 28%"></div>
     <div class="hs"></div>
     <div class="hcard-body">
       <div class="hcard-tag">GLP-1 Weight Loss</div>
       <div class="hcard-title">Lose the weight.<br><em>Keep the muscle.</em></div>
-      <div class="btn-w">Explore GLP-1 →</div>
+      <div class="btn-w">Start now →</div>
     </div>
   </a>
-  <a class="hcard" href="products.html#nad">
+  <a class="hcard" href="https://tally.so/r/WOPa6P">
     <div class="hp" style="background-image:url('p-squat-woman.jpg');background-position:50% 65%"></div>
     <div class="hs"></div>
     <div class="hcard-body">
       <div class="hcard-tag">NAD+ &amp; Peptide Therapy</div>
       <div class="hcard-title">Recover faster.<br><em>Age slower.</em></div>
-      <div class="btn-w">Explore peptides →</div>
+      <div class="btn-w">Start now →</div>
     </div>
   </a>
 </div>
@@ -704,9 +736,9 @@ footer{background:#070504;padding:56px 52px 28px}
 
     <div class="pillars-strip">
       <div class="strip-copy">
-        <strong>Apply for membership today.</strong> Physician review within 24 hours. First shipment in 5–7 days. Continue access to Foundry Club for just $60/month.
+        <strong>Apply for membership today.</strong> Physician review within 24 hours. First shipment in 5–7 days. First month consultation included.
       </div>
-      <a href="products.html" class="btn-strip" style="text-decoration:none">Start now</a>
+      <a href="https://tally.so/r/WOPa6P" class="btn-strip" style="text-decoration:none">Apply now →</a>
     </div>
   </div>
 </section>
@@ -722,8 +754,8 @@ footer{background:#070504;padding:56px 52px 28px}
 <!-- TICKER -->
 <div class="ticker-wrap">
   <div class="ticker">
-    <span class="ti">Semaglutide</span><span class="ti">Tirzepatide</span><span class="ti">BPC-157</span><span class="ti">TB-500</span><span class="ti">GHK-Cu</span><span class="ti">NAD+</span><span class="ti">Sermorelin</span><span class="ti">NMN</span><span class="ti">CJC-1295</span><span class="ti">Ipamorelin</span><span class="ti">503B Compounded</span><span class="ti">US Sourced</span><span class="ti">Licensed Providers</span>
-    <span class="ti">Semaglutide</span><span class="ti">Tirzepatide</span><span class="ti">BPC-157</span><span class="ti">TB-500</span><span class="ti">GHK-Cu</span><span class="ti">NAD+</span><span class="ti">Sermorelin</span><span class="ti">NMN</span><span class="ti">CJC-1295</span><span class="ti">Ipamorelin</span><span class="ti">503B Compounded</span><span class="ti">US Sourced</span><span class="ti">Licensed Providers</span>
+    <span class="ti">Semaglutide</span><span class="ti">Tirzepatide</span><span class="ti">BPC-157</span><span class="ti">TB-500</span><span class="ti">NAD+</span><span class="ti">Sermorelin</span><span class="ti">NMN</span><span class="ti">CJC-1295</span><span class="ti">Ipamorelin</span><span class="ti">503B Compounded</span><span class="ti">US Sourced</span><span class="ti">Licensed Providers</span>
+    <span class="ti">Semaglutide</span><span class="ti">Tirzepatide</span><span class="ti">BPC-157</span><span class="ti">TB-500</span><span class="ti">NAD+</span><span class="ti">Sermorelin</span><span class="ti">NMN</span><span class="ti">CJC-1295</span><span class="ti">Ipamorelin</span><span class="ti">503B Compounded</span><span class="ti">US Sourced</span><span class="ti">Licensed Providers</span>
   </div>
 </div>
 
@@ -742,15 +774,22 @@ footer{background:#070504;padding:56px 52px 28px}
   <div class="proof-cp">
     <div class="proof-stat-row">
       <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6.25" stroke="#aaa" stroke-width="1"/><path d="M3.5 7l2.5 2.5 4.5-4.5" stroke="#aaa" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      95% of members love their experience
+      Physician-reviewed. Member-trusted.
     </div>
-    <div class="proof-big">500+</div>
-    <div class="proof-sub">members and counting</div>
+    <div class="proof-big">−22 lbs</div>
+    <div class="proof-sub">in 12 weeks on semaglutide</div>
     <div class="proof-rule"></div>
-    <p class="proof-q">"The physician actually responded. Three dose adjustments in the first month. That kind of attention is unheard of anywhere else."</p>
+    <p class="proof-q">"I feel better at 42 than I did in my 30s. I lost 7 pounds in the first four weeks alone — and my physician was actually responsive every step of the way. I didn't expect that."</p>
     <div class="proof-who">
       <div class="who-dot">✓</div>
-      Adrienne K. &nbsp;<span style="color:#ccc">Foundry member</span>
+      Marcus T. &nbsp;<span style="color:#ccc">GLP-1 Protocol — 12 weeks</span>
+    </div>
+    <div style="margin-top:28px;padding-top:24px;border-top:1px solid var(--border);display:flex;flex-direction:column;gap:10px">
+      <p style="font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:300;font-style:italic;color:var(--ink);line-height:1.5;max-width:380px">"Three dose adjustments in the first month. That kind of attention is unheard of anywhere else."</p>
+      <div class="proof-who">
+        <div class="who-dot">✓</div>
+        Adrienne K. &nbsp;<span style="color:#ccc">Foundry member</span>
+      </div>
     </div>
   </div>
 </div>
@@ -766,6 +805,10 @@ footer{background:#070504;padding:56px 52px 28px}
   <div class="cb-left">
     <div class="cb-label">Foundry Club</div>
     <h2 class="cb-h">Not for everyone.<br><em>Designed for you.</em></h2>
+    <div style="margin-top:24px;display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border:1px solid rgba(184,154,94,.3);border-radius:24px;font-size:12px;color:var(--muted)">
+      <span style="width:6px;height:6px;border-radius:50%;background:#c8a94a;flex-shrink:0;display:inline-block"></span>
+      Physician slots limited. New members reviewed weekly.
+    </div>
   </div>
   <div class="cb-right">
     <p>Foundry RX is a members-only practice. Membership isn't just access to medication — it's access to a physician who knows you, a protocol built around your biology, and a practice that evolves with you.</p>
@@ -785,13 +828,15 @@ footer{background:#070504;padding:56px 52px 28px}
     <!-- Ro-style: autoplay muted loop, no controls, fills frame -->
     <video
       autoplay muted loop playsinline
+      aria-label="Foundry RX member lifestyle video"
       width="100%" height="100%"
       poster="p-boxing-bag.jpg"
       style="width:100%;height:100%;object-fit:cover;object-position:78% 35%;display:block;position:absolute;inset:0"
+      onerror="this.style.display='none';this.nextElementSibling.style.display='block'"
     >
       <source src="foundry-member.mp4" type="video/mp4">
-      <img src="p-couple-hires.jpg" style="width:100%;height:100%;object-fit:cover;display:block">
     </video>
+    <img src="p-boxing-bag.jpg" alt="Foundry member" style="width:100%;height:100%;object-fit:cover;object-position:78% 35%;display:none;position:absolute;inset:0">
     <div class="memb-ovl">
       <div class="memb-ovl-copy">Everything your protocol requires, handled.</div>
     </div>
@@ -807,8 +852,8 @@ footer{background:#070504;padding:56px 52px 28px}
       <li><div class="inc-dot"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1 4l2 2.5 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Complimentary discreet delivery</li>
       <li><div class="inc-dot"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1 4l2 2.5 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Side effect management &amp; support</li>
     </ul>
-    <a href="products.html" class="btn-gold" style="text-decoration:none;display:inline-block;padding:14px 28px;background:var(--gold);color:#fff;font-size:13.5px;font-weight:500;border-radius:32px;">Start now</a>
-
+    <a href="https://tally.so/r/WOPa6P" class="btn-gold" style="text-decoration:none;display:inline-block;padding:14px 28px;background:var(--gold);color:#fff;font-size:13.5px;font-weight:500;border-radius:32px;">Start now →</a>
+    <p class="memb-note">First month consultation included. Physician review within 24 hours.</p>
   </div>
 </div>
 
@@ -976,8 +1021,8 @@ footer{background:#070504;padding:56px 52px 28px}
 <section class="fcta">
   <div class="fcta-eye">Foundry Club Membership</div>
   <h2 class="fcta-h2">Your protocol<br>is <em>waiting.</em></h2>
-  <p class="fcta-p">Apply today. Physician review within 24 hours. First shipment at your door in 5–7 days.</p>
-  <a href="products.html" class="btn-fcta" style="text-decoration:none;display:inline-block;padding:15px 44px;background:var(--gold);color:#fff;font-size:14px;font-weight:500;border-radius:32px;">Start now</a>
+  <p class="fcta-p">Apply today. First month consultation included. Physician review within 24 hours. First shipment at your door in 5–7 days.</p>
+  <a href="https://tally.so/r/WOPa6P" class="btn-fcta" style="text-decoration:none;display:inline-block;padding:15px 44px;background:var(--gold);color:#fff;font-size:14px;font-weight:500;border-radius:32px;">Start now →</a>
 </section>
 
 <!-- FOOTER -->
@@ -1034,6 +1079,15 @@ footer{background:#070504;padding:56px 52px 28px}
     <span>Telehealth services provided by licensed physicians. Not available in all states.</span>
   </div>
 </footer>
+
+<!-- MOBILE STICKY CTA BAR -->
+<div class="sticky-cta-bar">
+  <div class="scb-copy">
+    <strong>GLP-1 starting at $169/mo</strong>
+    First consultation included
+  </div>
+  <a href="https://tally.so/r/WOPa6P">Apply now →</a>
+</div>
 
 <script>
 var an=document.querySelectorAll('.anchor a');
