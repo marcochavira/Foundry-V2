@@ -16,15 +16,70 @@
 <title>​</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Foundry Club GLP-1 Membership",
+  "description": "Physician-supervised GLP-1 and peptide protocols. US-licensed doctors, 503B-certified compounds, delivered to all 50 states.",
+  "brand": {
+    "@type": "Brand",
+    "name": "Foundry RX"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "169",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "url": "https://foundryrx.co"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "47",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Marcus T."
+      },
+      "reviewBody": "I feel better at 42 than I did in my 30s. I lost 7 pounds in the first four weeks alone — and my physician was actually responsive every step of the way. I didn't expect that."
+    },
+    {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Foundry Member"
+      },
+      "reviewBody": "Three dose adjustments in the first month. That kind of attention is unheard of anywhere else."
+    }
+  ]
+}
+</script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:'DM Sans',sans-serif;background:#fff;color:#111;overflow-x:hidden;-webkit-font-smoothing:antialiased;font-size:16px;line-height:1.55;letter-spacing:-.012em}
+body{font-family:'DM Sans',sans-serif;background:#fff;color:#111;overflow-x:hidden;-webkit-font-smoothing:antialiased;font-size:16px;line-height:1.55;letter-spacing:-.012em;padding-top:101px}
 a{color:inherit;text-decoration:none}
 img{display:block}
 
@@ -37,60 +92,75 @@ img{display:block}
   --muted:#7a7672;
   --border:#EDE9E2;
   --max:1300px;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'DM Sans',sans-serif;
+}
+
+/* ══ FIXED HEADER — promo bar + nav pinned to top of viewport ══ */
+.site-header{
+  position:fixed;top:0;left:0;right:0;z-index:400;
+  margin:0;padding:0;
 }
 
 /* ══ PROMO BAR ══ */
-.pbar{background:#d4e89b;text-align:center;padding:10px 24px;font-size:13px;color:#111}
+.pbar{
+  background:#d4e89b;text-align:center;
+  padding:9px 24px;font-family:var(--sans);
+  font-size:12.5px;letter-spacing:.01em;color:#111;
+  margin:0;
+}
 .pbar a{font-weight:600;color:#111;text-decoration:underline;text-underline-offset:2px}
 
 /* ══ NAV ══ */
 .nav{
-  position:sticky;top:0;z-index:400;background:#fff;
+  background:#fff;
   border-bottom:1px solid var(--border);
   display:flex;align-items:center;height:64px;padding:0 52px;
 }
-.logo{font-family:'DM Sans',sans-serif;font-size:15px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;display:flex;align-items:center;gap:9px;color:var(--ink)}
+.logo{font-family:var(--sans);font-size:13px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;display:flex;align-items:center;gap:9px;color:var(--ink)}
 .logo svg{flex-shrink:0}
 .nav-links{flex:1;display:flex;justify-content:center;list-style:none;gap:0}
-.nav-links a{font-size:14px;color:#666;padding:8px 18px;border-radius:20px;transition:color .2s}
+.nav-links a{font-family:var(--sans);font-size:13px;letter-spacing:.03em;color:#777;padding:8px 18px;border-radius:20px;transition:color .2s}
 .nav-links a:hover{color:#111}
 .nav-r{display:flex;align-items:center;gap:14px}
-.nav-login{font-size:13px;color:#999;background:none;border:none;cursor:pointer;transition:color .2s}
+.nav-login{font-family:var(--sans);font-size:12.5px;letter-spacing:.03em;color:#999;background:none;border:none;cursor:pointer;transition:color .2s}
 .nav-login:hover{color:#111}
-.nav-cta{font-size:13px;font-weight:500;color:#fff;background:var(--ink);padding:10px 24px;border-radius:28px;border:none;cursor:pointer;transition:background .2s;white-space:nowrap}
+.nav-cta{font-family:var(--sans);font-size:12.5px;font-weight:500;letter-spacing:.04em;color:#fff;background:var(--ink);padding:10px 24px;border-radius:28px;border:none;cursor:pointer;transition:background .2s;white-space:nowrap}
 .nav-cta:hover{background:#333}
 
-/* ══ CHAPTER 1: HERO ══
-   Ro-style: bold headline left, 4 checks right.
-   Two tall editorial cards below. No text on cards — they breathe. */
-
+/* ══ CHAPTER 1: HERO ══ */
 .hero-hdr{
   display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:48px;
-  padding:40px 52px 28px;max-width:var(--max);margin:0 auto;
+  padding:56px 52px 36px;max-width:var(--max);margin:0 auto;
 }
-.h1{font-family:'DM Sans',sans-serif;font-size:clamp(32px,3.4vw,48px);font-weight:300;line-height:1.1;letter-spacing:-.02em;color:var(--ink)}
+.h1{
+  font-family:var(--serif);
+  font-size:clamp(44px,4.8vw,68px);
+  font-weight:300;line-height:1.06;
+  letter-spacing:-.01em;color:var(--ink);
+}
 .h1 em{font-style:italic;font-weight:300;color:var(--muted)}
 
-.checks{list-style:none;display:flex;flex-direction:column;gap:17px}
-.checks li{display:flex;align-items:center;gap:12px;font-size:14px;color:#2a2824;line-height:1.4}
+.checks{list-style:none;display:flex;flex-direction:column;gap:16px}
+.checks li{display:flex;align-items:center;gap:12px;font-family:var(--sans);font-size:13.5px;color:#2a2824;line-height:1.4;letter-spacing:.01em}
 .chk{width:20px;height:20px;border-radius:50%;border:1.5px solid var(--gold);flex-shrink:0;display:flex;align-items:center;justify-content:center}
 .chk svg{color:var(--gold)}
 
 /* Hero cards: inset, rounded, portrait, no copy overlaid */
-.hero-cards{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:0 52px;max-width:var(--max);margin:0 auto}
-.hcard{position:relative;border-radius:20px;overflow:hidden;aspect-ratio:3/3.2;display:block;cursor:pointer}
+.hero-cards{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0 52px 60px;max-width:var(--max);margin:0 auto}
+.hcard{position:relative;border-radius:16px;overflow:hidden;aspect-ratio:3/2.6;display:block;cursor:pointer}
 .hp{position:absolute;inset:0;background-size:cover;transition:transform .65s cubic-bezier(.22,.44,.44,1)}
 .hcard:hover .hp{transform:scale(1.04)}
 /* Very light vignette — photo breathes */
-.hs{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.45) 0%,rgba(0,0,0,.05) 40%,rgba(0,0,0,.05) 60%,rgba(0,0,0,.48) 100%)}
-.hcard-body{position:absolute;bottom:0;left:0;right:0;z-index:2;padding:28px 28px}
-.hcard-body--top{top:0;bottom:auto;padding:32px 32px 0}
-.hcard-tag{font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.75);margin-bottom:12px}
-.hcard-title{font-family:'DM Sans',sans-serif;font-size:clamp(22px,2.8vw,32px);font-weight:500;line-height:1.15;color:#fff;margin-bottom:22px}
-.hcard-title--lg{font-family:'DM Sans',sans-serif;font-size:clamp(22px,2.2vw,32px);font-weight:400;line-height:1.12;color:#fff;margin-bottom:0;letter-spacing:-.018em}
-.hcard-title em{font-style:italic;font-weight:400}
-.hcard-cta-bottom{position:absolute;bottom:28px;left:28px;right:28px;z-index:2}
-.btn-w{display:inline-flex;align-items:center;gap:7px;background:#fff;color:var(--ink);font-size:13.5px;font-weight:500;padding:12px 26px;border-radius:32px;transition:background .18s,transform .2s}
+.hs{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.42) 0%,rgba(0,0,0,.04) 38%,rgba(0,0,0,.04) 60%,rgba(0,0,0,.46) 100%)}
+.hcard-body{position:absolute;bottom:0;left:0;right:0;z-index:2;padding:26px 28px}
+.hcard-body--top{top:0;bottom:auto;padding:28px 28px 0}
+.hcard-tag{font-family:var(--sans);font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:10px}
+.hcard-title{font-family:var(--serif);font-size:clamp(22px,2.4vw,30px);font-weight:400;line-height:1.15;color:#fff;margin-bottom:22px}
+.hcard-title--lg{font-family:var(--serif);font-size:clamp(22px,2vw,30px);font-weight:400;line-height:1.1;color:#fff;margin-bottom:0;letter-spacing:.005em}
+.hcard-title em{font-style:italic;font-weight:300}
+.hcard-cta-bottom{position:absolute;bottom:24px;left:28px;right:28px;z-index:2}
+.btn-w{display:inline-flex;align-items:center;gap:7px;background:#fff;color:var(--ink);font-family:var(--sans);font-size:12.5px;font-weight:500;letter-spacing:.04em;padding:11px 24px;border-radius:32px;transition:background .18s,transform .2s}
 .hcard:hover .btn-w{transform:translateX(4px)}
 
 /* ══ CHAPTER 2: WHAT WE BELIEVE ══
@@ -101,25 +171,24 @@ img{display:block}
   display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;
 }
 .manifesto-tag{
-  font-size:13px;font-weight:400;letter-spacing:.06em;
+  font-family:var(--sans);font-size:11px;font-weight:400;letter-spacing:.1em;text-transform:uppercase;
   color:var(--muted);margin-bottom:20px;
-  font-style:italic;
 }
 .manifesto-h2{
-  font-family:'DM Sans',sans-serif;
-  font-size:clamp(36px,4.5vw,54px);font-weight:300;
-  color:var(--ink);line-height:1.1;letter-spacing:-.015em;
+  font-family:var(--serif);
+  font-size:clamp(40px,5vw,62px);font-weight:300;
+  color:var(--ink);line-height:1.05;letter-spacing:.005em;
 }
 .manifesto-h2 em{font-style:italic}
 .manifesto-right{padding-top:12px}
-.manifesto-body{font-size:15px;color:var(--muted);line-height:1.82;margin-bottom:28px;max-width:440px}
-.manifesto-sub{font-family:'DM Sans',sans-serif;font-size:17px;font-weight:400;color:var(--ink);margin:0 0 16px;letter-spacing:-.012em;line-height:1.3}
+.manifesto-body{font-family:var(--sans);font-size:14.5px;color:var(--muted);line-height:1.82;margin-bottom:28px;max-width:440px}
+.manifesto-sub{font-family:var(--serif);font-size:22px;font-weight:400;color:var(--ink);margin:0 0 16px;letter-spacing:.01em;line-height:1.25}
 .manifesto-sub em{font-style:italic;font-weight:300;color:var(--muted)}
 .manifesto-checks{gap:12px}
-.manifesto-checks li{font-size:14px}
+.manifesto-checks li{font-size:13.5px}
 .manifesto-stats{display:flex;gap:40px;margin-top:36px;padding-top:32px;border-top:1px solid var(--border)}
-.stat-item .num{font-family:'DM Sans',sans-serif;font-size:44px;font-weight:300;color:var(--ink);line-height:1;display:block}
-.stat-item .lbl{font-size:11px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-top:6px;display:block}
+.stat-item .num{font-family:var(--serif);font-size:52px;font-weight:300;color:var(--ink);line-height:1;display:block}
+.stat-item .lbl{font-family:var(--sans);font-size:10px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-top:6px;display:block}
 
 /* ══ CHAPTER 3: THE THREE PILLARS ══
    Bone background. Asymmetric editorial grid. 
@@ -128,8 +197,8 @@ img{display:block}
 .pillars{background:var(--bone);padding:52px 52px}
 .pillars-inner{max-width:var(--max);margin:0 auto}
 .section-header{margin-bottom:32px}
-.sec-eye{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
-.sec-h2{font-family:'DM Sans',sans-serif;font-size:clamp(24px,2.6vw,38px);font-weight:400;color:var(--ink);line-height:1.12;letter-spacing:-.02em}
+.sec-eye{font-family:var(--sans);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.sec-h2{font-family:var(--serif);font-size:clamp(28px,3.2vw,44px);font-weight:300;color:var(--ink);line-height:1.08;letter-spacing:.01em}
 .sec-h2 em{font-style:italic;font-weight:300;color:var(--muted)}
 
 .pillars-grid{
@@ -143,8 +212,8 @@ img{display:block}
 .pc:hover .pc-photo{transform:scale(1.04)}
 .pc::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 35%,rgba(0,0,0,.55) 100%)}
 .pc-body{position:absolute;bottom:0;left:0;right:0;z-index:2;padding:24px 22px}
-.pc-tag{font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-lt);margin-bottom:10px}
-.pc-title{font-family:'DM Sans',sans-serif;font-size:24px;font-weight:400;color:#fff;line-height:1.25;margin-bottom:8px}
+.pc-tag{font-family:var(--sans);font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-lt);margin-bottom:10px}
+.pc-title{font-family:var(--serif);font-size:22px;font-weight:400;color:#fff;line-height:1.2;margin-bottom:8px}
 .pc-desc{font-size:13px;color:rgba(255,255,255,.78);line-height:1.6;font-weight:300}
 
 /* Protocole-style strip */
@@ -159,7 +228,7 @@ img{display:block}
 .btn-strip:hover{background:#333}
 
 /* ══ CHAPTER 4: ANCHOR NAV ══ */
-.anchor{position:sticky;top:64px;z-index:300;background:#fff;border-bottom:1px solid var(--border);display:flex;padding:0 52px;overflow-x:auto;scrollbar-width:none}
+.anchor{position:sticky;top:101px;z-index:300;background:#fff;border-bottom:1px solid var(--border);display:flex;padding:0 52px;overflow-x:auto;scrollbar-width:none}
 .anchor::-webkit-scrollbar{display:none}
 .anchor a{font-size:13px;color:#999;padding:13px 18px;border-bottom:2.5px solid transparent;white-space:nowrap;transition:color .15s,border-color .15s}
 .anchor a:hover,.anchor a.on{color:#111;border-bottom-color:#111}
@@ -209,8 +278,8 @@ img{display:block}
   text-transform:uppercase;color:var(--gold-lt);margin-bottom:8px;
 }
 .pg-name{
-  font-family:'DM Sans',sans-serif;
-  font-size:22px;font-weight:400;color:#fff;line-height:1.2;margin-bottom:10px;
+  font-family:var(--serif);
+  font-size:24px;font-weight:400;color:#fff;line-height:1.15;margin-bottom:10px;
 }
 .pg-badge{
   display:inline-flex;align-items:center;gap:5px;
@@ -231,7 +300,7 @@ img{display:block}
 .cin-bd{position:relative;z-index:2;height:100%;display:flex;align-items:center;padding:0 64px}
 .cin-eye{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:14px;display:flex;align-items:center;gap:10px}
 .cin-eye::before{content:'';width:18px;height:1px;background:var(--gold-lt)}
-.cin-h2{font-family:'DM Sans',sans-serif;font-size:clamp(28px,3.6vw,52px);font-weight:300;color:#fff;line-height:1.1;letter-spacing:-.022em;margin-bottom:28px}
+.cin-h2{font-family:var(--serif);font-size:clamp(28px,3.6vw,52px);font-weight:300;color:#fff;line-height:1.08;letter-spacing:.005em;margin-bottom:28px}
 .cin-h2 em{font-style:italic;font-weight:300}
 .cin-stat{position:absolute;right:60px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.1);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.16);border-radius:20px;padding:26px 30px}
 .cin-num{font-family:'DM Sans',sans-serif;font-size:42px;font-weight:500;color:#fff;line-height:1;display:flex;align-items:center;gap:4px}
@@ -256,11 +325,11 @@ img{display:block}
 .proof-cp{background:var(--bone);padding:44px 44px;display:flex;flex-direction:column;justify-content:center;position:relative}
 .proof-cp::before{content:'';position:absolute;left:0;top:10%;bottom:10%;width:1px;background:var(--border)}
 .proof-stat-row{display:flex;align-items:center;gap:8px;font-size:12px;color:#aaa;margin-bottom:14px;letter-spacing:.04em}
-.proof-big{font-family:'DM Sans',sans-serif;font-size:clamp(52px,7vw,88px);font-weight:300;color:var(--ink);line-height:.92;margin-bottom:4px;letter-spacing:-.03em}
-.proof-sub{font-size:12px;color:var(--muted);margin-bottom:32px;letter-spacing:.06em;text-transform:uppercase}
+.proof-big{font-family:var(--serif);font-size:clamp(56px,7.5vw,92px);font-weight:300;color:var(--ink);line-height:.9;margin-bottom:4px;letter-spacing:-.01em}
+.proof-sub{font-family:var(--sans);font-size:11px;color:var(--muted);margin-bottom:32px;letter-spacing:.1em;text-transform:uppercase}
 .proof-rule{width:28px;height:1px;background:var(--gold);margin-bottom:20px}
-.proof-q{font-family:'DM Sans',sans-serif;font-size:clamp(18px,2.2vw,24px);font-weight:400;font-style:italic;color:var(--ink);line-height:1.6;margin-bottom:20px;max-width:400px}
-.proof-who{display:flex;align-items:center;gap:9px;font-size:12.5px;color:var(--muted)}
+.proof-q{font-family:var(--serif);font-size:clamp(19px,2.2vw,24px);font-weight:400;font-style:italic;color:var(--ink);line-height:1.55;margin-bottom:20px;max-width:400px}
+.proof-who{display:flex;align-items:center;gap:9px;font-family:var(--sans);font-size:12px;letter-spacing:.04em;color:var(--muted)}
 .who-dot{width:14px;height:14px;border-radius:50%;background:var(--ink);display:flex;align-items:center;justify-content:center;font-size:7px;color:#fff;flex-shrink:0}
 
 /* ══ CHAPTER 9: COPY BREAK ══
@@ -271,10 +340,10 @@ img{display:block}
   display:grid;grid-template-columns:1fr 1fr;gap:80px;
   align-items:center;max-width:var(--max);margin:0 auto;
 }
-.cb-left .cb-label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
-.cb-left .cb-h{font-family:'DM Sans',sans-serif;font-size:clamp(26px,2.8vw,40px);font-weight:300;color:var(--ink);line-height:1.12;letter-spacing:-.02em}
+.cb-left .cb-label{font-family:var(--sans);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.cb-left .cb-h{font-family:var(--serif);font-size:clamp(32px,3.4vw,48px);font-weight:300;color:var(--ink);line-height:1.08;letter-spacing:.01em}
 .cb-left .cb-h em{font-style:italic;font-weight:300}
-.cb-right p{font-size:15px;color:var(--muted);line-height:1.82;margin-bottom:20px}
+.cb-right p{font-family:var(--sans);font-size:14.5px;color:var(--muted);line-height:1.82;margin-bottom:20px}
 .cb-right p:last-of-type{margin-bottom:0}
 
 /* ══ CHAPTER 10: MEMBERSHIP ══
@@ -283,7 +352,7 @@ img{display:block}
 .memb-ph{position:relative;min-height:480px;height:100%}
 .memb-ph img{width:100%;height:100%;object-fit:cover;display:block}
 .memb-ovl{position:absolute;bottom:22px;left:22px;right:22px;background:rgba(10,6,2,.75);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(184,154,94,.2);border-radius:14px;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;gap:14px}
-.memb-ovl-copy{font-family:'DM Sans',sans-serif;font-size:16px;font-weight:300;font-style:italic;color:#fff;line-height:1.4}
+.memb-ovl-copy{font-family:var(--serif);font-size:18px;font-weight:300;font-style:italic;color:#fff;line-height:1.4}
 .memb-ovl-price{text-align:right;flex-shrink:0}
 .price-num{font-family:'DM Sans',sans-serif;font-size:42px;font-weight:400;color:var(--gold-lt);display:block;line-height:1}
 .price-per{font-size:10px;color:rgba(255,255,255,.38);letter-spacing:.08em;text-transform:uppercase}
@@ -311,10 +380,10 @@ img{display:block}
 
 .fcta{background:var(--ink);padding:96px 52px;text-align:center;position:relative;overflow:hidden}
 .fcta::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:1000px;height:600px;border-radius:50%;background:radial-gradient(ellipse,rgba(184,154,94,.055) 0%,transparent 65%);pointer-events:none}
-.fcta-eye{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
-.fcta-h2{font-family:'DM Sans',sans-serif;font-size:clamp(32px,4.2vw,58px);font-weight:300;color:#fff;line-height:1.06;margin-bottom:16px;letter-spacing:-.025em;position:relative}
+.fcta-eye{font-family:var(--sans);font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+.fcta-h2{font-family:var(--serif);font-size:clamp(36px,5vw,66px);font-weight:300;color:#fff;line-height:1.04;margin-bottom:16px;letter-spacing:.005em;position:relative}
 .fcta-h2 em{font-style:italic;color:var(--gold-lt)}
-.fcta-p{font-size:14px;color:#555;max-width:360px;margin:0 auto 40px;line-height:1.72;position:relative}
+.fcta-p{font-family:var(--sans);font-size:13.5px;color:#666;max-width:360px;margin:0 auto 40px;line-height:1.75;position:relative}
 .btn-fcta{background:var(--gold);color:#fff;font-size:14px;font-weight:500;padding:15px 44px;border-radius:32px;border:none;cursor:pointer;position:relative;transition:background .18s}
 .btn-fcta:hover{background:#9a7d42}
 
@@ -343,7 +412,7 @@ img{display:block}
 
 /* Copy */
 .rx-guide-kicker{font-size:9px;letter-spacing:0.45em;text-transform:uppercase;color:#A8863C;margin-bottom:20px;font-family:'DM Sans',sans-serif;font-weight:400}
-.rx-guide-h{font-family:'DM Sans',sans-serif;font-size:clamp(28px,3vw,44px);font-weight:300;color:#F5F0E8;line-height:1.08;margin-bottom:20px;letter-spacing:-.022em}
+.rx-guide-h{font-family:var(--serif);font-size:clamp(32px,3.5vw,50px);font-weight:300;color:#F5F0E8;line-height:1.06;margin-bottom:20px;letter-spacing:.005em}
 .rx-guide-h em{font-style:italic;color:#A8863C}
 .rx-guide-p{font-size:13px;color:rgba(245,240,232,0.4);line-height:1.9;margin-bottom:36px;font-family:'DM Sans',sans-serif;font-weight:300;max-width:400px}
 .rx-guide-features{display:flex;flex-direction:column;gap:0;margin-bottom:40px;border-top:0.5px solid rgba(168,134,60,0.1)}
@@ -359,7 +428,7 @@ img{display:block}
 .rx-journal{background:#F5F0E8;padding:120px 52px}
 .rx-journal-top{max-width:1100px;margin:0 auto 64px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end}
 .rx-journal-kicker{font-size:9px;letter-spacing:0.45em;text-transform:uppercase;color:#A8863C;margin-bottom:16px;font-family:'DM Sans',sans-serif;font-weight:400}
-.rx-journal-h{font-family:'DM Sans',sans-serif;font-size:clamp(44px,4.5vw,62px);font-weight:300;color:#1C1A14;line-height:1.0}
+.rx-journal-h{font-family:var(--serif);font-size:clamp(48px,5.5vw,70px);font-weight:300;color:#1C1A14;line-height:1.0}
 .rx-journal-h em{font-style:italic;color:#A8863C}
 .rx-journal-right{display:flex;flex-direction:column;justify-content:flex-end;gap:24px;padding-bottom:6px}
 .rx-journal-sub{font-size:13px;color:rgba(28,26,20,0.45);line-height:1.85;font-family:'DM Sans',sans-serif;font-weight:300;max-width:380px}
@@ -382,7 +451,7 @@ img{display:block}
 .rx-jcard--large .rx-jcard-arrow{color:rgba(168,134,60,0.5)}
 .rx-jcard--large:hover .rx-jcard-arrow{color:#A8863C}
 .rx-jcard-tag{font-size:8px;letter-spacing:0.3em;text-transform:uppercase;color:#A8863C;font-family:'DM Sans',sans-serif;font-weight:400}
-.rx-jcard-title{font-family:'DM Sans',sans-serif;font-size:19px;font-weight:300;color:#1C1A14;line-height:1.2;flex:1}
+.rx-jcard-title{font-family:var(--serif);font-size:20px;font-weight:400;color:#1C1A14;line-height:1.18;flex:1}
 .rx-jcard-title em{font-style:italic;color:#A8863C}
 .rx-jcard-foot{display:flex;justify-content:space-between;align-items:center;margin-top:auto}
 .rx-jcard-read{font-size:8px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(28,26,20,0.3);font-family:'DM Sans',sans-serif}
@@ -462,7 +531,7 @@ footer{background:#070504;padding:56px 52px 28px}
 
 @media(max-width:768px){
   .sticky-cta-bar{display:flex}
-  body{padding-bottom:72px}
+  body{padding-bottom:72px;padding-top:93px}
 }
 
 /* ══ RESPONSIVE ══ */
@@ -478,7 +547,7 @@ footer{background:#070504;padding:56px 52px 28px}
   .pc{aspect-ratio:4/3}
   .pc.tall{aspect-ratio:4/3}
   .pillars-strip{flex-direction:column;border-radius:16px;padding:20px 20px}
-  .anchor{padding:0 24px;top:56px}
+  .anchor{padding:0 24px;top:93px}
   .protocols-sec{padding:52px 24px}
   .proto-layout{grid-template-columns:1fr;gap:32px}
   .proto-grid{grid-template-columns:1fr 1fr;gap:8px}
@@ -504,6 +573,7 @@ footer{background:#070504;padding:56px 52px 28px}
 </head>
 <body>
 
+<div class="site-header">
 <!-- PROMO BAR -->
 <div class="pbar">FDA-approved GLP-1s at their lowest prices. First month consultation included. <a href="https://patient-foundry-rx.uniloop.co/emr/enroll/glp-1-weight-loss"><strong>Apply now →</strong></a></div>
 
@@ -528,6 +598,7 @@ footer{background:#070504;padding:56px 52px 28px}
     <a href="https://patient-foundry-rx.uniloop.co/emr/enroll/glp-1-weight-loss" class="nav-cta" style="text-decoration:none">Start now</a>
   </div>
 </nav>
+</div><!-- /site-header -->
 
 <!-- ══════════════════════════════════════════
   CHAPTER 1 — THE PROMISE
@@ -790,10 +861,10 @@ footer{background:#070504;padding:56px 52px 28px}
       Marcus T. &nbsp;<span style="color:#ccc">GLP-1 Protocol — 12 weeks</span>
     </div>
     <div style="margin-top:28px;padding-top:24px;border-top:1px solid var(--border);display:flex;flex-direction:column;gap:10px">
-      <p style="font-family:'DM Sans',sans-serif;font-size:18px;font-weight:300;font-style:italic;color:var(--ink);line-height:1.5;max-width:380px">"Three dose adjustments in the first month. That kind of attention is unheard of anywhere else."</p>
+      <p style="font-family:'Cormorant Garamond',Georgia,serif;font-size:20px;font-weight:400;font-style:italic;color:var(--ink);line-height:1.55;max-width:380px">"Three dose adjustments in the first month. That kind of attention is unheard of anywhere else."</p>
       <div class="proof-who">
         <div class="who-dot">✓</div>
-        Adrienne K. &nbsp;<span style="color:#ccc">Foundry member</span>
+        Foundry Member &nbsp;<span style="color:#ccc">GLP-1 Protocol</span>
       </div>
     </div>
   </div>
