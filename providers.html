@@ -3,100 +3,83 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Our Providers — Foundry RX</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <title>Our Providers — Board-Certified Physicians | Foundry RX</title>
+  <meta name="description" content="Meet the licensed physicians and nurse practitioners behind every Foundry RX protocol. Board-certified. 50-state telehealth. Real clinical oversight — not automated systems.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://foundryrx.co/providers">
+  <meta property="og:title" content="Our Providers — Foundry RX">
+  <meta property="og:description" content="Board-certified physicians and nurse practitioners. Every Foundry RX protocol is supervised by licensed US providers.">
+  <meta property="og:url" content="https://foundryrx.co/providers">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://foundryrx.co/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Our Providers — Foundry RX">
+  <meta name="twitter:description" content="Board-certified physicians behind every Foundry RX protocol.">
+  <meta name="twitter:image" content="https://foundryrx.co/og-image.jpg">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalOrganization",
+    "name": "Foundry RX",
+    "url": "https://foundryrx.co",
+    "description": "Physician-supervised GLP-1 and peptide telehealth. US-licensed providers. 503B-certified compounds.",
+    "medicalSpecialty": "GeneralPractice",
+    "availableService": {
+      "@type": "MedicalTherapy",
+      "name": "GLP-1 Weight Loss & Peptide Protocols"
+    }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bone: #F5F0E8;
-      --cream: #FAF7F2;
-      --ink: #1A1A18;
-      --gold: #B8975A;
-      --gold-light: #D4B483;
-      --muted: #6B6560;
-      --border: #E2DAD0;
+      --bone: #F5F1EA;
+      --cream: #F5F1EA;
+      --ink: #0D0C0A;
+      --gold: #B89A5E;
+      --gold-light: #CCA96E;
+      --muted: #7a7672;
+      --border: #EDE9E2;
+      --sans: 'DM Sans', sans-serif;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     html { scroll-behavior: smooth; }
-
     body {
-      background-color: var(--cream);
+      background-color: var(--bone);
       color: var(--ink);
-      font-family: 'DM Sans', sans-serif;
+      font-family: var(--sans);
       font-weight: 300;
       -webkit-font-smoothing: antialiased;
+      padding-top: 101px;
     }
 
-    /* NAV */
+    /* NAV — unified with index.html */
+    .site-header { position: fixed; top: 0; left: 0; right: 0; z-index: 400; }
+    .pbar { background: #d4e89b; text-align: center; padding: 9px 24px; font-family: var(--sans); font-size: 12.5px; color: #111; }
+    .pbar a { font-weight: 600; color: #111; text-decoration: underline; text-underline-offset: 2px; }
     nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 48px;
-      height: 72px;
-      background: rgba(250, 247, 242, 0.92);
-      backdrop-filter: blur(12px);
+      background: #fff;
       border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; height: 64px; padding: 0 52px;
     }
-
-    .nav-logo {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 22px;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--ink);
-      text-decoration: none;
-    }
-
-    .nav-logo span {
-      color: var(--gold);
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 36px;
-      list-style: none;
-    }
-
-    .nav-links a {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 12px;
-      font-weight: 400;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--muted);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    .nav-links a:hover { color: var(--ink); }
-
-    .nav-cta {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--gold);
-      text-decoration: none;
-      border: 1px solid var(--gold);
-      padding: 10px 24px;
-      transition: all 0.25s;
-    }
-
-    .nav-cta:hover {
-      background: var(--gold);
-      color: var(--cream);
-    }
+    .nav-logo { font-family: var(--sans); font-size: 13px; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; display: flex; align-items: center; gap: 9px; color: var(--ink); text-decoration: none; }
+    .nav-links { flex: 1; display: flex; justify-content: center; list-style: none; gap: 0; }
+    .nav-links a { font-family: var(--sans); font-size: 13px; letter-spacing: .03em; color: #777; padding: 8px 18px; text-decoration: none; transition: color .2s; }
+    .nav-links a:hover, .nav-links a.active { color: #111; }
+    .nav-r { display: flex; align-items: center; gap: 14px; }
+    .nav-login { font-family: var(--sans); font-size: 12.5px; color: #999; text-decoration: none; }
+    .nav-cta { font-family: var(--sans); font-size: 12.5px; font-weight: 500; color: #fff; background: var(--ink); padding: 10px 24px; border-radius: 28px; text-decoration: none; white-space: nowrap; }
+    .nav-cta:hover { background: #333; }
 
     /* HERO */
     .hero {
-      padding: 160px 48px 80px;
+      padding: 60px 48px 72px;
       max-width: 1200px;
       margin: 0 auto;
       opacity: 0;
@@ -126,8 +109,8 @@
     }
 
     .hero h1 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(48px, 6vw, 80px);
+      font-family: var(--sans);
+      font-size: clamp(32px, 4vw, 52px);
       font-weight: 300;
       line-height: 1.05;
       color: var(--ink);
@@ -268,7 +251,7 @@
     }
 
     .provider-avatar span {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'DM Sans', sans-serif;
       font-size: 28px;
       font-weight: 300;
       color: var(--gold-light);
@@ -295,7 +278,7 @@
     }
 
     .provider-name {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'DM Sans', sans-serif;
       font-size: 32px;
       font-weight: 400;
       color: var(--ink);
@@ -388,9 +371,9 @@
     }
 
     .infra-section h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 42px;
-      font-weight: 300;
+      font-family: var(--sans);
+      font-size: 36px;
+      font-weight: 400;
       color: var(--bone);
       line-height: 1.15;
       margin-bottom: 20px;
@@ -425,7 +408,7 @@
     .infra-item:first-child { border-top: 1px solid rgba(245, 240, 232, 0.1); }
 
     .infra-number {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: var(--sans);
       font-size: 13px;
       color: var(--gold);
       font-weight: 300;
@@ -461,7 +444,7 @@
     }
 
     .cta-section h2 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'DM Sans', sans-serif;
       font-size: clamp(36px, 4vw, 56px);
       font-weight: 300;
       color: var(--ink);
@@ -515,7 +498,7 @@
     }
 
     .footer-logo {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'DM Sans', sans-serif;
       font-size: 16px;
       font-weight: 500;
       letter-spacing: 0.14em;
@@ -558,16 +541,26 @@
 <body>
 
   <!-- NAV -->
-  <nav>
-    <a href="/" class="nav-logo">Foundry <span>RX</span></a>
-    <ul class="nav-links">
-      <li><a href="/products">Protocols</a></li>
-      <li><a href="/blog">The Journal</a></li>
-      <li><a href="/ebook">GLP-1 Guide</a></li>
-      <li><a href="/#membership">Membership</a></li>
-    </ul>
-    <a href="https://tally.so/r/WOPa6P" class="nav-cta">Begin</a>
-  </nav>
+  <div class="site-header">
+    <div class="pbar">FDA-approved GLP-1s at their lowest prices. <a href="https://patient-foundry-rx.uniloop.co/emr/enroll/glp-1-weight-loss"><strong>Apply now →</strong></a></div>
+    <nav>
+      <a href="/" class="nav-logo">
+        <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><line x1="6.5" y1="1" x2="6.5" y2="12" stroke="#B89A5E" stroke-width="1.3"/><line x1="1" y1="6.5" x2="12" y2="6.5" stroke="#B89A5E" stroke-width="1.3"/></svg>
+        Foundry RX
+      </a>
+      <ul class="nav-links">
+        <li><a href="products.html">Protocols</a></li>
+        <li><a href="/#how-it-works">How it works</a></li>
+        <li><a href="/#membership">Membership</a></li>
+        <li><a href="providers.html" class="active">Our Providers</a></li>
+        <li><a href="blog.html">The Journal</a></li>
+      </ul>
+      <div class="nav-r">
+        <a href="https://patient-foundry-rx.uniloop.co/patient/login" class="nav-login">Member login</a>
+        <a href="https://patient-foundry-rx.uniloop.co/emr/enroll/glp-1-weight-loss" class="nav-cta">Start now</a>
+      </div>
+    </nav>
+  </div><!-- /site-header -->
 
   <!-- HERO -->
   <section class="hero">
