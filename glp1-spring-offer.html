@@ -153,9 +153,26 @@ img{display:block}
 }
 .hero-inner{
   max-width:var(--max);margin:0 auto;
-  display:grid;grid-template-columns:1fr 420px;
-  gap:72px;align-items:center;
+  display:grid;grid-template-columns:1fr 340px 380px;
+  gap:52px;align-items:center;
 }
+
+/* ══ VIAL ══ */
+.hero-vial{
+  display:flex;flex-direction:column;align-items:center;gap:16px;
+  position:relative;
+}
+.hero-vial img{
+  width:100%;max-width:300px;
+  filter:drop-shadow(0 32px 48px rgba(0,0,0,.7));
+  transition:transform .6s cubic-bezier(.22,.44,.44,1);
+}
+.hero-vial:hover img{transform:translateY(-6px)}
+.vial-label{
+  display:flex;flex-direction:column;align-items:center;gap:4px;
+}
+.vial-name{font-family:var(--sans);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.35)}
+.vial-sub{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);opacity:.7}
 .hero-eyebrow{
   display:inline-flex;align-items:center;gap:10px;
   font-size:9.5px;letter-spacing:.28em;text-transform:uppercase;
@@ -447,12 +464,17 @@ footer{background:#070504;padding:56px 52px 28px}
 .fade-in.visible{opacity:1;transform:none}
 
 /* ══ RESPONSIVE ══ */
+@media(max-width:1100px){
+  .hero-inner{grid-template-columns:1fr 280px 340px;gap:36px}
+}
 @media(max-width:1000px){
   .nav{padding:0 24px;height:56px}
   .nav-links{display:none}
   body{padding-top:93px}
   .hero{padding:52px 24px 48px}
   .hero-inner{grid-template-columns:1fr;gap:40px}
+  .hero-vial img{max-width:200px}
+  .hero-vial{flex-direction:row;justify-content:center;gap:24px;align-items:flex-end}
   .legit-section{padding:52px 24px}
   .legit-inner{grid-template-columns:1fr;gap:40px}
   .how{padding:52px 24px}
@@ -546,8 +568,17 @@ footer{background:#070504;padding:56px 52px 28px}
       </div>
     </div>
 
+    <!-- VIAL -->
+    <div class="hero-vial fade-in" style="transition-delay:.08s">
+      <img src="product_01.png" alt="Foundry RX Semaglutide — Compounded GLP-1 Agonist, Sterile, Prescription Use Only" width="300" height="420">
+      <div class="vial-label">
+        <span class="vial-name">Compounded Semaglutide</span>
+        <span class="vial-sub">GLP-1 Agonist · 503B Sterile</span>
+      </div>
+    </div>
+
     <!-- OFFER CARD -->
-    <div class="offer-card fade-in" style="transition-delay:.12s">
+    <div class="offer-card fade-in" style="transition-delay:.16s">
       <div class="offer-badge">
         <span></span>
         Spring offer
