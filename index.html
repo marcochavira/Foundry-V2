@@ -571,16 +571,14 @@ footer{background:#070504;padding:56px 52px 28px}
 
 @media(max-width:768px){
   .sticky-cta-bar{display:flex}
-  body{padding-bottom:72px;padding-top:80px}
+  .pbar{display:none}
+  body{padding-bottom:72px;padding-top:56px}
 }
 
 /* == RESPONSIVE == */
 @media(max-width:1000px){
-  .nav{padding:0 20px;height:56px;justify-content:space-between}
+  .nav{padding:0 24px;height:56px}
   .nav-links{display:none}
-  .logo{font-size:11px;letter-spacing:.08em;flex:1}
-  .nav-login{display:none}
-  .nav-cta{font-size:12px;padding:9px 18px;flex-shrink:0}
   .hero-hdr{grid-template-columns:1fr;padding:36px 24px 28px;gap:24px}
   .hero-cards{grid-template-columns:1fr;padding:0 4px;gap:4px}
   .hcard{aspect-ratio:4/3;border-radius:14px}
@@ -611,6 +609,10 @@ footer{background:#070504;padding:56px 52px 28px}
   .fcta{padding:68px 24px}
   footer{padding:44px 24px 24px}
   .foot-grid{grid-template-columns:1fr 1fr;gap:28px}
+  .nav{padding:0 20px;justify-content:space-between}
+  .logo{font-size:11px;letter-spacing:.08em;flex:1}
+  .nav-login{display:none}
+  .nav-cta{font-size:12px;padding:9px 18px;flex-shrink:0}
   body{font-size:15px}
   .h1{font-size:clamp(32px,8vw,42px);letter-spacing:-.018em}
   .manifesto-h2{font-size:clamp(28px,7vw,40px)}
