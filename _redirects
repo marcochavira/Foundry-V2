@@ -1,0 +1,11 @@
+# Fix 404 — old glp1.html link floating around
+/glp1.html /glp1-spring-offer 301
+/glp1 /glp1-spring-offer 301
+
+# Prevent .html versions from being indexed as separate pages
+/index.html / 301
+/products.html /products 301
+/providers.html /providers 301
+/blog.html /blog 301
+/faq.html /faq 301
+/ebook.html /ebook 301
