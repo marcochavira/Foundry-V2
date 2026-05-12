@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google Tag Manager --><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start":new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src="https://www.googletagmanager.com/gtm.js?id="+i+dl;f.parentNode.insertBefore(j,f);})(window,document,"script","dataLayer","GTM-TPPL2BGK");<\/script><!-- End Google Tag Manager -->
+<!-- Google Tag Manager --><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start":new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src="https://www.googletagmanager.com/gtm.js?id="+i+dl;f.parentNode.insertBefore(j,f);})(window,document,"script","dataLayer","GTM-TPPL2BGK");</script><!-- End Google Tag Manager -->
 <meta charset="UTF-8">
 <meta name="robots" content="index, follow">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -120,7 +120,9 @@ html,body{margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:'DM Sans',sans-serif;background:#fff;color:#111;overflow-x:hidden;-webkit-font-smoothing:antialiased;font-size:16px;line-height:1.55;letter-spacing:-.012em;padding-top:101px}
 a{color:inherit;text-decoration:none}
-img{display:block}
+img{display:block;max-width:100%;height:auto}
+video{max-width:100%;height:auto}
+html,body{max-width:100%;overflow-x:hidden}
 
 :root{
   --gold:#B89A5E;
@@ -571,10 +573,12 @@ footer{background:#070504;padding:56px 52px 28px}
 
 @media(max-width:768px){
   .sticky-cta-bar{display:flex}
+  .pbar{display:none}
+  body{padding-bottom:72px;padding-top:56px}
 }
 
 /* == RESPONSIVE == */
-@media(max-width:768px){
+@media(max-width:1000px){
   .nav{padding:0 24px;height:56px}
   .nav-links{display:none}
   .hero-hdr{grid-template-columns:1fr;padding:36px 24px 28px;gap:24px}
@@ -586,7 +590,7 @@ footer{background:#070504;padding:56px 52px 28px}
   .pc{aspect-ratio:4/3}
   .pc.tall{aspect-ratio:4/3}
   .pillars-strip{flex-direction:column;border-radius:16px;padding:20px 20px}
-  .anchor{padding:0 24px;top:56px}
+  .anchor{padding:0 24px;top:93px}
   .protocols-sec{padding:52px 24px}
   .proto-layout{grid-template-columns:1fr;gap:32px}
   .proto-grid{grid-template-columns:1fr 1fr;gap:8px}
@@ -618,39 +622,11 @@ footer{background:#070504;padding:56px 52px 28px}
   .checks li{font-size:14px}
   .sec-h2{font-size:clamp(24px,6vw,32px)}
   .pc-desc{font-size:14px}
-  body{padding-top:56px}
-  .pbar{display:none}
-  .proof{grid-template-columns:1fr;margin:24px 0;padding:0;border-radius:0;max-width:100%}
-  .proof-photo{height:280px;border-radius:0}
-  .proof-cp{padding:32px 24px}
-  .memb{margin:0 0 40px;border-radius:0}
-  .proto-layout{grid-template-columns:1fr}
-  .cin{aspect-ratio:4/3}
-  .cin-bd{padding:0 24px}
-  .copy-break{padding:48px 24px;gap:32px}
-  .rx-guide{padding:64px 24px}
-  .rx-journal{padding:64px 24px}
-  .manifesto{padding:40px 24px;gap:32px}
-  .pillars{padding:40px 24px}
-  .protocols-sec{padding:40px 24px}
-  .hero-hdr{padding:32px 24px 24px;gap:20px}
-  .hero-cards{padding:0 16px 32px;gap:8px}
-  .hero-cards .hcard:last-child{display:none}
-  .h1{font-size:clamp(32px,8vw,44px)}
-  .memb-ct{padding:36px 24px}
-  .fcta{padding:64px 24px}
-  .rx-guide-inner{grid-template-columns:1fr;gap:40px}
-  .rx-journal-top{grid-template-columns:1fr;gap:24px}
-  .rx-journal-grid{grid-template-columns:1fr}
-  .rx-jcard--large{grid-column:1;grid-row:auto}
-  footer{padding:40px 24px 24px}
-  .foot-grid{grid-template-columns:1fr 1fr;gap:24px}
 }
 </style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TPPL2BGK" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><!-- End Google Tag Manager (noscript) -->
-
 
 <div class="site-header">
 <!-- PROMO BAR -->
