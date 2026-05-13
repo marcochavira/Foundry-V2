@@ -176,10 +176,10 @@ nav{background:#fff;border-bottom:1px solid var(--border);display:flex;align-ite
 .snum{font-size:10px;letter-spacing:.16em;color:var(--gold);padding-top:3px;font-weight:500}
 .stitle{font-size:14px;font-weight:500;color:var(--ink);margin-bottom:6px;letter-spacing:-.01em}
 .sbody{font-size:13px;color:var(--muted);line-height:1.75}
-.hiw-visual{border-radius:16px;overflow:hidden;background:#0a0906;display:flex;align-items:center;justify-content:center;min-height:480px;position:relative}
-.hiw-visual::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 35%,rgba(184,154,94,.07) 0%,transparent 65%);pointer-events:none}
+.hiw-visual{border-radius:16px;overflow:hidden;background:#ccc;min-height:480px;position:relative}
+.hiw-visual::before{display:none}
 .hiw-vial{height:320px;width:auto;object-fit:contain;position:relative;z-index:2}
-.hiw-caption{position:absolute;bottom:24px;left:0;right:0;text-align:center;font-size:10.5px;color:rgba(255,255,255,.3);letter-spacing:.08em}
+.hiw-caption{position:absolute;bottom:24px;left:0;right:0;text-align:center;font-size:10.5px;color:rgba(255,255,255,.6);letter-spacing:.08em}
 
 /* DOCTOR */
 .doctor{background:var(--bone);padding:64px}
@@ -515,9 +515,10 @@ footer{background:#070504;padding:52px 64px 28px}
       </div>
     </div>
     <div class="hiw-visual">
-      <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 35%,rgba(184,154,94,.07) 0%,transparent 65%);pointer-events:none"></div>
-      <img src="https://foundryrx.co/product_02.png" alt="Foundry RX compounded tirzepatide vial" class="hiw-vial">
-      <div class="hiw-caption">Medically reviewed by Theresa Vergara, DNP &nbsp;·&nbsp; NPI 1144870056</div>
+      <img src="https://foundryrx.co/hold__4_.jpg" alt="Foundry RX members — active lifestyle on GLP-1 program" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top">
+      <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(0,0,0,.48) 0%,transparent 100%);padding:28px 24px 18px">
+        <div class="hiw-caption" style="position:static;text-align:left">Medically reviewed by Theresa Vergara, DNP &nbsp;&middot;&nbsp; NPI 1144870056</div>
+      </div>
     </div>
   </div>
 </section>
