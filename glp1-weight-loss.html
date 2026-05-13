@@ -110,9 +110,9 @@ nav{background:#fff;border-bottom:1px solid var(--border);display:flex;align-ite
 .micro-trust li::before{content:'✓';color:var(--gold);font-size:10px}
 
 /* HERO VISUAL */
-.hero-visual{position:relative;border-radius:20px;overflow:hidden;background:#0a0906;min-height:520px;display:flex;align-items:center;justify-content:center}
+.hero-visual{position:relative;border-radius:20px;overflow:hidden;background:#0a0906;min-height:560px;display:flex;align-items:center;justify-content:center}
 .hero-glow{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 40%,rgba(184,154,94,.09) 0%,transparent 68%);pointer-events:none}
-.hero-vial{width:auto;max-width:60%;max-height:400px;object-fit:contain;position:relative;z-index:2;animation:floatVial 7s ease-in-out infinite}
+.hero-vial{width:auto;max-width:52%;max-height:340px;object-fit:contain;position:relative;z-index:2;animation:floatVial 7s ease-in-out infinite}
 @keyframes floatVial{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
 .hero-label{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);background:rgba(255,255,255,.07);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:12px 20px;text-align:center;white-space:nowrap}
 .hero-label-top{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:3px}
@@ -150,9 +150,9 @@ nav{background:#fff;border-bottom:1px solid var(--border);display:flex;align-ite
 
 .pcard{background:#fff;border:1px solid var(--border);border-radius:20px;overflow:hidden;transition:box-shadow .25s}
 .pcard:hover{box-shadow:0 12px 40px rgba(13,12,10,.08)}
-.pcard-photo{background:#0a0906;display:flex;align-items:center;justify-content:center;height:300px;position:relative;overflow:hidden}
+.pcard-photo{background:#0a0906;display:flex;align-items:center;justify-content:center;height:280px;position:relative;overflow:hidden;padding:20px}
 .pcard-photo::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 40%,rgba(184,154,94,.08) 0%,transparent 65%);pointer-events:none}
-.pcard-photo img{height:240px;width:auto;object-fit:contain;position:relative;z-index:2}
+.pcard-photo img{height:200px;width:auto;max-width:70%;object-fit:contain;position:relative;z-index:2}
 .pcard-body{padding:32px 32px 36px}
 .pcard-tag{font-size:9px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
 .pcard-name{font-size:26px;font-weight:400;letter-spacing:-.022em;color:var(--ink);margin-bottom:4px}
@@ -379,10 +379,6 @@ footer{background:#070504;padding:52px 64px 28px}
   <div class="hero-visual">
     <div class="hero-glow"></div>
     <img src="https://foundryrx.co/product_01.png" alt="Foundry RX compounded semaglutide — GLP-1 receptor agonist 10mg/2mL" class="hero-vial">
-    <div class="hero-label">
-      <div class="hero-label-top">Foundry RX</div>
-      <div class="hero-label-name">Compounded Semaglutide</div>
-    </div>
   </div>
 </div>
 
@@ -515,10 +511,7 @@ footer{background:#070504;padding:52px 64px 28px}
       </div>
     </div>
     <div class="hiw-visual">
-      <img src="https://foundryrx.co/hold__4_.jpg" alt="Foundry RX members — active lifestyle on GLP-1 program" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top">
-      <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(0,0,0,.48) 0%,transparent 100%);padding:28px 24px 18px">
-        <div class="hiw-caption" style="position:static;text-align:left">Medically reviewed by Theresa Vergara, DNP &nbsp;&middot;&nbsp; NPI 1144870056</div>
-      </div>
+      <img src="https://foundryrx.co/hold__4_.jpg" alt="Active lifestyle on GLP-1 program" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top">
     </div>
   </div>
 </section>
