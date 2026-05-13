@@ -107,7 +107,7 @@ nav{background:#fff;border-bottom:1px solid var(--border);display:flex;align-ite
 /* Hero visual — product photo on dark card */
 .hero-visual{position:relative;border-radius:20px;overflow:hidden;background:var(--ink);min-height:500px;display:flex;align-items:center;justify-content:center}
 .hero-glow{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 38%,rgba(184,154,94,0.08) 0%,transparent 68%);pointer-events:none}
-.hero-vial-img{width:55%;position:relative;z-index:2;animation:floatVial 7s ease-in-out infinite}
+.hero-vial-img{width:auto;max-width:55%;max-height:380px;object-fit:contain;position:relative;z-index:2;animation:floatVial 7s ease-in-out infinite}
 @keyframes floatVial{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
 .hero-stat-badge{position:absolute;bottom:24px;right:24px;background:rgba(255,255,255,.08);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:16px 20px;text-align:center}
 .hsb-num{font-family:var(--sans);font-size:32px;font-weight:300;color:#fff;display:block;line-height:1;margin-bottom:3px}
@@ -134,8 +134,8 @@ nav{background:#fff;border-bottom:1px solid var(--border);display:flex;align-ite
 .drug-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .drug-card{border:1px solid var(--border);border-radius:20px;overflow:hidden;transition:box-shadow .2s}
 .drug-card:hover{box-shadow:0 8px 32px rgba(0,0,0,.07)}
-.drug-photo{height:220px;background:var(--bone);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
-.drug-photo img{height:100%;width:100%;object-fit:cover;object-position:center}
+.drug-photo{height:260px;background:var(--bone);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:24px}
+.drug-photo img{height:100%;width:auto;max-height:200px;object-fit:contain;display:block;margin:0 auto}
 .drug-label-overlay{position:absolute;bottom:14px;left:14px;background:rgba(255,255,255,.9);backdrop-filter:blur(8px);border-radius:20px;padding:6px 14px;font-size:11px;font-weight:500;color:var(--ink);letter-spacing:.04em}
 .drug-body{padding:28px 28px 32px}
 .drug-name{font-size:22px;font-weight:400;color:var(--ink);letter-spacing:-.02em;margin-bottom:6px}
@@ -162,7 +162,7 @@ nav{background:#fff;border-bottom:1px solid var(--border);display:flex;align-ite
 .stitle{font-size:15px;font-weight:400;color:var(--ink);margin-bottom:7px;letter-spacing:-.015em}
 .sbody{font-size:13px;color:var(--muted);line-height:1.75}
 .hiw-photo{border-radius:16px;overflow:hidden;position:relative}
-.hiw-photo img{width:100%;height:500px;object-fit:cover;object-position:center top}
+.hiw-photo img{width:100%;height:460px;object-fit:cover;object-position:center center}
 .hiw-photo-cap{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(0,0,0,.5) 0%,transparent 100%);padding:28px 22px 18px;font-size:11px;color:rgba(255,255,255,.6);letter-spacing:.05em}
 
 /* DOCTOR CARD */
@@ -179,7 +179,7 @@ nav{background:#fff;border-bottom:1px solid var(--border);display:flex;align-ite
 .doc-badge svg{color:var(--gold);flex-shrink:0}
 
 /* RESULTS CINEMATIC */
-.cin{position:relative;width:100%;overflow:hidden;aspect-ratio:21/8;margin:0}
+.cin{position:relative;width:100%;overflow:hidden;aspect-ratio:21/8;min-height:280px;background:var(--ink)}
 .cin-ph{position:absolute;inset:0;background-size:cover;background-position:center}
 .cin-sc{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.65) 0%,rgba(0,0,0,.2) 50%,transparent 72%)}
 .cin-bd{position:relative;z-index:2;height:100%;display:flex;align-items:center;padding:0 64px}
@@ -373,7 +373,7 @@ footer{background:#070504;padding:52px 52px 26px}
   <div class="hero-visual">
     <div class="hero-glow"></div>
     <div class="hero-tag-tl">New member offer</div>
-    <img src="product_01.png" alt="Foundry RX compounded semaglutide — GLP-1 receptor agonist 10mg/2mL" class="hero-vial-img">
+    <img src="https://foundryrx.co/product_01.png" alt="Foundry RX compounded semaglutide — GLP-1 receptor agonist 10mg/2mL" class="hero-vial-img">
     <div class="hero-stat-badge">
       <span class="hsb-num">−22 lbs</span>
       <span class="hsb-lbl">avg. in 12 weeks*</span>
@@ -406,7 +406,7 @@ footer{background:#070504;padding:52px 52px 26px}
     <!-- SEMAGLUTIDE -->
     <div class="drug-card">
       <div class="drug-photo">
-        <img src="product_01.png" alt="Foundry RX compounded semaglutide vial">
+        <img src="https://foundryrx.co/product_01.png" alt="Foundry RX compounded semaglutide vial">
         <div class="drug-label-overlay">Semaglutide · GLP-1 RA</div>
       </div>
       <div class="drug-body">
@@ -425,7 +425,7 @@ footer{background:#070504;padding:52px 52px 26px}
     <!-- TIRZEPATIDE -->
     <div class="drug-card drug-card--featured">
       <div class="drug-photo" style="background:#f0ece4">
-        <img src="product_01.png" alt="Foundry RX compounded tirzepatide vial" style="filter:hue-rotate(15deg) brightness(0.95)">
+        <img src="https://foundryrx.co/product_01.png" alt="Foundry RX compounded tirzepatide vial" style="filter:hue-rotate(15deg) brightness(0.95)">
         <div class="drug-label-overlay">Tirzepatide · GLP-1 + GIP</div>
         <div class="featured-tag">Most effective</div>
       </div>
@@ -459,7 +459,7 @@ footer{background:#070504;padding:52px 52px 26px}
         <div class="step"><div class="snum">04</div><div><div class="stitle">Unlimited support as you progress.</div><p class="sbody">Your provider adjusts your dose as your results evolve. Unlimited follow-up, side effect management, and dose titration — all included in your membership.</p></div></div>
       </div>
       <div class="hiw-photo">
-        <img src="kaylee-garrett-GaprWyIw66o-unsplash.jpg" alt="Foundry RX members — active lifestyle on GLP-1 program">
+        <img src="https://foundryrx.co/kaylee-garrett-GaprWyIw66o-unsplash.jpg" alt="Foundry RX members — active lifestyle on GLP-1 program">
         <div class="hiw-photo-cap">Foundry Club members &nbsp;&middot;&nbsp; Physician-supervised GLP-1 protocol</div>
       </div>
     </div>
@@ -496,7 +496,7 @@ footer{background:#070504;padding:52px 52px 26px}
 
 <!-- CINEMATIC RESULTS -->
 <div class="cin">
-  <div class="cin-ph" style="background-image:url('hold__4_.jpg')"></div>
+  <div class="cin-ph" style="background-image:url('https://foundryrx.co/hold__4_.jpg')"></div>
   <div class="cin-sc"></div>
   <div class="cin-bd">
     <div>
