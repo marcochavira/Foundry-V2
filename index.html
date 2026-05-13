@@ -17,95 +17,98 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Foundry RX — GLP-1 & Peptide Protocols">
 <meta name="twitter:description" content="Physician-supervised GLP-1 and peptide therapy. GLP-1 starting at $169/month.">
-<title>Foundry RX — GLP-1 & Peptide Protocols | From $169/month</title>
+<title>Foundry RX — Physician-Supervised GLP-1 & Peptide Therapy Online | From $169/month</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Foundry Club GLP-1 Membership",
-  "description": "Physician-supervised GLP-1 and peptide protocols. US-licensed doctors, 503B-certified compounds, delivered to all 50 states.",
-  "image": "https://foundryrx.co/og-image.jpg",
-  "brand": {
-    "@type": "Brand",
-    "name": "Foundry RX"
-  },
-  "offers": {
-    "@type": "Offer",
-    "price": "169",
-    "priceCurrency": "USD",
-    "availability": "https://schema.org/InStock",
-    "url": "https://foundryrx.co/",
-    "priceValidUntil": "2026-12-31",
-    "shippingDetails": {
-      "@type": "OfferShippingDetails",
-      "shippingRate": {
-        "@type": "MonetaryAmount",
-        "value": "0",
-        "currency": "USD"
-      },
-      "deliveryTime": {
-        "@type": "ShippingDeliveryTime",
-        "handlingTime": {
-          "@type": "QuantitativeValue",
-          "minValue": 1,
-          "maxValue": 2,
-          "unitCode": "DAY"
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "Foundry RX",
+      "url": "https://foundryrx.co",
+      "logo": "https://foundryrx.co/og-image-v2.jpg",
+      "description": "Physician-supervised GLP-1 weight loss and peptide therapy, delivered online to all 50 states.",
+      "email": "members@foundryrx.co",
+      "sameAs": ["https://instagram.com/foundryrx"]
+    },
+    {
+      "@type": "WebSite",
+      "name": "Foundry RX",
+      "url": "https://foundryrx.co"
+    },
+    {
+      "@type": "MedicalBusiness",
+      "name": "Foundry RX",
+      "url": "https://foundryrx.co",
+      "description": "Online telehealth clinic offering physician-supervised GLP-1 weight loss, compounded semaglutide, tirzepatide, peptide therapy, and NAD+ protocols.",
+      "medicalSpecialty": ["Endocrinology", "GeneralPractice"],
+      "areaServed": { "@type": "Country", "name": "United States" },
+      "availableService": [
+        {
+          "@type": "MedicalTherapy",
+          "name": "GLP-1 Weight Loss Program",
+          "description": "Physician-supervised compounded semaglutide and tirzepatide programs for weight management, starting at $169/month."
         },
-        "transitTime": {
-          "@type": "QuantitativeValue",
-          "minValue": 5,
-          "maxValue": 7,
-          "unitCode": "DAY"
+        {
+          "@type": "MedicalTherapy",
+          "name": "Peptide Therapy",
+          "description": "BPC-157, TB-500, Sermorelin, CJC-1295/Ipamorelin, NAD+, and Tesamorelin protocols supervised by licensed US providers."
         }
-      },
-      "shippingDestination": {
-        "@type": "DefinedRegion",
-        "addressCountry": "US"
-      }
-    },
-    "hasMerchantReturnPolicy": {
-      "@type": "MerchantReturnPolicy",
-      "applicableCountry": "US",
-      "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted",
-      "merchantReturnDays": 0
-    }
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "47",
-    "bestRating": "5",
-    "worstRating": "1"
-  },
-  "review": [
-    {
-      "@type": "Review",
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "5",
-        "bestRating": "5"
-      },
-      "author": {
-        "@type": "Person",
-        "name": "Marcus T."
-      },
-      "reviewBody": "I feel better at 42 than I did in my 30s. I lost 7 pounds in the first four weeks alone — and my physician was actually responsive every step of the way. I didn't expect that."
+      ],
+      "employee": [
+        {
+          "@type": "Person",
+          "name": "Theresa Vergara",
+          "jobTitle": "DNP — Licensed Provider",
+          "identifier": "NPI: 1144870056"
+        },
+        {
+          "@type": "Person",
+          "name": "Arnold Cruz",
+          "jobTitle": "DO — Licensed Provider",
+          "identifier": "NPI: 1487682514"
+        }
+      ]
     },
     {
-      "@type": "Review",
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "5",
-        "bestRating": "5"
-      },
-      "author": {
-        "@type": "Person",
-        "name": "Foundry Member"
-      },
-      "reviewBody": "Three dose adjustments in the first month. That kind of attention is unheard of anywhere else."
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is compounded semaglutide FDA-approved?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Compounded semaglutide and tirzepatide are prepared by licensed 503B outsourcing facilities and are not FDA-approved drugs. They are prescribed under physician supervision when clinically appropriate. Foundry RX partners exclusively with 503B-certified pharmacies that meet federal quality and purity standards."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need an in-person visit to get started with GLP-1?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Foundry RX operates entirely online. Complete your health intake and a licensed US provider reviews your information and determines your protocol — typically within 24 hours. No waiting room required."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What states does Foundry RX serve?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Foundry RX serves all 50 states through a network of licensed telehealth providers. Medication ships directly to your door from our certified 503B pharmacy partner."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does GLP-1 treatment cost at Foundry RX?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "GLP-1 programs at Foundry RX start at $169/month. Membership includes physician access, unlimited follow-up, personalized protocol and dose titration, and complimentary discreet delivery. First consultation is included."
+          }
+        }
+      ]
     }
   ]
 }
@@ -116,6 +119,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0}
 html,body{margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:'DM Sans',sans-serif;background:#fff;color:#111;overflow-x:hidden;-webkit-font-smoothing:antialiased;font-size:16px;line-height:1.55;letter-spacing:-.012em;padding-top:101px}
@@ -630,7 +634,7 @@ footer{background:#070504;padding:56px 52px 28px}
 
 <div class="site-header">
 <!-- PROMO BAR -->
-<div class="pbar">FDA-approved GLP-1s at their lowest prices. First month consultation included. <a href="https://patient-foundry-rx.uniloop.co/emr/enroll/glp-1-weight-loss"><strong>Apply now &rarr;</strong></a></div>
+<div class="pbar">Physician-supervised GLP-1 programs starting at $169/month — first consultation included. <a href="https://patient-foundry-rx.uniloop.co/emr/enroll/glp-1-weight-loss"><strong>Apply now &rarr;</strong></a></div>
 
 <!-- NAV -->
 <nav class="nav">
@@ -683,7 +687,7 @@ footer{background:#070504;padding:56px 52px 28px}
     <div class="hs"></div>
     <div class="hcard-body hcard-body--top">
       <div class="hcard-tag">GLP-1 Weight Loss</div>
-      <div class="hcard-title hcard-title--lg">New GLP-1 options<br>at Foundry</div>
+      <h2 class="hcard-title hcard-title--lg">New GLP-1 options<br>at Foundry</h2>
     </div>
     <div class="hcard-cta-bottom">
       <div class="btn-w">Explore GLP-1 &rarr;</div>
@@ -694,7 +698,7 @@ footer{background:#070504;padding:56px 52px 28px}
     <div class="hs"></div>
     <div class="hcard-body hcard-body--top">
       <div class="hcard-tag">Peptide Therapy</div>
-      <div class="hcard-title hcard-title--lg">NAD+ &amp; Peptide<br>Protocols</div>
+      <h2 class="hcard-title hcard-title--lg">NAD+ &amp; Peptide<br>Protocols</h2>
     </div>
     <div class="hcard-cta-bottom">
       <div class="btn-w">Explore peptides &rarr;</div>
@@ -772,7 +776,7 @@ footer{background:#070504;padding:56px 52px 28px}
           <div class="pg-photo" style="background-image:url('p-boxing-white.jpg');background-position:center 18%"></div>
           <div class="pg-body">
             <div class="pg-cat">Weight Loss</div>
-            <div class="pg-name">Semaglutide &amp;<br>Tirzepatide</div>
+            <h3 class="pg-name">Semaglutide &amp;<br>Tirzepatide</h3>
             <div class="pg-badge"><span class="bd"></span>Available</div>
           </div>
         </a>
@@ -782,7 +786,7 @@ footer{background:#070504;padding:56px 52px 28px}
           <div class="pg-photo" style="background-image:url('p-man-curl-light.jpg');background-position:center 35%"></div>
           <div class="pg-body">
             <div class="pg-cat">Repair &amp; Renewal</div>
-            <div class="pg-name">BPC-157 &amp; TB-500</div>
+            <h3 class="pg-name">BPC-157 &amp; TB-500</h3>
             <div class="pg-badge"><span class="bd"></span>Available</div>
           </div>
         </a>
@@ -792,7 +796,7 @@ footer{background:#070504;padding:56px 52px 28px}
           <div class="pg-photo" style="background-image:url('p-barbell-woman.jpg');background-position:center 30%"></div>
           <div class="pg-body">
             <div class="pg-cat">Performance &amp; Growth</div>
-            <div class="pg-name">Sermorelin, CJC-1295 / Ipamorelin</div>
+            <h3 class="pg-name">Sermorelin, CJC-1295 / Ipamorelin</h3>
             <div class="pg-badge"><span class="bd"></span>Available</div>
           </div>
         </a>
@@ -802,7 +806,7 @@ footer{background:#070504;padding:56px 52px 28px}
           <div class="pg-photo" style="background-image:url('p-boxing-bag.jpg');background-position:center 18%"></div>
           <div class="pg-body">
             <div class="pg-cat">Longevity &amp; Composition</div>
-            <div class="pg-name">NAD+ &amp; Tesamorelin</div>
+            <h3 class="pg-name">NAD+ &amp; Tesamorelin</h3>
             <div class="pg-badge"><span class="bd"></span>Available</div>
           </div>
         </a>
@@ -838,7 +842,7 @@ footer{background:#070504;padding:56px 52px 28px}
         <div class="pc-photo" style="background-image:url('p-deadlift.jpg');background-position:center 25%"></div>
         <div class="pc-body">
           <div class="pc-tag">US-sourced &amp; US-compounded</div>
-          <div class="pc-title">The highest-quality compounds. No shortcuts.</div>
+          <h3 class="pc-title">The highest-quality compounds. No shortcuts.</h3>
           <div class="pc-desc">503B-certified, sourced and compounded in the US, batch-tested above 99.9% purity before it ships to you.</div>
         </div>
       </div>
@@ -848,7 +852,7 @@ footer{background:#070504;padding:56px 52px 28px}
         <div class="pc-photo" style="background-image:url('p-stretch.jpg');background-position:center 18%"></div>
         <div class="pc-body">
           <div class="pc-tag">No guessing</div>
-          <div class="pc-title">Physician-supervised. Every step.</div>
+          <h3 class="pc-title">Physician-supervised. Every step.</h3>
           <div class="pc-desc">Licensed US physicians supervise every protocol and adjust it as you progress. Unlimited follow-up, no extra fees.</div>
         </div>
       </div>
@@ -858,7 +862,7 @@ footer{background:#070504;padding:56px 52px 28px}
         <div class="pc-photo" style="background-image:url('p-pilates.jpg');background-position:40% 30%"></div>
         <div class="pc-body">
           <div class="pc-tag">Concierge care</div>
-          <div class="pc-title">White-glove. From intake to door.</div>
+          <h3 class="pc-title">White-glove. From intake to door.</h3>
           <div class="pc-desc">Discreet packaging, ships in 5&ndash;7 days. No waiting rooms. No follow-up fees.</div>
         </div>
       </div>
