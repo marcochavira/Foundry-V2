@@ -229,6 +229,7 @@ html,body{max-width:100%;overflow-x:hidden}
 .manifesto-sub em{font-style:italic;font-weight:300;color:var(--muted)}
 .manifesto-checks{gap:11px}
 .manifesto-checks li{font-size:13px}
+.manifesto-tagline{font-family:var(--sans);font-size:clamp(22px,2.6vw,34px);font-weight:300;color:var(--ink);line-height:1.18;letter-spacing:-.022em}
 .manifesto-stats{display:flex;gap:40px;margin-top:32px;padding-top:28px;border-top:1px solid var(--border)}
 .stat-item .num{font-family:var(--sans);font-size:40px;font-weight:300;color:var(--ink);line-height:1;display:block;letter-spacing:-.03em}
 .stat-item .lbl{font-family:var(--sans);font-size:10px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-top:5px;display:block}
@@ -669,10 +670,10 @@ footer{background:#070504;padding:56px 52px 28px}
   <h1 class="h1">Foundry,<br><em>modern wellness</em></h1>
   <div>
   <ul class="checks">
-    <li><div class="chk"><svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M1.5 4.5l2 2.5 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>503B certified. 99.9%+ purity. US-compounded.</li>
-    <li><div class="chk"><svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M1.5 4.5l2 2.5 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Physician-supervised protocols</li>
-    <li><div class="chk"><svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M1.5 4.5l2 2.5 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Unlimited follow-up. No extra fees.</li>
-    <li><div class="chk"><svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M1.5 4.5l2 2.5 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>100% online. All 50 states.</li>
+    <li><div class="chk"><svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M1.5 4.5l2 2.5 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>U.S.-made GLP-1s &amp; peptides</li>
+    <li><div class="chk"><svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M1.5 4.5l2 2.5 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>503B-compounded quality</li>
+    <li><div class="chk"><svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M1.5 4.5l2 2.5 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Provider-reviewed protocols</li>
+    <li><div class="chk"><svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M1.5 4.5l2 2.5 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Ongoing member support</li>
   </ul>
   <div style="margin-top:24px;display:flex;align-items:center;gap:14px;flex-wrap:wrap">
     <a href="https://patient-foundry-rx.uniloop.co/emr/enroll/glp-1-weight-loss" style="display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:#fff;font-size:13px;font-weight:500;padding:12px 26px;border-radius:32px;text-decoration:none;transition:background .18s" onmouseover="this.style.background='#333'" onmouseout="this.style.background='var(--ink)'">Start now &rarr;</a>
@@ -720,13 +721,7 @@ footer{background:#070504;padding:56px 52px 28px}
   </div>
   <div class="manifesto-right">
 
-    <h3 class="manifesto-sub">Everything included.</h3>
-    <ul class="checks manifesto-checks">
-      <li><div class="chk"><svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M1.5 4.5l2 2.5 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Physician access &amp; unlimited follow-up</li>
-      <li><div class="chk"><svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M1.5 4.5l2 2.5 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Personalized protocol &amp; dose titration</li>
-      <li><div class="chk"><svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M1.5 4.5l2 2.5 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>503B-certified, US-compounded medications</li>
-      <li><div class="chk"><svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M1.5 4.5l2 2.5 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Free discreet delivery. All 50 states.</li>
-    </ul>
+    <p class="manifesto-tagline">Better sourcing.<br>Better oversight.<br>Better follow-through.</p>
     
   </div>
 </div>
@@ -832,7 +827,7 @@ footer{background:#070504;padding:56px 52px 28px}
   <div class="pillars-inner">
     <div class="section-header">
       <div class="sec-eye">Why Foundry</div>
-      <h2 class="sec-h2">Three things no one else<br><em>does all at once</em></h2>
+      <h2 class="sec-h2">U.S.-made GLP-1 and peptide protocols.<br><em>Provider-reviewed. Member-supported.</em></h2>
     </div>
 
     <div class="pillars-grid">
@@ -841,9 +836,9 @@ footer{background:#070504;padding:56px 52px 28px}
       <div class="pc tall">
         <div class="pc-photo" style="background-image:url('p-deadlift.jpg');background-position:center 25%"></div>
         <div class="pc-body">
-          <div class="pc-tag">US-sourced &amp; US-compounded</div>
-          <h3 class="pc-title">The highest-quality compounds. No shortcuts.</h3>
-          <div class="pc-desc">503B-certified, sourced and compounded in the US, batch-tested above 99.9% purity before it ships to you.</div>
+          <div class="pc-tag">Quality</div>
+          <h3 class="pc-title">No gray-market shortcuts.</h3>
+          <div class="pc-desc">U.S.-made GLP-1 and peptide protocols.</div>
         </div>
       </div>
 
@@ -851,9 +846,9 @@ footer{background:#070504;padding:56px 52px 28px}
       <div class="pc">
         <div class="pc-photo" style="background-image:url('p-stretch.jpg');background-position:center 18%"></div>
         <div class="pc-body">
-          <div class="pc-tag">No guessing</div>
-          <h3 class="pc-title">Physician-supervised. Every step.</h3>
-          <div class="pc-desc">Licensed US physicians supervise every protocol and adjust it as you progress. Unlimited follow-up, no extra fees.</div>
+          <div class="pc-tag">Oversight</div>
+          <h3 class="pc-title">A protocol, not a product.</h3>
+          <div class="pc-desc">Provider review and dose guidance.</div>
         </div>
       </div>
 
@@ -861,9 +856,9 @@ footer{background:#070504;padding:56px 52px 28px}
       <div class="pc">
         <div class="pc-photo" style="background-image:url('p-pilates.jpg');background-position:40% 30%"></div>
         <div class="pc-body">
-          <div class="pc-tag">Concierge care</div>
-          <h3 class="pc-title">White-glove. From intake to door.</h3>
-          <div class="pc-desc">Discreet packaging, ships in 5&ndash;7 days. No waiting rooms. No follow-up fees.</div>
+          <div class="pc-tag">Membership</div>
+          <h3 class="pc-title">Care after delivery.</h3>
+          <div class="pc-desc">Discreet shipping and ongoing support.</div>
         </div>
       </div>
 
