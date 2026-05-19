@@ -116,10 +116,27 @@ nav{background:#fff;border-bottom:1px solid var(--border);display:flex;align-ite
 .hero-card-cta{display:inline-flex;align-items:center;gap:7px;background:#fff;color:var(--ink);font-size:12px;font-weight:500;letter-spacing:.01em;padding:9px 18px;border-radius:28px;transition:all .2s}
 .hero-card:hover .hero-card-cta{transform:translateX(3px);box-shadow:0 4px 16px rgba(0,0,0,.12)}
 
-/* NAD card */
+/* NAD card — Apple product card */
 .hero-card-nad{background:#0A0906}
-.hero-card-nad .hero-card-inner img{object-fit:contain;padding:8% 16% 32%;object-position:center 40%;mix-blend-mode:lighten}
-.hero-card-nad .hero-card-overlay{background:linear-gradient(to bottom,rgba(0,0,0,.1) 0%,rgba(0,0,0,0) 35%,rgba(0,0,0,.82) 100%)}
+.hero-card-nad .hero-card-inner img{
+  object-fit:contain;
+  width:80%;
+  height:72%;
+  position:absolute;
+  top:8%;
+  left:50%;
+  transform:translateX(-50%);
+  mix-blend-mode:lighten;
+  padding:0;
+}
+.hero-card-nad .hero-card-overlay{
+  background:linear-gradient(to bottom,
+    transparent 0%,
+    transparent 50%,
+    rgba(0,0,0,.7) 75%,
+    rgba(0,0,0,.92) 100%
+  )
+}
 
 /* Badge */
 .hero-photo-badge{position:absolute;top:18px;right:18px;background:rgba(255,255,255,.93);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-radius:12px;padding:9px 14px;display:flex;align-items:center;gap:8px;box-shadow:0 4px 20px rgba(0,0,0,.1);z-index:3}
@@ -354,7 +371,7 @@ a:focus-visible,button:focus-visible{
   .hero-trust-list{display:none}
   .hero-cards{grid-template-columns:1fr;gap:8px}
   .hero-card{min-height:300px}
-  .hero-card-nad img{padding:6% 18% 30%}
+  .hero-card-nad .hero-card-inner img{width:70%;height:65%;top:10%}
   .trust{padding:14px 24px}
   .ti2{padding:5px 10px;font-size:10px}
   .intro{grid-template-columns:1fr;padding:60px 24px;gap:40px}
@@ -461,14 +478,14 @@ a:focus-visible,button:focus-visible{
       </div>
     </a>
 
-    <!-- Card 2: NAD+ — narrower supporting card -->
+    <!-- Card 2: NAD+ — Apple product card style -->
     <a href="https://patient-foundry-rx.uniloop.co/emr/enroll/nad-treatment" class="hero-card hero-card-nad">
       <div class="hero-card-inner">
         <img src="product_03.png" alt="Foundry RX NAD+ vial — 1000mg/10mL">
       </div>
       <div class="hero-card-overlay"></div>
       <div class="hero-card-body">
-        <div class="hero-card-tag">Cellular Energy &amp; Longevity</div>
+        <div class="hero-card-tag">Cellular Energy</div>
         <div class="hero-card-title">NAD+<br><em>Protocol</em></div>
         <div class="hero-card-cta">Start now &rarr;</div>
       </div>
