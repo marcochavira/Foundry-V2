@@ -169,32 +169,36 @@ nav{background:#fff;border-bottom:1px solid var(--border);display:flex;align-ite
 .sec-h2{font-size:clamp(24px,2.6vw,36px);font-weight:400;color:var(--ink);line-height:1.1;letter-spacing:-.022em}
 .sec-h2 em{font-style:italic;font-weight:300;color:var(--soft)}
 
-/* PRODUCTS */
-.products{background:var(--bone);padding:80px 64px}
+/* PRODUCTS — dark luxury cards */
+.products{background:var(--bone);padding:80px 52px}
 .products-inner{max-width:var(--max);margin:0 auto}
 .products-header{margin-bottom:48px}
 .products-sub{font-size:14px;color:var(--muted);line-height:1.75;max-width:520px;margin-top:12px}
-.product-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;align-items:stretch}
+.product-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;align-items:stretch}
 
 .pcard{background:#fff;border:1px solid var(--border);border-radius:20px;overflow:hidden;transition:box-shadow .25s;display:flex;flex-direction:column}
 .pcard:hover{box-shadow:0 12px 40px rgba(13,12,10,.08)}
-.pcard-photo{background:#0a0906;display:flex;align-items:center;justify-content:center;height:260px;position:relative;overflow:hidden;padding:24px 20px 20px;flex-shrink:0}
-.pcard-photo::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 40%,rgba(184,154,94,.08) 0%,transparent 65%);pointer-events:none}
-.pcard-photo img{height:180px;width:auto;max-width:68%;object-fit:contain;position:relative;z-index:2}
-/* NAD vial — blend away cream background box */
-.pcard:nth-child(3) .pcard-photo img{height:155px;max-width:55%;mix-blend-mode:lighten}
+
+/* Dark photo area — product fills frame */
+.pcard-photo{background:#0A0906;display:flex;align-items:center;justify-content:center;height:280px;position:relative;overflow:hidden;flex-shrink:0}
+.pcard-photo::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(184,154,94,.1) 0%,transparent 65%);pointer-events:none}
+.pcard-photo img{height:220px;width:auto;max-width:80%;object-fit:contain;position:relative;z-index:2}
+
+/* NAD vial — mix-blend on dark works perfectly */
+.pcard:nth-child(3) .pcard-photo img{height:200px;max-width:65%;mix-blend-mode:lighten}
+
 .pcard-body{padding:28px 28px 32px;display:flex;flex-direction:column;flex:1}
 .pcard-tag{font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
-.pcard-name{font-size:26px;font-weight:400;letter-spacing:-.022em;color:var(--ink);margin-bottom:4px}
-.pcard-aka{font-size:12px;color:var(--soft);margin-bottom:14px;letter-spacing:.02em}
+.pcard-name{font-size:28px;font-weight:400;letter-spacing:-.022em;color:var(--ink);margin-bottom:4px;line-height:1.1}
+.pcard-aka{font-size:12px;color:var(--soft);margin-bottom:16px;letter-spacing:.01em}
 .pcard-desc{font-size:13px;color:var(--muted);line-height:1.75;margin-bottom:20px}
-.pcard-includes{list-style:none;display:flex;flex-direction:column;gap:7px;padding-top:18px;border-top:1px solid var(--border);margin-bottom:0;flex:1}
-.pcard-includes li{display:flex;align-items:center;gap:10px;font-size:12px;color:var(--muted)}
+.pcard-includes{list-style:none;display:flex;flex-direction:column;gap:8px;padding-top:18px;border-top:1px solid var(--border);margin-bottom:0;flex:1}
+.pcard-includes li{display:flex;align-items:center;gap:10px;font-size:12.5px;color:var(--muted)}
 .pcard-includes li::before{content:'';width:15px;height:15px;border-radius:50%;border:1.5px solid var(--gold);flex-shrink:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M4 8l2.5 3 5.5-5.5' stroke='%23B89A5E' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat}
 .pcard-spacer{flex:1}
 .pcard-price-row{display:flex;align-items:baseline;gap:6px;margin-bottom:18px;margin-top:24px}
 .pcard-from{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#bbb}
-.pcard-price{font-size:38px;font-weight:300;color:var(--ink);line-height:1;letter-spacing:-.03em}
+.pcard-price{font-size:40px;font-weight:300;color:var(--ink);line-height:1;letter-spacing:-.03em}
 .pcard-mo{font-size:12px;color:var(--soft)}
 .pcard-note{font-size:11px;color:#bbb;margin-top:8px}
 
