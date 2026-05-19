@@ -161,11 +161,13 @@ nav{background:#fff;border-bottom:1px solid var(--border);display:flex;align-ite
 
 .pcard{background:#fff;border:1px solid var(--border);border-radius:20px;overflow:hidden;transition:box-shadow .25s;display:flex;flex-direction:column}
 .pcard:hover{box-shadow:0 12px 40px rgba(13,12,10,.08)}
-.pcard-photo{background:#0a0906;display:flex;align-items:center;justify-content:center;height:260px;position:relative;overflow:hidden;padding:20px;flex-shrink:0}
+.pcard-photo{background:#0a0906;display:flex;align-items:center;justify-content:center;height:260px;position:relative;overflow:hidden;padding:24px 20px 20px;flex-shrink:0}
 .pcard-photo::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 40%,rgba(184,154,94,.08) 0%,transparent 65%);pointer-events:none}
-.pcard-photo img{height:190px;width:auto;max-width:72%;object-fit:contain;position:relative;z-index:2}
+.pcard-photo img{height:180px;width:auto;max-width:68%;object-fit:contain;position:relative;z-index:2}
+/* NAD vial is portrait — constrain tighter so it doesn't overflow into tag */
+.pcard:nth-child(3) .pcard-photo img{height:160px;max-width:52%}
 .pcard-body{padding:28px 28px 32px;display:flex;flex-direction:column;flex:1}
-.pcard-tag{font-size:9px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.pcard-tag{font-size:9px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .pcard-name{font-size:26px;font-weight:400;letter-spacing:-.022em;color:var(--ink);margin-bottom:4px}
 .pcard-aka{font-size:12px;color:var(--soft);margin-bottom:14px;letter-spacing:.02em}
 .pcard-desc{font-size:13px;color:var(--muted);line-height:1.75;margin-bottom:20px}
@@ -488,15 +490,14 @@ a:focus-visible,button:focus-visible{
 <!-- INTRO PANEL -->
 <div class="intro">
   <div>
-    <h2 class="intro-h">What GLP-1 treatment <em>does.</em></h2>
-    <p class="intro-p">GLP-1 medications help regulate appetite, fullness, and metabolic signaling. For eligible patients, they can make weight loss feel less like willpower and more like physiology working with you.</p>
-    <p class="intro-p">Foundry RX protocols are physician-designed, US-compounded, and adjusted over time as your body responds. Not a one-size program. A clinical plan built for you.</p>
+    <h2 class="intro-h">Less willpower.<br><em>More physiology.</em></h2>
+    <p class="intro-p">GLP-1 medications work with your biology — regulating appetite, fullness, and metabolic signaling. Physician-designed. US-compounded. Adjusted as you respond.</p>
     <a href="https://patient-foundry-rx.uniloop.co/emr/enroll/glp-1-weight-loss" class="btn-gold-pill">Check Eligibility &rarr;</a>
   </div>
   <div class="intro-visual">
     <p class="intro-chart-label">Average trial results</p>
     <div class="intro-stat">15–<em>22%</em></div>
-    <p class="intro-note">Average body-weight reduction reported in major semaglutide and tirzepatide trials with diet and lifestyle changes. Individual results vary.</p>
+    <p class="intro-note">Body-weight reduction in major clinical trials. Individual results vary.</p>
   </div>
 </div>
 
@@ -572,7 +573,7 @@ a:focus-visible,button:focus-visible{
           <img src="product_03.png" alt="Foundry RX NAD+ — Nicotinamide Adenine Dinucleotide 1000mg/10mL">
         </div>
         <div class="pcard-body">
-          <div class="pcard-tag">Cellular Energy &amp; Longevity</div>
+          <div class="pcard-tag">Cellular Energy · Longevity</div>
           <h2 class="pcard-name">NAD+</h2>
           <p class="pcard-aka">Injectable &amp; IV-grade protocol</p>
           <p class="pcard-desc">NAD+ supports mitochondrial function, DNA repair, and cellular energy production. Often used alongside GLP-1 therapy to support metabolism and reduce fatigue during caloric restriction.</p>
@@ -648,28 +649,28 @@ a:focus-visible,button:focus-visible{
         <div class="snum">01</div>
         <div>
           <div class="stitle">Intake</div>
-          <p class="sbody">Complete a short medical intake so your provider can understand your history, goals, medications, and eligibility. Takes about ten minutes.</p>
+          <p class="sbody">10-minute medical intake. Your history, goals, medications.</p>
         </div>
       </div>
       <div class="step">
         <div class="snum">02</div>
         <div>
           <div class="stitle">Review</div>
-          <p class="sbody">A licensed provider reviews your profile and determines whether GLP-1 treatment is appropriate — and which compound fits your biology.</p>
+          <p class="sbody">A licensed provider reviews your profile within 24 hours.</p>
         </div>
       </div>
       <div class="step">
         <div class="snum">03</div>
         <div>
-          <div class="stitle">Start</div>
-          <p class="sbody">If prescribed, your medication ships discreetly from a US 503B-certified pharmacy with clear dosing instructions. Arrives in 5–7 days.</p>
+          <div class="stitle">Ship</div>
+          <p class="sbody">Your medication ships from a US 503B pharmacy. Arrives in 5–7 days.</p>
         </div>
       </div>
       <div class="step">
         <div class="snum">04</div>
         <div>
           <div class="stitle">Adjust</div>
-          <p class="sbody">Your provider supports dose changes, side effects, and progress over time. Unlimited follow-up is included in your membership.</p>
+          <p class="sbody">Unlimited provider follow-up. Dose changes, side effects, progress.</p>
         </div>
       </div>
     </div>
@@ -691,7 +692,7 @@ a:focus-visible,button:focus-visible{
         <div class="doc-reviewed">Medically reviewed by</div>
         <h2 class="doc-name">Theresa Vergara, DNP</h2>
         <p class="doc-title">Doctor of Nursing Practice &nbsp;&middot;&nbsp; Licensed Provider, Foundry RX</p>
-        <p class="doc-bio">Theresa specializes in metabolic health, weight management, and GLP-1 protocols. Every Foundry protocol is reviewed by a licensed US provider — not an algorithm. A real clinical relationship from intake to outcome.</p>
+        <p class="doc-bio">Specializes in metabolic health and GLP-1 protocols. Every Foundry protocol is reviewed by a licensed US provider — not an algorithm.</p>
         <p class="doc-npi">NPI: 1144870056 &nbsp;&middot;&nbsp; Protocol reviewed May 2026 &nbsp;&middot;&nbsp; <a href="https://www.legitscript.com/" target="_blank" rel="noopener" style="color:var(--gold)">LegitScript Certified</a></p>
       </div>
       <div class="doc-badges">
@@ -715,26 +716,26 @@ a:focus-visible,button:focus-visible{
 <!-- ELIGIBILITY -->
 <section class="elig" id="eligibility">
   <div class="sec-eye">Am I a candidate?</div>
-  <h2 class="sec-h2">Eligibility, <em>clearly explained.</em></h2>
+  <h2 class="sec-h2">Eligibility, <em>simply.</em></h2>
   <div class="elig-grid">
     <div>
-      <p style="font-size:13px;color:var(--muted);line-height:1.75;margin-bottom:28px">BMI is a starting point, not the whole story. Your provider reviews your complete health intake and makes an individualized determination.</p>
+      <p style="font-size:13px;color:var(--muted);line-height:1.75;margin-bottom:28px">BMI is a starting point. Your provider makes the final call based on your full health profile.</p>
       <table class="etable">
         <thead><tr><th>BMI Range</th><th>GLP-1 Eligibility</th></tr></thead>
         <tbody>
           <tr><td>Below 27</td><td class="tno">Generally not indicated</td></tr>
-          <tr><td>27.0 – 29.9</td><td>Case-by-case with comorbidities</td></tr>
+          <tr><td>27.0 – 29.9</td><td>Case-by-case</td></tr>
           <tr><td>30.0 and above</td><td class="tyes">Likely indicated</td></tr>
         </tbody>
       </table>
-      <p class="enote">Eligibility is determined at the independent clinical judgment of a licensed US physician after review of your complete health profile. Approval is not guaranteed.</p>
+      <p class="enote">Approval at independent clinical judgment of a licensed physician. Not guaranteed.</p>
     </div>
     <ul class="clist">
-      <li class="ci"><div class="cring"><svg viewBox="0 0 8 8" fill="none"><path d="M1 4l2 2.5 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Adults 18+ with a BMI of 27+, or 30+ without weight-related comorbidities</li>
-      <li class="ci"><div class="cring"><svg viewBox="0 0 8 8" fill="none"><path d="M1 4l2 2.5 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>No personal or family history of medullary thyroid carcinoma (MTC) or MEN 2</li>
-      <li class="ci"><div class="cring"><svg viewBox="0 0 8 8" fill="none"><path d="M1 4l2 2.5 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Not currently pregnant, breastfeeding, or planning to become pregnant</li>
-      <li class="ci"><div class="cring"><svg viewBox="0 0 8 8" fill="none"><path d="M1 4l2 2.5 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Committed to reduced-calorie nutrition and increased physical activity</li>
-      <li class="ci"><div class="cring"><svg viewBox="0 0 8 8" fill="none"><path d="M1 4l2 2.5 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Available for ongoing follow-up and dose titration with your Foundry provider</li>
+      <li class="ci"><div class="cring"><svg viewBox="0 0 8 8" fill="none"><path d="M1 4l2 2.5 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Adults 18+ with BMI 27 or above</li>
+      <li class="ci"><div class="cring"><svg viewBox="0 0 8 8" fill="none"><path d="M1 4l2 2.5 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>No history of MTC or MEN 2</li>
+      <li class="ci"><div class="cring"><svg viewBox="0 0 8 8" fill="none"><path d="M1 4l2 2.5 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Not currently pregnant or breastfeeding</li>
+      <li class="ci"><div class="cring"><svg viewBox="0 0 8 8" fill="none"><path d="M1 4l2 2.5 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Committed to nutrition and activity changes</li>
+      <li class="ci"><div class="cring"><svg viewBox="0 0 8 8" fill="none"><path d="M1 4l2 2.5 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Available for ongoing provider follow-up</li>
     </ul>
   </div>
 </section>
@@ -750,13 +751,13 @@ a:focus-visible,button:focus-visible{
         <a href="https://patient-foundry-rx.uniloop.co/emr/enroll/glp-1-weight-loss" class="btn-gold-pill">Get Started &rarr;</a>
       </div>
       <div class="faq-list">
-        <details class="fi"><summary class="fq">What is included in the price?</summary><p class="fa">Both programs include your physician consultation, personalized protocol and dose titration, unlimited follow-up, side effect management, and discreet US shipping. Semaglutide starts at $169/month. Tirzepatide starts at $239/month. No hidden fees.</p></details>
-        <details class="fi"><summary class="fq">What is the difference between semaglutide and tirzepatide?</summary><p class="fa">Semaglutide activates the GLP-1 receptor — helping regulate appetite, gastric emptying, and blood sugar. Tirzepatide activates both GLP-1 and GIP receptors, a dual mechanism that clinical trials showed may produce greater average weight reduction for some patients. Your provider will recommend the right starting point.</p></details>
-        <details class="fi"><summary class="fq">Are these medications FDA-approved?</summary><p class="fa">Compounded semaglutide and tirzepatide are not FDA-approved finished drug products. They are prepared by licensed 503B outsourcing facilities — federally registered compounding pharmacies operating under CGMP standards — and prescribed at the independent clinical judgment of a licensed physician.</p></details>
-        <details class="fi"><summary class="fq">Where are the medications made?</summary><p class="fa">All Foundry RX compounds are US-made at 503B-certified outsourcing facilities, batch-tested above 99.9% purity before shipping. We do not source from overseas compounders or unverified pharmacies.</p></details>
-        <details class="fi"><summary class="fq">How much weight can I expect to lose?</summary><p class="fa">Clinical trials of brand-name semaglutide showed average weight loss of approximately 15% of body weight over 68 weeks with lifestyle modifications. Tirzepatide trials showed up to 22% average reduction. Individual results vary based on starting weight, adherence, and titration.</p></details>
-        <details class="fi"><summary class="fq">What states do you serve?</summary><p class="fa">Foundry RX operates in all 50 states through a network of licensed telehealth providers. Medication ships directly from our certified 503B pharmacy to your door.</p></details>
-        <details class="fi"><summary class="fq">What is NAD+ and how does it work with GLP-1?</summary><p class="fa">NAD+ (Nicotinamide Adenine Dinucleotide) is a coenzyme involved in cellular energy production, DNA repair, and mitochondrial function. Levels naturally decline with age. NAD+ therapy is often combined with GLP-1 programs to support metabolism and reduce the fatigue that can accompany caloric restriction during weight loss. Your provider will determine whether combination therapy is appropriate for your profile.</p></details>
+        <details class="fi"><summary class="fq">What is included in the price?</summary><p class="fa">Physician consultation, personalized protocol, dose titration, unlimited follow-up, and discreet US shipping. Semaglutide $169/mo. Tirzepatide $239/mo. No hidden fees.</p></details>
+        <details class="fi"><summary class="fq">What is the difference between semaglutide and tirzepatide?</summary><p class="fa">Semaglutide targets the GLP-1 receptor. Tirzepatide targets both GLP-1 and GIP — a dual mechanism that showed higher average weight reduction in trials for some patients. Your provider recommends the right one.</p></details>
+        <details class="fi"><summary class="fq">Are these medications FDA-approved?</summary><p class="fa">Compounded semaglutide and tirzepatide are not FDA-approved finished drug products. They are prepared by licensed 503B outsourcing facilities and prescribed at the clinical judgment of a licensed physician.</p></details>
+        <details class="fi"><summary class="fq">Where are the medications made?</summary><p class="fa">US-made at 503B-certified outsourcing facilities, batch-tested above 99.9% purity. We do not source from overseas compounders.</p></details>
+        <details class="fi"><summary class="fq">How much weight can I expect to lose?</summary><p class="fa">Clinical trials showed ~15% average reduction with semaglutide and up to 22% with tirzepatide over 68 weeks with lifestyle changes. Individual results vary.</p></details>
+        <details class="fi"><summary class="fq">What states do you serve?</summary><p class="fa">All 50 states through our licensed telehealth network. Medication ships directly to your door.</p></details>
+        <details class="fi"><summary class="fq">What is NAD+ and how does it work with GLP-1?</summary><p class="fa">NAD+ supports cellular energy, DNA repair, and metabolism. It's often paired with GLP-1 programs to reduce fatigue during caloric restriction. Your provider determines if it's appropriate for your protocol.</p></details>
       </div>
     </div>
   </div>
@@ -826,7 +827,7 @@ a:focus-visible,button:focus-visible{
         <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11" stroke="#B89A5E" stroke-width="1.2"/><line x1="1" y1="6" x2="11" y2="6" stroke="#B89A5E" stroke-width="1.2"/></svg>
         Foundry RX
       </div>
-      <p class="foot-desc">Physician-formulated GLP-1 &amp; peptide protocols. US-licensed physicians. 503B-certified compounds. No waiting rooms.</p>
+      <p class="foot-desc">Physician-formulated GLP-1 &amp; NAD+ protocols. US-licensed physicians. 503B-certified compounds. No waiting rooms.</p>
       <div class="foot-social">
         <a class="foot-ig" href="https://instagram.com/foundryrx" target="_blank" rel="noopener">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
