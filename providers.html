@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google Tag Manager --><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start":new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src="https://www.googletagmanager.com/gtm.js?id="+i+dl;f.parentNode.insertBefore(j,f);})(window,document,"script","dataLayer","GTM-TPPL2BGK");<\/script><!-- End Google Tag Manager -->
+<!-- Google Tag Manager --><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start":new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src="https://www.googletagmanager.com/gtm.js?id="+i+dl;f.parentNode.insertBefore(j,f);})(window,document,"script","dataLayer","GTM-TPPL2BGK");</script><!-- End Google Tag Manager -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Our Providers — Board-Certified Physicians | Foundry RX</title>
@@ -26,8 +26,31 @@
     "@type": "MedicalOrganization",
     "name": "Foundry RX",
     "url": "https://foundryrx.co/providers",
-    "description": "Physician-supervised GLP-1 and peptide telehealth. US-licensed providers. 503B-certified compounds.",
-    "medicalSpecialty": "GeneralPractice",
+    "description": "Physician-supervised GLP-1 and peptide telehealth. US-licensed providers. 503B-certified compounds. Serving all 50 states.",
+    "medicalSpecialty": ["GeneralPractice", "Endocrinology"],
+    "areaServed": [
+      "Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut","Delaware",
+      "Florida","Georgia","Hawaii","Idaho","Illinois","Indiana","Iowa","Kansas","Kentucky",
+      "Louisiana","Maine","Maryland","Massachusetts","Michigan","Minnesota","Mississippi",
+      "Missouri","Montana","Nebraska","Nevada","New Hampshire","New Jersey","New Mexico",
+      "New York","North Carolina","North Dakota","Ohio","Oklahoma","Oregon","Pennsylvania",
+      "Rhode Island","South Carolina","South Dakota","Tennessee","Texas","Utah","Vermont",
+      "Virginia","Washington","West Virginia","Wisconsin","Wyoming","Washington D.C."
+    ],
+    "employee": [
+      {
+        "@type": "Person",
+        "name": "Theresa Vergara",
+        "jobTitle": "DNP, AGACNP-BC — Lead Clinician",
+        "identifier": "NPI: 1144870056"
+      },
+      {
+        "@type": "Person",
+        "name": "Arnold Cruz",
+        "jobTitle": "DO — Medical Director",
+        "identifier": "NPI: 1487682514"
+      }
+    ],
     "availableService": {
       "@type": "MedicalTherapy",
       "name": "GLP-1 Weight Loss & Peptide Protocols"
@@ -50,7 +73,9 @@
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { max-width: 100%; overflow-x: hidden; }
     html { scroll-behavior: smooth; }
+    img, video, svg { max-width: 100%; height: auto; display: block; }
     body {
       background-color: var(--bone);
       color: var(--ink);
@@ -518,6 +543,102 @@
       text-align: right;
     }
 
+    /* STATES SERVED */
+    .states-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 48px;
+      border-top: 1px solid var(--border);
+    }
+    .states-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 40px;
+      margin-bottom: 48px;
+      flex-wrap: wrap;
+    }
+    .states-header-left { max-width: 480px; }
+    .states-eyebrow {
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .states-eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 32px;
+      height: 1px;
+      background: var(--gold);
+    }
+    .states-h2 {
+      font-family: var(--sans);
+      font-size: clamp(24px, 2.8vw, 36px);
+      font-weight: 400;
+      line-height: 1.1;
+      color: var(--ink);
+      margin-bottom: 12px;
+    }
+    .states-h2 em { font-style: italic; color: var(--gold); }
+    .states-sub {
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+    .states-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--ink);
+      color: var(--bone);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 12px 22px;
+      border-radius: 32px;
+      white-space: nowrap;
+      align-self: flex-start;
+      flex-shrink: 0;
+    }
+    .states-badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #5bb85b;
+      flex-shrink: 0;
+    }
+    .states-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 0 12px;
+    }
+    .state-item {
+      font-size: 12.5px;
+      font-weight: 300;
+      color: var(--muted);
+      padding: 9px 0;
+      border-bottom: 1px solid var(--border);
+      letter-spacing: 0.01em;
+      line-height: 1.3;
+    }
+    .states-footnote {
+      margin-top: 24px;
+      font-size: 11.5px;
+      color: var(--muted);
+      font-weight: 300;
+      line-height: 1.6;
+    }
+    .states-footnote a { color: var(--gold); text-decoration: none; }
+    .states-footnote a:hover { text-decoration: underline; }
+
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
@@ -526,16 +647,25 @@
     @media (max-width: 768px) {
       nav { padding: 0 24px; }
       .nav-links { display: none; }
-      .hero { padding: 120px 24px 60px; }
+      .hero { padding: 40px 24px 52px; }
       .credentials-bar { padding: 32px 24px; flex-direction: column; gap: 24px; }
       .providers-section { padding: 60px 24px 80px; }
       .providers-grid { grid-template-columns: 1fr; }
-      .provider-card { padding: 40px 32px; }
+      .provider-card { padding: 40px 28px; }
       .infra-section { padding: 60px 24px; }
       .infra-inner { grid-template-columns: 1fr; gap: 48px; }
+      .states-section { padding: 52px 24px; }
+      .states-header { flex-direction: column; gap: 20px; }
+      .states-grid { grid-template-columns: repeat(2, 1fr); gap: 0 16px; }
+      .states-badge { align-self: flex-start; }
       .cta-section { padding: 80px 24px; }
       footer { padding: 32px 24px; flex-direction: column; gap: 20px; text-align: center; }
       .footer-disclaimer { text-align: center; }
+    }
+
+    @media (max-width: 480px) {
+      .states-grid { grid-template-columns: repeat(2, 1fr); }
+      .state-item { font-size: 12px; }
     }
   </style>
 </head>
@@ -664,6 +794,77 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </section>
 
+  <!-- STATES SERVED -->
+  <section class="states-section" id="states-served">
+    <div class="states-header">
+      <div class="states-header-left">
+        <div class="states-eyebrow">Coverage</div>
+        <h2 class="states-h2">Available in all <em>50 states.</em></h2>
+        <p class="states-sub">Foundry RX provides telehealth services to patients across the United States through a network of licensed providers holding active state telemedicine registrations. Clinical services are delivered via our telehealth platform partner, Uniloop LLC.</p>
+      </div>
+      <div class="states-badge">
+        <span class="states-badge-dot"></span>
+        All 50 states + D.C.
+      </div>
+    </div>
+
+    <div class="states-grid">
+      <div class="state-item">Alabama</div>
+      <div class="state-item">Alaska</div>
+      <div class="state-item">Arizona</div>
+      <div class="state-item">Arkansas</div>
+      <div class="state-item">California</div>
+      <div class="state-item">Colorado</div>
+      <div class="state-item">Connecticut</div>
+      <div class="state-item">Delaware</div>
+      <div class="state-item">Florida</div>
+      <div class="state-item">Georgia</div>
+      <div class="state-item">Hawaii</div>
+      <div class="state-item">Idaho</div>
+      <div class="state-item">Illinois</div>
+      <div class="state-item">Indiana</div>
+      <div class="state-item">Iowa</div>
+      <div class="state-item">Kansas</div>
+      <div class="state-item">Kentucky</div>
+      <div class="state-item">Louisiana</div>
+      <div class="state-item">Maine</div>
+      <div class="state-item">Maryland</div>
+      <div class="state-item">Massachusetts</div>
+      <div class="state-item">Michigan</div>
+      <div class="state-item">Minnesota</div>
+      <div class="state-item">Mississippi</div>
+      <div class="state-item">Missouri</div>
+      <div class="state-item">Montana</div>
+      <div class="state-item">Nebraska</div>
+      <div class="state-item">Nevada</div>
+      <div class="state-item">New Hampshire</div>
+      <div class="state-item">New Jersey</div>
+      <div class="state-item">New Mexico</div>
+      <div class="state-item">New York</div>
+      <div class="state-item">North Carolina</div>
+      <div class="state-item">North Dakota</div>
+      <div class="state-item">Ohio</div>
+      <div class="state-item">Oklahoma</div>
+      <div class="state-item">Oregon</div>
+      <div class="state-item">Pennsylvania</div>
+      <div class="state-item">Rhode Island</div>
+      <div class="state-item">South Carolina</div>
+      <div class="state-item">South Dakota</div>
+      <div class="state-item">Tennessee</div>
+      <div class="state-item">Texas</div>
+      <div class="state-item">Utah</div>
+      <div class="state-item">Vermont</div>
+      <div class="state-item">Virginia</div>
+      <div class="state-item">Washington</div>
+      <div class="state-item">West Virginia</div>
+      <div class="state-item">Wisconsin</div>
+      <div class="state-item">Wyoming</div>
+      <div class="state-item">Washington D.C.</div>
+    </div>
+
+    <p class="states-footnote">Services are not available outside the United States. Provider availability may vary by jurisdiction. For questions about your state, contact <a href="mailto:members@foundryrx.co">members@foundryrx.co</a>. See our <a href="privacy.html">Privacy Policy</a> for additional jurisdiction information.</p>
+  </section>
+
   <!-- INFRASTRUCTURE -->
   <div class="infra-section">
     <div class="infra-inner">
@@ -692,9 +893,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
 
   <!-- FOOTER -->
-  <footer>
-    <div class="footer-logo">Foundry <span>RX</span></div>
-    <div class="footer-disclaimer">Foundry RX is not a substitute for in-person medical care. All protocols are prescribed at the discretion of a licensed clinician. Results vary by individual. &copy; 2026 Algorithm Management Inc. DBA Foundry RX.</div>
+  <footer style="border-top:1px solid var(--border);padding:40px 48px;background:#fff;">
+    <div style="max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;">
+      <div style="font-family:var(--sans);font-size:13px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;display:flex;align-items:center;gap:9px;color:var(--ink);">
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11" stroke="#B89A5E" stroke-width="1.2"/><line x1="1" y1="6" x2="11" y2="6" stroke="#B89A5E" stroke-width="1.2"/></svg>
+        Foundry RX
+      </div>
+      <div style="display:flex;gap:28px;flex-wrap:wrap;">
+        <a href="providers.html" style="font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.04em;text-decoration:none;transition:color .2s;">Providers</a>
+        <a href="faq.html" style="font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.04em;text-decoration:none;">FAQ</a>
+        <a href="privacy.html" style="font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.04em;text-decoration:none;">Privacy</a>
+        <a href="https://patient-foundry-rx.uniloop.co/patient/login" target="_blank" style="font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.04em;text-decoration:none;">Member login</a>
+      </div>
+    </div>
+    <div style="max-width:1200px;margin:20px auto 0;padding-top:20px;border-top:1px solid var(--border);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+      <span style="font-family:var(--sans);font-size:11.5px;color:var(--muted);">&copy; 2026 Algorithm Management Inc DBA Foundry RX. All rights reserved.</span>
+      <span style="font-family:var(--sans);font-size:11px;color:var(--muted);font-weight:300;">Foundry RX is not a substitute for in-person medical care. Results vary by individual.</span>
+    </div>
   </footer>
 
 </body>
