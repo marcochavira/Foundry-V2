@@ -138,87 +138,6 @@ nav{background:#fff;border-bottom:1px solid var(--border);display:flex;align-ite
   )
 }
 
-/* HOW IT WORKS — polished feature-card art direction */
-.hiw{padding:76px 52px 88px}
-.hiw-head{max-width:var(--max);margin:0 auto 42px}
-.hiw-cards{
-  max-width:1440px;
-  margin:0 auto;
-  display:grid;
-  grid-template-columns:repeat(4,minmax(0,1fr));
-  gap:18px;
-  align-items:stretch;
-}
-.hwcard{
-  height:auto;
-  min-height:0;
-  aspect-ratio:0.78;
-  border-radius:22px;
-  overflow:hidden;
-  position:relative;
-  background:#eee8df;
-  border:1px solid rgba(13,12,10,.06);
-  box-shadow:0 18px 48px rgba(13,12,10,.07);
-}
-.hwcard-photo{
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  background-repeat:no-repeat!important;
-  transform:translateZ(0);
-  filter:saturate(.96) contrast(.98);
-}
-/* Card 1: zoom OUT so the subject has room and does not feel cropped */
-.hwcard-photo--message{
-  background-size:auto 88%!important;
-  background-position:center 63%!important;
-  background-color:#eeeae3!important;
-}
-/* Card 2: zoom IN, but keep the progress UI centered and premium */
-.hwcard-photo--progress{
-  background-size:116% auto!important;
-  background-position:center 52%!important;
-  background-color:#e7dfd3!important;
-}
-/* Card 3: product trio should sit centered with breathing room */
-.hwcard-photo--product{
-  background-size:86% auto!important;
-  background-position:center 53%!important;
-  background-color:#030303!important;
-}
-/* Card 4: shipping image stays soft and full-bleed */
-.hwcard-photo--shipping{
-  background-size:112% auto!important;
-  background-position:center 52%!important;
-  background-color:#f2eee7!important;
-}
-.hwcard-gradient{
-  position:absolute;
-  inset:0;
-  background:linear-gradient(180deg,rgba(0,0,0,.50) 0%,rgba(0,0,0,.08) 38%,rgba(0,0,0,.04) 100%);
-}
-.hwcard-gradient--light{
-  position:absolute;
-  inset:0;
-  background:linear-gradient(180deg,rgba(255,255,255,.34) 0%,rgba(255,255,255,.08) 40%,rgba(255,255,255,.02) 100%);
-}
-.hwcard-label{
-  position:absolute;
-  top:26px;
-  left:28px;
-  right:24px;
-  z-index:2;
-}
-.hwcard-label h3{
-  font-size:16px;
-  font-weight:500;
-  line-height:1.2;
-  letter-spacing:-.018em;
-  margin:0;
-  text-wrap:balance;
-}
-
 /* Badge */
 .hero-photo-badge{position:absolute;top:18px;right:18px;background:rgba(255,255,255,.93);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-radius:12px;padding:9px 14px;display:flex;align-items:center;gap:8px;box-shadow:0 4px 20px rgba(0,0,0,.1);z-index:3}
 .hero-badge-dot{width:7px;height:7px;border-radius:50%;background:#3a7a3a;flex-shrink:0;animation:pulse 2s ease-in-out infinite}
@@ -294,44 +213,6 @@ nav{background:#fff;border-bottom:1px solid var(--border);display:flex;align-ite
 .hwcard-gradient--light{position:absolute;inset:0;background:linear-gradient(160deg,rgba(0,0,0,.3) 0%,transparent 55%)}
 .hwcard-label{position:absolute;top:20px;left:20px;right:20px;z-index:2}
 .hwcard-label h3{font-size:15px;font-weight:500;line-height:1.3;letter-spacing:-.01em;margin:0}
-
-/* HOW IT WORKS — refined image art direction */
-.hiw-cards{gap:12px;align-items:stretch}
-.hwcard{
-  aspect-ratio:3/4;
-  height:auto;
-  min-height:390px;
-  border-radius:22px;
-  background:#ece7de;
-  border:1px solid rgba(13,12,10,.06);
-  box-shadow:0 10px 34px rgba(13,12,10,.045);
-  isolation:isolate;
-}
-.hwcard-photo{transform:translateZ(0);filter:saturate(.96) contrast(.98)}
-.hwcard-photo--message{
-  background-size:auto 96% !important;
-  background-position:center bottom !important;
-  background-color:#ece8df !important;
-}
-.hwcard-photo--progress{
-  background-size:124% auto !important;
-  background-position:center 46% !important;
-  background-color:#c9c5ba !important;
-}
-.hwcard-photo--product{
-  background-size:82% auto !important;
-  background-position:center 54% !important;
-  background-color:#030302 !important;
-}
-.hwcard-photo--shipping{
-  background-size:116% auto !important;
-  background-position:center 42% !important;
-  background-color:#f4f1eb !important;
-}
-.hwcard-gradient{background:linear-gradient(180deg,rgba(0,0,0,.52) 0%,rgba(0,0,0,.08) 42%,rgba(0,0,0,.10) 100%)}
-.hwcard-gradient--light{background:linear-gradient(180deg,rgba(255,255,255,.48) 0%,rgba(255,255,255,.10) 46%,rgba(255,255,255,.04) 100%)}
-.hwcard-label{top:24px;left:24px;right:24px}
-.hwcard-label h3{font-size:16px;letter-spacing:-.015em;text-wrap:balance}
 
 /* DOCTOR */
 .doctor{background:var(--bone);padding:64px}
@@ -473,7 +354,7 @@ footer{background:#070504;padding:52px 64px 28px}
 
 /* Respect reduced motion */
 @media(prefers-reduced-motion:reduce){
-  .hero-card-inner img,.hwcard-photo{transition:none!important;animation:none!important}
+  .intro,.products,.proof-strip,.hiw,.doctor,
 }
 
 /* Apple-style focus rings */
@@ -501,8 +382,8 @@ a:focus-visible,button:focus-visible{
   .proof-photo-img{object-position:center 25%}
   .proof-stats{gap:0}
   .hiw{padding:52px 24px}
-  .hiw-cards{grid-template-columns:1fr 1fr;gap:12px}
-  .hwcard{height:auto;min-height:0;aspect-ratio:.82}
+  .hiw-cards{grid-template-columns:1fr 1fr;gap:8px}
+  .hwcard{height:280px}
   .doctor{padding:48px 24px}
   .doctor-card{grid-template-columns:1fr;gap:24px;padding:28px 24px}
   .doc-badges{flex-direction:row;flex-wrap:wrap}
@@ -520,85 +401,6 @@ a:focus-visible,button:focus-visible{
   .sticky-cta-bar{display:flex}
   body{padding-bottom:72px}
 }
-
-@media(max-width:640px){
-  .hiw-cards{grid-template-columns:1fr;gap:14px}
-  .hwcard{aspect-ratio:.86}
-  .hwcard-photo--message{background-size:auto 84%!important;background-position:center 62%!important}
-  .hwcard-photo--progress{background-size:108% auto!important;background-position:center 52%!important}
-  .hwcard-photo--product{background-size:78% auto!important}
-}
-
-
-/* FINAL FIX — clean, uniform How It Works cards */
-.hiw{padding:0 32px 72px}
-.hiw-head{margin:0 0 28px 0}
-.hiw-cards{
-  display:grid !important;
-  grid-template-columns:repeat(4,minmax(0,1fr)) !important;
-  gap:14px !important;
-  align-items:stretch !important;
-}
-.hiw .hwcard{
-  position:relative !important;
-  overflow:hidden !important;
-  min-height:540px !important;
-  height:540px !important;
-  aspect-ratio:auto !important;
-  border-radius:24px !important;
-  background:#ece7e0 !important;
-  box-shadow:0 8px 28px rgba(19,19,19,.06) !important;
-}
-.hiw .hwcard-photo{
-  position:absolute !important;
-  inset:0 !important;
-  width:100% !important;
-  height:100% !important;
-  background-repeat:no-repeat !important;
-  background-position:center center !important;
-  background-size:cover !important;
-}
-.hiw .hwcard-photo--message{
-  background-size:102% auto !important;
-  background-position:center 18% !important;
-}
-.hiw .hwcard-photo--progress{
-  background-size:126% auto !important;
-  background-position:center 42% !important;
-}
-.hiw .hwcard-photo--product{
-  background-size:122% auto !important;
-  background-position:center 58% !important;
-}
-.hiw .hwcard-photo--shipping{
-  background-size:126% auto !important;
-  background-position:center 52% !important;
-}
-.hiw .hwcard-gradient{background:linear-gradient(180deg,rgba(0,0,0,.34) 0%,rgba(0,0,0,.06) 34%,rgba(0,0,0,.12) 100%) !important}
-.hiw .hwcard-gradient--light{background:linear-gradient(180deg,rgba(255,255,255,.24) 0%,rgba(255,255,255,.04) 48%,rgba(255,255,255,.02) 100%) !important}
-.hiw .hwcard-label{
-  position:absolute !important;
-  top:24px !important;
-  left:24px !important;
-  right:24px !important;
-  z-index:2 !important;
-}
-.hiw .hwcard-label h3{
-  margin:0 !important;
-  font-size:18px !important;
-  line-height:1.2 !important;
-  font-weight:500 !important;
-  letter-spacing:-.02em !important;
-}
-@media (max-width: 1100px){
-  .hiw-cards{grid-template-columns:repeat(2,minmax(0,1fr)) !important}
-}
-@media (max-width: 720px){
-  .hiw{padding:0 20px 56px}
-  .hiw-cards{grid-template-columns:1fr !important;gap:12px !important}
-  .hiw .hwcard{min-height:460px !important;height:460px !important}
-}
-
 </style>
 </head>
 <body>
@@ -820,33 +622,38 @@ a:focus-visible,button:focus-visible{
 <!-- HOW IT WORKS — Ro-style feature cards -->
 <section class="hiw" id="how-it-works">
   <h2 class="hiw-head">100% online.<br><em>Physician-supervised.</em></h2>
-  <div class="hiw-cards">
+    <div class="hiw-cards">
 
-    <div class="hwcard hwcard--message">
-      <div class="hwcard-photo hwcard-photo--message" style="background-image:url('message-provider.jpg');"></div>
+    <!-- Card 1: Message your provider — jump rope -->
+    <div class="hwcard">
+      <div class="hwcard-photo" style="background-image:url('/images/hw-card-1.jpg');background-size:cover;background-position:center 15%"></div>
       <div class="hwcard-gradient"></div>
-      <div class="hwcard-label"><h3>Message your provider</h3></div>
+      <div class="hwcard-label"><h3 style="color:#fff">Message your provider</h3></div>
     </div>
 
-    <div class="hwcard hwcard--progress">
-      <div class="hwcard-photo hwcard-photo--progress" style="background-image:url('card2.png');"></div>
+    <!-- Card 2: Track your progress — app mockup -->
+    <div class="hwcard">
+      <div class="hwcard-photo" style="background-image:url('/images/hw-card-2.png');background-color:#e8e2d8;background-size:80%;background-position:center center;background-repeat:no-repeat"></div>
       <div class="hwcard-gradient--light"></div>
       <div class="hwcard-label"><h3 style="color:var(--ink)">Track your progress</h3></div>
     </div>
 
-    <div class="hwcard hwcard--product">
-      <div class="hwcard-photo hwcard-photo--product" style="background-image:url('card3.png');"></div>
+    <!-- Card 3: US-made 503B — vials -->
+    <div class="hwcard">
+      <div class="hwcard-photo" style="background-image:url('/images/hw-card-3.png');background-color:#0a0906;background-size:75%;background-position:center center;background-repeat:no-repeat"></div>
       <div class="hwcard-gradient"></div>
-      <div class="hwcard-label"><h3>US-made · 503B certified</h3></div>
+      <div class="hwcard-label"><h3 style="color:#fff">US-made · 503B certified</h3></div>
     </div>
 
-    <div class="hwcard hwcard--shipping">
-      <div class="hwcard-photo hwcard-photo--shipping" style="background-image:url('card4.png');"></div>
+    <!-- Card 4: Fast discreet shipping -->
+    <div class="hwcard">
+      <div class="hwcard-photo" style="background-image:url('/images/hw-card-4.png');background-color:#f0ece4;background-size:cover;background-position:center center"></div>
       <div class="hwcard-gradient--light"></div>
       <div class="hwcard-label"><h3 style="color:var(--ink)">Fast, discreet shipping</h3></div>
     </div>
 
   </div>
+
 </section>
 
 <!-- DOCTOR -->
