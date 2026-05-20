@@ -204,13 +204,12 @@ nav{background:#fff;border-bottom:1px solid var(--border);display:flex;align-ite
 .hiw{background:#fff;padding:80px 52px}
 .hiw-head{max-width:var(--max);margin:0 auto 44px;font-size:clamp(28px,3.2vw,44px);font-weight:400;line-height:1.06;letter-spacing:-.028em;color:var(--ink)}
 .hiw-head em{font-style:italic;font-weight:300;color:var(--soft)}
-.hiw-cards{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:10px}
-
-/* Card: full-bleed image, text top-left */
-.hwcard{border-radius:16px;overflow:hidden;height:420px;position:relative;cursor:default;background:#0a0906}
-.hwcard-photo{position:absolute;inset:0;background-size:cover;background-position:center;background-repeat:no-repeat;width:100%;height:100%}
-.hwcard-gradient{position:absolute;inset:0;background:linear-gradient(160deg,rgba(0,0,0,.55) 0%,transparent 60%)}
-.hwcard-gradient--light{position:absolute;inset:0;background:linear-gradient(160deg,rgba(0,0,0,.3) 0%,transparent 55%)}
+.hiw-cards{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.hwcard{border-radius:16px;overflow:hidden;height:420px;position:relative;cursor:default}
+.hwcard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+.hwcard img.contain{object-fit:contain;padding:24px}
+.hwcard-gradient{position:absolute;inset:0;background:linear-gradient(160deg,rgba(0,0,0,.5) 0%,transparent 55%)}
+.hwcard-gradient--light{position:absolute;inset:0;background:linear-gradient(160deg,rgba(0,0,0,.25) 0%,transparent 50%)}
 .hwcard-label{position:absolute;top:20px;left:20px;right:20px;z-index:2}
 .hwcard-label h3{font-size:15px;font-weight:500;line-height:1.3;letter-spacing:-.01em;margin:0}
 
@@ -619,41 +618,39 @@ a:focus-visible,button:focus-visible{
   </div>
 </section>
 
-<!-- HOW IT WORKS — Ro-style feature cards -->
+<!-- HOW IT WORKS -->
 <section class="hiw" id="how-it-works">
   <h2 class="hiw-head">100% online.<br><em>Physician-supervised.</em></h2>
-    <div class="hiw-cards">
+  <div class="hiw-cards">
 
-    <!-- Card 1: Message your provider — jump rope -->
-    <div class="hwcard">
-      <div class="hwcard-photo" style="background-image:url('/hw-card-1.jpg');background-size:cover;background-position:center 15%"></div>
+    <!-- Card 1: Message your provider -->
+    <div class="hwcard" style="background:#b0a898">
+      <img src="/hw-card-1.jpg" alt="Message your provider">
       <div class="hwcard-gradient"></div>
       <div class="hwcard-label"><h3 style="color:#fff">Message your provider</h3></div>
     </div>
 
-    <!-- Card 2: Track your progress — app mockup -->
-    <div class="hwcard">
-      <div class="hwcard-photo" style="background-image:url('/hw-card-2.png');background-color:#e8e2d8;background-size:80%;background-position:center center;background-repeat:no-repeat"></div>
-      <div class="hwcard-gradient--light"></div>
+    <!-- Card 2: Track your progress -->
+    <div class="hwcard" style="background:#e8e2d8">
+      <img src="/chatgpt-app-mockup.png" alt="Track your progress" class="contain">
       <div class="hwcard-label"><h3 style="color:var(--ink)">Track your progress</h3></div>
     </div>
 
-    <!-- Card 3: US-made 503B — vials -->
-    <div class="hwcard">
-      <div class="hwcard-photo" style="background-image:url('/hw-card-3.png');background-color:#0a0906;background-size:75%;background-position:center center;background-repeat:no-repeat"></div>
+    <!-- Card 3: US-made 503B certified -->
+    <div class="hwcard" style="background:#0a0906">
+      <img src="/chatgpt-vials.png" alt="US-made 503B certified">
       <div class="hwcard-gradient"></div>
       <div class="hwcard-label"><h3 style="color:#fff">US-made · 503B certified</h3></div>
     </div>
 
     <!-- Card 4: Fast discreet shipping -->
-    <div class="hwcard">
-      <div class="hwcard-photo" style="background-image:url('/hw-card-4.png');background-color:#f0ece4;background-size:cover;background-position:center center"></div>
+    <div class="hwcard" style="background:#f0ece4">
+      <img src="/chatgpt-shipping.png" alt="Fast discreet shipping">
       <div class="hwcard-gradient--light"></div>
       <div class="hwcard-label"><h3 style="color:var(--ink)">Fast, discreet shipping</h3></div>
     </div>
 
   </div>
-
 </section>
 
 <!-- DOCTOR -->
