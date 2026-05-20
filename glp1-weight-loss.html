@@ -395,7 +395,8 @@ a:focus-visible,button:focus-visible{
 .hiw-cards{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
 .hwcard{border-radius:16px;overflow:hidden;height:420px;position:relative}
 .hwcard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block}
-.hwcard img.contain{object-fit:contain;padding:28px}
+.hwcard img.contain{object-fit:contain;padding:20px;background:transparent}
+.hwcard img.zoom-out{object-fit:cover;object-position:center 30%;transform:scale(0.85);transform-origin:center center}
 .hwcard-grad{position:absolute;inset:0;background:linear-gradient(160deg,rgba(0,0,0,.5) 0%,transparent 55%)}
 .hwcard-grad--light{position:absolute;inset:0;background:linear-gradient(160deg,rgba(0,0,0,.28) 0%,transparent 50%)}
 .hwcard-label{position:absolute;top:20px;left:20px;right:20px;z-index:2}
@@ -623,25 +624,29 @@ a:focus-visible,button:focus-visible{
   <h2 class="hiw-head">100% online.<br><em>Physician-supervised.</em></h2>
   <div class="hiw-cards">
 
-    <div class="hwcard" style="background:#b8b0a4">
-      <img src="/hw-card-1.jpg" alt="Message your provider">
+    <!-- Card 1: woman jumping rope — pull back, show body not just face -->
+    <div class="hwcard" style="background:#c4bdb5">
+      <img src="/hw-card-1.jpg" alt="Message your provider" style="object-fit:cover;object-position:center 15%;transform:scale(0.92);transform-origin:center top">
       <div class="hwcard-grad"></div>
       <div class="hwcard-label"><h3 style="color:#fff">Message your provider</h3></div>
     </div>
 
-    <div class="hwcard" style="background:#e8e2d8">
-      <img src="/chatgpt-app-mockup.png" alt="Track your progress" class="contain">
+    <!-- Card 2: app mockup — centered with breathing room, label on dark top bar -->
+    <div class="hwcard" style="background:#ede8e0">
+      <img src="/chatgpt-app-mockup.png" alt="Track your progress" style="object-fit:contain;object-position:center 55%;padding:16px 20px 0">
       <div class="hwcard-label"><h3 style="color:var(--ink)">Track your progress</h3></div>
     </div>
 
-    <div class="hwcard" style="background:#0a0906">
-      <img src="/chatgpt-vials.png" alt="US-made · 503B certified">
+    <!-- Card 3: vials — zoom out to show full bottles, no cropping -->
+    <div class="hwcard" style="background:#0d0b09">
+      <img src="/chatgpt-vials.png" alt="US-made · 503B certified" style="object-fit:contain;object-position:center 60%;padding:20px 12px 0">
       <div class="hwcard-grad"></div>
       <div class="hwcard-label"><h3 style="color:#fff">US-made · 503B certified</h3></div>
     </div>
 
-    <div class="hwcard" style="background:#f0ece4">
-      <img src="/chatgpt-shipping.png" alt="Fast, discreet shipping">
+    <!-- Card 4: shipping bag — cover, anchor bottom so bag fills frame naturally -->
+    <div class="hwcard" style="background:#f2ede6">
+      <img src="/chatgpt-shipping.png" alt="Fast, discreet shipping" style="object-fit:cover;object-position:center center">
       <div class="hwcard-grad--light"></div>
       <div class="hwcard-label"><h3 style="color:var(--ink)">Fast, discreet shipping</h3></div>
     </div>
