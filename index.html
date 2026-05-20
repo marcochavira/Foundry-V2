@@ -192,9 +192,10 @@ html,body{max-width:100%;overflow-x:hidden}
 
 /* Hero cards */
 .hero-cards{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:0 52px 48px;max-width:var(--max);margin:0 auto}
-.hcard{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:16/9;display:block;cursor:pointer}
+.hcard{position:relative;border-radius:14px;overflow:hidden;min-height:420px;display:block;cursor:pointer}
 .hp{position:absolute;inset:0;background-size:cover;transition:transform .65s cubic-bezier(.22,.44,.44,1)}
 .hcard:hover .hp{transform:scale(1.04)}
+.hcard img.himg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
 .hs{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.38) 0%,rgba(0,0,0,.02) 35%,rgba(0,0,0,.02) 60%,rgba(0,0,0,.52) 100%)}
 .hcard-body{position:absolute;bottom:0;left:0;right:0;z-index:2;padding:22px 24px}
 .hcard-body--top{top:0;bottom:auto;padding:22px 24px 0}
@@ -583,7 +584,13 @@ footer{background:#070504;padding:56px 52px 28px}
   .nav-links{display:none}
   .hero-hdr{grid-template-columns:1fr;padding:36px 24px 28px;gap:24px}
   .hero-cards{grid-template-columns:1fr;padding:0 4px;gap:4px}
-  .hcard{aspect-ratio:4/3;border-radius:14px}
+  .hcard{min-height:300px;border-radius:14px}
+  .hiw{padding:60px 24px}
+  .hiw-cards{grid-template-columns:1fr 1fr;gap:8px}
+  .hwcard{height:280px}
+  .doctor{padding:48px 24px}
+  .doctor-card{grid-template-columns:1fr;gap:24px;padding:28px 24px}
+  .doc-badges{flex-direction:row;flex-wrap:wrap}
   .manifesto{grid-template-columns:1fr;padding:52px 24px;gap:36px}
   .pillars{padding:52px 24px}
   .pillars-grid{grid-template-columns:1fr;gap:8px}
@@ -623,6 +630,35 @@ footer{background:#070504;padding:56px 52px 28px}
   .sec-h2{font-size:clamp(24px,6vw,32px)}
   .pc-desc{font-size:14px}
 }
+
+/* HOW IT WORKS — home page */
+.hiw{background:#fff;padding:80px 52px}
+.hiw-head{max-width:var(--max);margin:0 auto 44px;font-size:clamp(28px,3.2vw,44px);font-weight:400;line-height:1.06;letter-spacing:-.028em;color:var(--ink)}
+.hiw-head em{font-style:italic;font-weight:300;color:var(--muted)}
+.hiw-cards{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.hwcard{border-radius:16px;overflow:hidden;height:420px;position:relative}
+.hwcard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+.hwcard img.contain{object-fit:contain;padding:28px}
+.hwcard-grad{position:absolute;inset:0;background:linear-gradient(160deg,rgba(0,0,0,.5) 0%,transparent 55%)}
+.hwcard-grad--light{position:absolute;inset:0;background:linear-gradient(160deg,rgba(0,0,0,.28) 0%,transparent 50%)}
+.hwcard-label{position:absolute;top:20px;left:20px;right:20px;z-index:2}
+.hwcard-label h3{font-size:15px;font-weight:500;line-height:1.3;letter-spacing:-.01em;margin:0}
+
+
+/* DOCTOR — home page */
+.doctor{background:var(--bone);padding:64px 52px}
+.doctor-inner{max-width:var(--max);margin:0 auto}
+.doctor-card{background:#fff;border-radius:20px;padding:44px 52px;display:grid;grid-template-columns:72px 1fr auto;gap:36px;align-items:center;border:1px solid var(--border)}
+.doc-avatar{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--border),#ddd4c6);display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:400;color:var(--muted);flex-shrink:0;letter-spacing:-.01em}
+.doc-reviewed{font-size:9px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.doc-name{font-size:20px;font-weight:400;color:var(--ink);letter-spacing:-.018em;margin-bottom:3px}
+.doc-title{font-size:12px;color:var(--muted);margin-bottom:10px}
+.doc-bio{font-size:13px;color:var(--muted);line-height:1.72;max-width:460px}
+.doc-npi{font-size:10.5px;color:#bbb;margin-top:8px}
+.doc-badges{display:flex;flex-direction:column;gap:8px;flex-shrink:0}
+.doc-badge{display:flex;align-items:center;gap:8px;background:var(--bone);border:1px solid var(--border);border-radius:10px;padding:9px 14px;font-size:11px;color:var(--muted);white-space:nowrap}
+.doc-badge svg{color:var(--gold);flex-shrink:0}
+
 </style>
 </head>
 <body>
@@ -678,8 +714,9 @@ footer{background:#070504;padding:56px 52px 28px}
 </div>
 
 <div class="hero-cards">
-  <a class="hcard" href="glp1-weight-loss.html">
-    <div class="hp" style="background-image:url('p-beach-glow.jpg');background-position:center 28%"></div>
+  <!-- Card 1: Beach glow — face+chest centered, anchor at 45% -->
+  <a class="hcard" href="glp1-weight-loss.html" style="background:#c8b89a">
+    <img class="himg" src="p-beach-glow.jpg" alt="GLP-1 Weight Loss" style="object-position:center 45%">
     <div class="hs"></div>
     <div class="hcard-body hcard-body--top">
       <div class="hcard-tag">GLP-1 Weight Loss</div>
@@ -689,15 +726,16 @@ footer{background:#070504;padding:56px 52px 28px}
       <div class="btn-w">Explore GLP-1 &rarr;</div>
     </div>
   </a>
-  <div class="hcard" style="cursor:default">
-    <div class="hp" style="background-image:url('p-squat-woman.jpg');background-position:50% 65%"></div>
-    <div class="hs"></div>
+  <!-- Card 2: Coming soon — Youth/Sculpt protocols, warm sand bg -->
+  <div class="hcard" style="background:#e8e0d4;cursor:default">
+    <img class="himg" src="protocols-coming-soon.png" alt="Advanced Protocols" style="object-fit:cover;object-position:center 45%">
+    <div style="position:absolute;inset:0;background:linear-gradient(160deg,rgba(240,232,220,.35) 0%,transparent 45%)"></div>
     <div class="hcard-body hcard-body--top">
-      <div class="hcard-tag">Protocols</div>
-      <h2 class="hcard-title hcard-title--lg">Advanced<br>Protocols</h2>
+      <div class="hcard-tag" style="color:rgba(20,15,10,.45)">Protocols</div>
+      <h2 class="hcard-title hcard-title--lg" style="color:var(--ink)">Advanced<br>Protocols</h2>
     </div>
     <div class="hcard-cta-bottom">
-      <div class="btn-w" style="opacity:.6;cursor:default">Coming soon</div>
+      <div class="btn-w" style="opacity:.6;cursor:default;background:rgba(255,255,255,.75);backdrop-filter:blur(8px)">Coming soon</div>
     </div>
   </div>
 </div>
@@ -708,7 +746,6 @@ footer{background:#070504;padding:56px 52px 28px}
 
 <div class="manifesto">
   <div class="manifesto-left">
-    <p class="manifesto-tag">A different standard.</p>
     <h2 class="manifesto-h2">
       Modern wellness<br>
       <em>is not a trend.</em>
@@ -740,6 +777,68 @@ footer{background:#070504;padding:56px 52px 28px}
   <p class="cin-disc">Average 20% weight loss based on physician-supervised GLP-1 protocols with diet and lifestyle modifications. Individual results vary.</p>
 </div>
 
+<!-- HOW IT WORKS -->
+<section class="hiw">
+  <h2 class="hiw-head">100% online.<br><em>Physician-supervised.</em></h2>
+  <div class="hiw-cards">
+
+    <div class="hwcard" style="background:#b8b0a4">
+      <img src="hw-card-1.jpg" alt="Message your provider" style="object-fit:cover;object-position:center 22%">
+      <div class="hwcard-grad"></div>
+      <div class="hwcard-label"><h3 style="color:#fff">Message your provider</h3></div>
+    </div>
+
+    <div class="hwcard" style="background:#e3d9cc">
+      <img src="chatgpt-app-mockup.png" alt="Track your progress" style="object-fit:cover;object-position:center top">
+      <div class="hwcard-label"><h3 style="color:var(--ink)">Track your progress</h3></div>
+    </div>
+
+    <div class="hwcard" style="background:#0d0b09">
+      <img src="chatgpt-vials.png" alt="US-made · 503B certified" style="object-fit:contain;object-position:center 60%;padding:20px 12px 0">
+      <div class="hwcard-grad"></div>
+      <div class="hwcard-label"><h3 style="color:#fff">US-made · 503B certified</h3></div>
+    </div>
+
+    <div class="hwcard" style="background:#f2ede6">
+      <img src="chatgpt-shipping.png" alt="Fast, discreet shipping" style="object-fit:cover;object-position:center center">
+      <div class="hwcard-grad--light"></div>
+      <div class="hwcard-label"><h3 style="color:var(--ink)">Fast, discreet shipping</h3></div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- DOCTOR -->
+<div class="doctor">
+  <div class="doctor-inner">
+    <div class="doctor-card">
+      <div class="doc-avatar">TV</div>
+      <div>
+        <div class="doc-reviewed">Medically reviewed by</div>
+        <h2 class="doc-name">Theresa Vergara, DNP</h2>
+        <p class="doc-title">Doctor of Nursing Practice &nbsp;&middot;&nbsp; Licensed Provider, Foundry RX</p>
+        <p class="doc-bio">Specializes in metabolic health and GLP-1 protocols. Every Foundry protocol is reviewed by a licensed US provider — not an algorithm.</p>
+        <p class="doc-npi">NPI: 1144870056 &nbsp;&middot;&nbsp; Protocol reviewed May 2026 &nbsp;&middot;&nbsp; <a href="https://www.legitscript.com/" target="_blank" rel="noopener" style="color:var(--gold)">LegitScript Certified</a></p>
+      </div>
+      <div class="doc-badges">
+        <div class="doc-badge">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2 L3 6 V12 C3 17 7 21 12 22 C17 21 21 17 21 12 V6 Z"/><path d="M8 12.5 L11 15 L16.5 9.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          LegitScript
+        </div>
+        <div class="doc-badge">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 4"/></svg>
+          24hr review
+        </div>
+        <div class="doc-badge">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+          503B pharmacy
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- ==========================================
   CHAPTER 4 &mdash; THE FORMULARY
   Stacked directly under the Drop 20% banner.
@@ -754,7 +853,7 @@ footer{background:#070504;padding:56px 52px 28px}
       <div class="proto-left">
         <div class="sec-eye">The Foundry Formulary</div>
         <h2 class="sec-h2">Physician-formulated<br><em>protocols</em></h2>
-        <p>Every compound supervised by a licensed US physician. Titrated to your biology. GLP-1 and NAD+ available now — more coming.</p>
+        <p>Physician-supervised. Titrated to your biology.</p>
         <a href="glp1-weight-loss.html" class="btn-proto-all" style="text-decoration:none">View programs &rarr;</a>
       </div>
 
@@ -845,7 +944,7 @@ footer{background:#070504;padding:56px 52px 28px}
   <div class="memb-ct">
     <div class="sec-eye">The Founders</div>
     <h3 class="sec-h2">Membership,<br><em>not a transaction.</em></h3>
-    <p>Members receive physician access, the highest-quality USA-compounded protocols, complimentary delivery, and preferred pricing on every order.</p>
+    <p>Foundry RX isn't just access to medication &mdash; it's access to a physician who knows you, a protocol built around your biology, and a practice that evolves with you. No waiting rooms. No per-message fees. No one-size fits all. The membership for people who demand more from modern wellness.</p>
     <a href="https://patient-foundry-rx.uniloop.co/emr/enroll/glp-1-weight-loss" class="btn-gold" style="text-decoration:none;display:inline-block;padding:14px 28px;background:var(--gold);color:#fff;font-size:13.5px;font-weight:500;border-radius:32px;">Start now &rarr;</a>
     <p class="memb-note">First month consultation included. Physician review within 24 hours.</p>
   </div>
@@ -882,7 +981,7 @@ footer{background:#070504;padding:56px 52px 28px}
         <div class="pc-body">
           <div class="pc-tag">Oversight</div>
           <h3 class="pc-title">A protocol, not a product.</h3>
-          <div class="pc-desc">Provider review and dose guidance.</div>
+          <div class="pc-desc">Provider review.</div>
         </div>
       </div>
 
@@ -892,7 +991,7 @@ footer{background:#070504;padding:56px 52px 28px}
         <div class="pc-body">
           <div class="pc-tag">Membership</div>
           <h3 class="pc-title">Care after delivery.</h3>
-          <div class="pc-desc">Discreet shipping and ongoing support.</div>
+          <div class="pc-desc">Discreet. Ongoing.</div>
         </div>
       </div>
 
@@ -971,7 +1070,7 @@ footer{background:#070504;padding:56px 52px 28px}
     <h2 class="cb-h">Not for everyone.<br><em>Designed for you.</em></h2>
   </div>
   <div class="cb-right">
-    <p>Foundry RX is a members-only practice. Membership isn't just access to medication &mdash; it's access to a physician who knows you, a protocol built around your biology, and a practice that evolves with you.</p>
+    <p>Foundry RX isn't just access to medication &mdash; it's access to a physician who knows you, a protocol built around your biology, and a practice that evolves with you.</p>
     <p>No waiting rooms. No per-message fees. No one-size fits all. The membership for people who demand more from modern wellness.</p>
   </div>
 </div>
@@ -987,7 +1086,6 @@ footer{background:#070504;padding:56px 52px 28px}
       <h2 class="rx-journal-h">Intelligence,<br><em>not noise.</em></h2>
     </div>
     <div class="rx-journal-right">
-      <p class="rx-journal-sub">Clinical insight and protocol science for people who demand more from modern medicine.</p>
       <a href="blog.html" class="rx-journal-link">Read all articles &rarr;</a>
     </div>
   </div>
