@@ -383,7 +383,24 @@ a:focus-visible,button:focus-visible{
   .foot-grid{grid-template-columns:1fr 1fr;gap:32px}
   .sticky-cta-bar{display:flex}
   body{padding-bottom:72px}
+  .hiw{padding:60px 24px}
+  .hiw-cards{grid-template-columns:1fr 1fr;gap:8px}
+  .hwcard{height:280px}
 }
+
+/* HOW IT WORKS */
+.hiw{background:#fff;padding:80px 52px}
+.hiw-head{max-width:var(--max);margin:0 auto 44px;font-size:clamp(28px,3.2vw,44px);font-weight:400;line-height:1.06;letter-spacing:-.028em;color:var(--ink)}
+.hiw-head em{font-style:italic;font-weight:300;color:var(--soft)}
+.hiw-cards{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.hwcard{border-radius:16px;overflow:hidden;height:420px;position:relative}
+.hwcard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+.hwcard img.contain{object-fit:contain;padding:28px}
+.hwcard-grad{position:absolute;inset:0;background:linear-gradient(160deg,rgba(0,0,0,.5) 0%,transparent 55%)}
+.hwcard-grad--light{position:absolute;inset:0;background:linear-gradient(160deg,rgba(0,0,0,.28) 0%,transparent 50%)}
+.hwcard-label{position:absolute;top:20px;left:20px;right:20px;z-index:2}
+.hwcard-label h3{font-size:15px;font-weight:500;line-height:1.3;letter-spacing:-.01em;margin:0}
+
 </style>
 </head>
 <body>
@@ -596,6 +613,37 @@ a:focus-visible,button:focus-visible{
       </div>
 
       <a href="https://patient-foundry-rx.uniloop.co/emr/enroll/glp-1-weight-loss" class="btn-gold-pill">Start your protocol &rarr;</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="hiw">
+  <h2 class="hiw-head">100% online.<br><em>Physician-supervised.</em></h2>
+  <div class="hiw-cards">
+
+    <div class="hwcard" style="background:#b8b0a4">
+      <img src="/hw-card-1.jpg" alt="Message your provider">
+      <div class="hwcard-grad"></div>
+      <div class="hwcard-label"><h3 style="color:#fff">Message your provider</h3></div>
+    </div>
+
+    <div class="hwcard" style="background:#e8e2d8">
+      <img src="/chatgpt-app-mockup.png" alt="Track your progress" class="contain">
+      <div class="hwcard-label"><h3 style="color:var(--ink)">Track your progress</h3></div>
+    </div>
+
+    <div class="hwcard" style="background:#0a0906">
+      <img src="/chatgpt-vials.png" alt="US-made · 503B certified">
+      <div class="hwcard-grad"></div>
+      <div class="hwcard-label"><h3 style="color:#fff">US-made · 503B certified</h3></div>
+    </div>
+
+    <div class="hwcard" style="background:#f0ece4">
+      <img src="/chatgpt-shipping.png" alt="Fast, discreet shipping">
+      <div class="hwcard-grad--light"></div>
+      <div class="hwcard-label"><h3 style="color:var(--ink)">Fast, discreet shipping</h3></div>
     </div>
 
   </div>
