@@ -289,35 +289,40 @@ html,body{max-width:100%;overflow-x:hidden}
 .anchor a{font-size:13px;color:#999;padding:13px 18px;border-bottom:2.5px solid transparent;white-space:nowrap;transition:color .15s,border-color .15s}
 .anchor a:hover,.anchor a.on{color:#111;border-bottom-color:#111}
 
-/* == CHAPTER 5: PROTOCOLS \2014  Protocole-style ==
-   Left: section title + description copy.
-   Right: 2&times;2 grid of tall photo cards with protocol name + category.
-   Clean, editorial, no scroll needed. */
-.protocols-sec{padding:52px 52px}
+.protocols-sec{padding:64px 52px 64px}
 .protocols-inner{max-width:var(--max);margin:0 auto}
-.proto-layout{display:grid;grid-template-columns:320px 1fr;gap:64px;align-items:start;margin-top:0}
-.proto-left{}
-.proto-left .sec-eye{margin-bottom:14px}
-.proto-left .sec-h2{margin-bottom:20px}
-.proto-left p{font-size:14px;color:var(--muted);line-height:1.75;margin-bottom:32px;max-width:280px}
-.proto-left .btn-proto-all{
+
+/* Full-width header row above cards */
+.proto-header{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  margin-bottom:20px;
+  gap:24px;
+}
+.proto-header-left{}
+.proto-header-left .sec-eye{margin-bottom:10px}
+.proto-header-left .sec-h2{margin-bottom:0}
+.proto-header-right{flex-shrink:0}
+.proto-header-right .btn-proto-all{
   display:inline-flex;align-items:center;gap:8px;
   background:var(--ink);color:#fff;
   font-size:13px;font-weight:500;
   padding:12px 26px;border-radius:28px;border:none;cursor:pointer;
-  transition:background .18s;
+  transition:background .18s;text-decoration:none;
 }
-.proto-left .btn-proto-all:hover{background:#333}
+.proto-header-right .btn-proto-all:hover{background:#333}
 
-/* 2-card portrait grid */
+/* Two square cards — full container width, no inner padding */
 .proto-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:10px;
+  gap:12px;
+  width:100%;
 }
 .pg-card{
   position:relative;border-radius:16px;overflow:hidden;
-  aspect-ratio:2/3;cursor:pointer;display:block;
+  aspect-ratio:16/10;cursor:pointer;display:block;
 }
 .pg-photo{
   position:absolute;inset:0;background-size:cover;
@@ -326,40 +331,25 @@ html,body{max-width:100%;overflow-x:hidden}
 .pg-card:hover .pg-photo{transform:scale(1.04)}
 .pg-card::after{
   content:'';position:absolute;inset:0;
-  background:linear-gradient(to bottom,transparent 40%,rgba(0,0,0,.6) 100%);
+  background:linear-gradient(to bottom,transparent 42%,rgba(0,0,0,.68) 100%);
 }
-.pg-body{position:absolute;bottom:0;left:0;right:0;z-index:2;padding:22px 20px}
+.pg-body{position:absolute;bottom:0;left:0;right:0;z-index:2;padding:28px 24px}
 .pg-cat{
   font-size:9.5px;font-weight:500;letter-spacing:.2em;
   text-transform:uppercase;color:var(--gold-lt);margin-bottom:8px;
 }
 .pg-name{
   font-family:var(--sans);
-  font-size:22px;font-weight:400;color:#fff;line-height:1.2;margin-bottom:10px;letter-spacing:-.018em;
+  font-size:28px;font-weight:400;color:#fff;line-height:1.15;margin-bottom:14px;letter-spacing:-.02em;
 }
 .pg-badge{
-  display:inline-flex;align-items:center;gap:5px;
+  display:inline-flex;align-items:center;gap:6px;
   background:rgba(255,255,255,.15);backdrop-filter:blur(4px);
   border:1px solid rgba(255,255,255,.2);
-  border-radius:20px;padding:4px 11px;
-  font-size:11px;color:#fff;
+  border-radius:20px;padding:5px 13px;
+  font-size:12px;color:#fff;
 }
-.pg-badge .bd{width:5px;height:5px;border-radius:50%;background:#2c8a2c;flex-shrink:0}
-.pg-badge .bd.g{background:var(--gold)}
-
-/* Coming soon cards — Apple locked/unavailable treatment */
-.pg-card--soon{cursor:default}
-.pg-card--soon:hover .pg-photo{transform:none}
-.pg-photo--soon{filter:grayscale(60%) brightness(.7)}
-.pg-card--soon::after{background:linear-gradient(to bottom,rgba(0,0,0,.35) 0%,rgba(0,0,0,.72) 100%)}
-.pg-badge--soon{
-  background:rgba(255,255,255,.08);
-  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
-  border:1px solid rgba(255,255,255,.12);
-  border-radius:20px;padding:4px 11px;
-  font-size:11px;color:rgba(255,255,255,.5);
-  display:inline-flex;align-items:center;
-}
+.pg-badge .bd{width:6px;height:6px;border-radius:50%;background:#2c8a2c;flex-shrink:0}
 
 /* == CHAPTER 6: CINEMATIC STATEMENT ==
    Full-bleed inset banner. Breathes between protocol scroll and proof.
@@ -635,8 +625,9 @@ footer{background:#070504;padding:56px 52px 28px}
   .pillars-strip{flex-direction:column;border-radius:16px;padding:20px 20px}
   .anchor{padding:0 24px;top:93px}
   .protocols-sec{padding:52px 24px}
-  .proto-layout{grid-template-columns:1fr;gap:32px}
-  .proto-grid{grid-template-columns:1fr 1fr;gap:8px}
+  .proto-header{flex-direction:column;align-items:flex-start;gap:16px}
+  .proto-grid{grid-template-columns:1fr;gap:10px}
+  .pg-card{aspect-ratio:4/3}
   .pg-card{aspect-ratio:3/4}
   .cin{margin:0;border-radius:0;aspect-ratio:4/3}
   .cin-bd{padding:0 28px}
@@ -806,10 +797,10 @@ footer{background:#070504;padding:56px 52px 28px}
       </div>
     </div>
 
-    <div class="hwcard" style="background:#EAE2D6;overflow:hidden">
+    <div class="hwcard" style="background:#EAE2D8;overflow:hidden">
       <img src="chatgpt-vials-warm.png" alt="US-made · 503B certified"
-        style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 55%;display:block">
-      <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.28) 0%,transparent 30%)"></div>
+        style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center 58%;display:block">
+      <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.28) 0%,transparent 28%)"></div>
       <div class="hwcard-label" style="position:absolute;top:20px;left:20px;right:20px;z-index:2">
         <h3 style="color:#fff">US-made · 503B certified</h3>
       </div>
@@ -865,42 +856,39 @@ footer{background:#070504;padding:56px 52px 28px}
 
 <section class="protocols-sec" id="protocols">
   <div class="protocols-inner">
-    <div class="proto-layout">
 
-      <!-- LEFT: description copy -->
-      <div class="proto-left">
+    <!-- Full-width header above cards — Ro style -->
+    <div class="proto-header">
+      <div class="proto-header-left">
         <div class="sec-eye">The Foundry Formulary</div>
         <h2 class="sec-h2">Physician-formulated<br><em>protocols</em></h2>
-        <p>Physician-supervised. Titrated to your biology.</p>
-        <a href="glp1-weight-loss.html" class="btn-proto-all" style="text-decoration:none">View programs &rarr;</a>
       </div>
-
-      <!-- RIGHT: 2×2 photo grid -->
-      <div class="proto-grid">
-
-        <!-- 1. GLP-1 — Available -->
-        <a class="pg-card" href="glp1-weight-loss.html">
-          <div class="pg-photo" style="background-image:url('p-boxing-white.jpg');background-position:center 18%"></div>
-          <div class="pg-body">
-            <div class="pg-cat">Weight Loss</div>
-            <h3 class="pg-name">Semaglutide &amp;<br>Tirzepatide</h3>
-            <div class="pg-badge"><span class="bd"></span>Available</div>
-          </div>
-        </a>
-
-        <!-- 2. NAD+ — Available -->
-        <a class="pg-card" href="glp1-weight-loss.html#options">
-          <div class="pg-photo" style="background-image:url('p-man-curl-light.jpg');background-position:center 35%"></div>
-          <div class="pg-body">
-            <div class="pg-cat">Cellular Energy</div>
-            <h3 class="pg-name">NAD+</h3>
-            <div class="pg-badge"><span class="bd"></span>Available</div>
-          </div>
-        </a>
-
-
-
+      <div class="proto-header-right">
+        <a href="glp1-weight-loss.html" class="btn-proto-all">View programs &rarr;</a>
       </div>
+    </div>
+
+    <!-- Two full-width square cards -->
+    <div class="proto-grid">
+
+      <a class="pg-card" href="glp1-weight-loss.html">
+        <div class="pg-photo" style="background-image:url('p-boxing-white.jpg');background-position:center 18%"></div>
+        <div class="pg-body">
+          <div class="pg-cat">Weight Loss</div>
+          <h3 class="pg-name">Semaglutide &amp;<br>Tirzepatide</h3>
+          <div class="pg-badge"><span class="bd"></span>Available</div>
+        </div>
+      </a>
+
+      <a class="pg-card" href="glp1-weight-loss.html#options">
+        <div class="pg-photo" style="background-image:url('p-man-curl-light.jpg');background-position:center 35%"></div>
+        <div class="pg-body">
+          <div class="pg-cat">Cellular Energy</div>
+          <h3 class="pg-name">NAD+</h3>
+          <div class="pg-badge"><span class="bd"></span>Available</div>
+        </div>
+      </a>
+
     </div>
 
     <details style="margin-top:32px">
