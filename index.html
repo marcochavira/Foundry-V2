@@ -295,7 +295,7 @@ html,body{max-width:100%;overflow-x:hidden}
    Clean, editorial, no scroll needed. */
 .protocols-sec{padding:52px 52px}
 .protocols-inner{max-width:var(--max);margin:0 auto}
-.proto-layout{display:grid;grid-template-columns:320px 1fr;gap:64px;align-items:start;margin-top:0;max-width:900px}
+.proto-layout{display:grid;grid-template-columns:320px 1fr;gap:64px;align-items:start;margin-top:0}
 .proto-left{}
 .proto-left .sec-eye{margin-bottom:14px}
 .proto-left .sec-h2{margin-bottom:20px}
@@ -309,7 +309,7 @@ html,body{max-width:100%;overflow-x:hidden}
 }
 .proto-left .btn-proto-all:hover{background:#333}
 
-/* 2&times;2 grid */
+/* 2-card portrait grid */
 .proto-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -317,7 +317,7 @@ html,body{max-width:100%;overflow-x:hidden}
 }
 .pg-card{
   position:relative;border-radius:16px;overflow:hidden;
-  aspect-ratio:3/4;cursor:pointer;display:block;
+  aspect-ratio:2/3;cursor:pointer;display:block;
 }
 .pg-photo{
   position:absolute;inset:0;background-size:cover;
@@ -806,10 +806,10 @@ footer{background:#070504;padding:56px 52px 28px}
       </div>
     </div>
 
-    <div class="hwcard" style="background:#EDE5D5;overflow:hidden">
+    <div class="hwcard" style="background:#EAE2D6;overflow:hidden">
       <img src="chatgpt-vials-warm.png" alt="US-made · 503B certified"
-        style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center center;padding:8% 4% 0;display:block">
-      <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.32) 0%,transparent 35%)"></div>
+        style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 55%;display:block">
+      <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.28) 0%,transparent 30%)"></div>
       <div class="hwcard-label" style="position:absolute;top:20px;left:20px;right:20px;z-index:2">
         <h3 style="color:#fff">US-made · 503B certified</h3>
       </div>
