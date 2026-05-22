@@ -796,14 +796,13 @@ footer{background:#070504;padding:56px 52px 28px}
         <p style="font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.6;margin:0;">A dual-pathway GLP-1 to lose the weight and a personalized plan to keep it off.</p>
         <a href="https://patient-foundry-rx.uniloop.co/emr/enroll/glp-1-weight-loss" class="proto-card-btn">See if you qualify &rarr;</a>
       </div>
-      <div class="proto-card-bottom">
-        <div class="proto-bg" style="background-image:url('proto-glp1-vial.png')"></div>
+      <div class="proto-card-bottom" style="background-image:url('proto-glp1-vial.png');background-size:cover;background-position:right center;background-repeat:no-repeat;">
         <div class="proto-price-tag">
-            <div class="proto-price-label">FOUNDRY RX<br>GLP-1</div>
-            <div class="proto-price-num">$<span>149</span></div>
-            <div class="proto-price-from">to start &mdash; semaglutide</div>
-          </div>
+          <div class="proto-price-label">FOUNDRY RX<br>GLP-1</div>
+          <div class="proto-price-num">$<span>149</span></div>
+          <div class="proto-price-from">to start &mdash; semaglutide</div>
         </div>
+      </div>
     </div>
 
     <!-- Card 2: Microdose -->
@@ -814,14 +813,13 @@ footer{background:#070504;padding:56px 52px 28px}
         <p style="font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.6;margin:0;">A smaller dose for an easy, but impactful result.</p>
         <a href="https://patient-foundry-rx.uniloop.co/emr/enroll/glp-1-weight-loss" class="proto-card-btn">See if you qualify &rarr;</a>
       </div>
-      <div class="proto-card-bottom">
-        <div class="proto-bg" style="background-image:url('proto-microdose-vials.png')"></div>
+      <div class="proto-card-bottom" style="background-image:url('proto-microdose-vials.png');background-size:cover;background-position:right center;background-repeat:no-repeat;">
         <div class="proto-price-tag">
-            <div class="proto-price-label">MICRODOSE<br>GLP-1</div>
-            <div class="proto-price-num">$<span>99</span></div>
-            <div class="proto-price-from">to start &mdash; semaglutide</div>
-          </div>
+          <div class="proto-price-label">MICRODOSE<br>GLP-1</div>
+          <div class="proto-price-num">$<span>99</span></div>
+          <div class="proto-price-from">to start &mdash; semaglutide</div>
         </div>
+      </div>
     </div>
 
     <!-- Card 3: Coming Soon -->
@@ -833,7 +831,6 @@ footer{background:#070504;padding:56px 52px 28px}
         <div class="proto-card-btn proto-card-btn--ghost">Coming soon</div>
       </div>
       <div class="proto-card-bottom proto-card-bottom--soon">
-        <div class="proto-bg" style="background-image:url('proto-app-mockup.png');opacity:0.18"></div>
         <div class="proto-soon-line">Advanced peptide stacking and performance protocols.</div>
       </div>
     </div>
@@ -892,25 +889,18 @@ footer{background:#070504;padding:56px 52px 28px}
   align-self:flex-start;margin-top:4px;cursor:default;
 }
 .proto-card-bottom{
-.proto-card-bottom{
   flex:1;position:relative;overflow:hidden;min-height:220px;
 }
 .proto-card-bottom--soon{
   flex:1;display:flex;align-items:flex-end;
-  padding:20px 28px 28px;
+  padding:20px 28px 28px;min-height:220px;
 }
 .proto-soon-line{
   font-family:var(--sans);font-size:13px;font-weight:300;
   color:rgba(255,255,255,.2);line-height:1.65;letter-spacing:.01em;
 }
+.proto-bg{display:none}
 .proto-vial-wrap{display:none}
-.proto-vial-img{display:none}
-.proto-bg{
-  position:absolute;inset:0;
-  background-size:cover;
-  background-position:right center;
-  background-repeat:no-repeat;
-}
 .proto-price-tag{
   position:absolute;left:16px;bottom:16px;
   background:#fff;border-radius:14px;
@@ -933,7 +923,6 @@ footer{background:#070504;padding:56px 52px 28px}
   font-family:var(--sans);font-size:9px;color:var(--muted);
   letter-spacing:.02em;margin-top:5px;
 }
-/* proto image fix — ensure images render properly */
 @media(max-width:1024px){
   .proto-cards-inner{grid-template-columns:1fr 1fr}
   .proto-card--soon{grid-column:1/3}
@@ -947,8 +936,7 @@ footer{background:#070504;padding:56px 52px 28px}
   .proto-card-top{padding:24px 20px 16px}
   .proto-card-bottom{min-height:180px}
   .proto-price-tag{left:12px;bottom:12px;padding:10px 12px;min-width:110px}
-  .proto-price-num{font-size:30px}
-  .proto-price-num span{font-size:30px}
+  .proto-price-num,.proto-price-num span{font-size:30px}
 }
 </style>
 
