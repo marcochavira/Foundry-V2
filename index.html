@@ -792,7 +792,8 @@ footer{background:#070504;padding:56px 52px 28px}
     <div class="proto-card">
       <div class="proto-card-top">
         <div class="proto-card-label">GLP-1 Standard</div>
-        <h3 class="proto-card-title">Weight loss.<br>Physician-directed.</h3>
+        <h3 class="proto-card-title">An Advanced GLP-1 Program</h3>
+        <p style="font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.6;margin:0;">A dual-pathway GLP-1 to lose the weight and a personalized plan to keep it off.</p>
         <a href="https://patient-foundry-rx.uniloop.co/emr/enroll/glp-1-weight-loss" class="proto-card-btn">See if you qualify &rarr;</a>
       </div>
       <div class="proto-card-bottom">
@@ -811,7 +812,8 @@ footer{background:#070504;padding:56px 52px 28px}
     <div class="proto-card proto-card--mid">
       <div class="proto-card-top">
         <div class="proto-card-label">Microdose</div>
-        <h3 class="proto-card-title">Longevity.<br>Precision dosing.</h3>
+        <h3 class="proto-card-title">A Low Dose Way to Start</h3>
+        <p style="font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.6;margin:0;">A smaller dose for an easy, but impactful result.</p>
         <a href="https://patient-foundry-rx.uniloop.co/emr/enroll/glp-1-weight-loss" class="proto-card-btn">See if you qualify &rarr;</a>
       </div>
       <div class="proto-card-bottom">
@@ -830,7 +832,8 @@ footer{background:#070504;padding:56px 52px 28px}
     <div class="proto-card proto-card--soon">
       <div class="proto-card-top">
         <div class="proto-card-label proto-card-label--muted">Protocols</div>
-        <h3 class="proto-card-title proto-card-title--muted">Lose weight.<br>Keep it off.<br>Build strength.</h3>
+        <h3 class="proto-card-title proto-card-title--muted">Advanced Protocols Program</h3>
+        <p style="font-family:var(--sans);font-size:13px;color:rgba(255,255,255,.2);line-height:1.6;margin:0;font-style:italic;">Coming soon.</p>
         <div class="proto-card-btn proto-card-btn--ghost">Coming soon</div>
       </div>
       <div class="proto-card-bottom proto-card-bottom--soon">
@@ -854,7 +857,7 @@ footer{background:#070504;padding:56px 52px 28px}
   border-radius:20px;
   background:var(--bone);
   display:flex;flex-direction:column;
-  overflow:hidden;min-height:480px;
+  overflow:hidden;min-height:360px;
   border:1px solid var(--border);
 }
 .proto-card--mid{background:#F0EDE6}
@@ -892,48 +895,55 @@ footer{background:#070504;padding:56px 52px 28px}
   align-self:flex-start;margin-top:4px;cursor:default;
 }
 .proto-card-bottom{
-  flex:1;display:flex;align-items:flex-end;justify-content:center;
-  padding:0 20px 0;position:relative;overflow:hidden;
+  flex:1;position:relative;overflow:hidden;min-height:195px;
 }
 .proto-card-bottom--soon{
+  flex:1;display:flex;align-items:flex-end;
   padding:20px 28px 28px;
-  align-items:flex-end;justify-content:flex-start;
 }
 .proto-soon-line{
   font-family:var(--sans);font-size:13px;font-weight:300;
   color:rgba(255,255,255,.2);line-height:1.65;letter-spacing:.01em;
 }
 .proto-vial-wrap{
-  position:relative;width:100%;display:flex;
-  justify-content:flex-end;align-items:flex-end;
+  position:absolute;inset:0;
+  display:flex;align-items:flex-end;justify-content:flex-end;
 }
 .proto-vial-wrap--duo{justify-content:center}
 .proto-vial-img{
-  width:55%;max-width:180px;height:auto;
-  display:block;object-fit:contain;
+  display:block;
+  width:auto;
+  max-width:62%;
+  height:100%;
+  max-height:100%;
+  object-fit:contain;
+  object-position:bottom right;
 }
-.proto-vial-img--duo{width:80%;max-width:260px}
+.proto-vial-img--duo{
+  max-width:88%;
+  object-position:bottom center;
+}
 .proto-price-tag{
-  position:absolute;left:16px;bottom:24px;
-  background:#fff;border-radius:12px;
-  padding:12px 16px;
-  box-shadow:0 2px 16px rgba(0,0,0,.08);
-  min-width:120px;
+  position:absolute;left:20px;bottom:20px;
+  background:#fff;border-radius:14px;
+  padding:13px 18px;
+  box-shadow:0 2px 20px rgba(0,0,0,.1);
+  min-width:130px;
+  z-index:2;
 }
 .proto-price-label{
   font-family:var(--sans);font-size:8px;font-weight:600;
   letter-spacing:.18em;text-transform:uppercase;color:var(--muted);
-  margin-bottom:4px;line-height:1.4;
+  margin-bottom:5px;line-height:1.4;
 }
 .proto-price-num{
   font-family:var(--sans);font-weight:300;color:var(--ink);
-  line-height:1;letter-spacing:-.02em;
-  font-size:38px;
+  line-height:1;letter-spacing:-.02em;font-size:42px;
 }
-.proto-price-num span{font-size:38px}
+.proto-price-num span{font-size:42px}
 .proto-price-from{
   font-family:var(--sans);font-size:9px;color:var(--muted);
-  letter-spacing:.03em;margin-top:4px;
+  letter-spacing:.02em;margin-top:5px;
 }
 /* proto image fix — ensure images render properly */
 .proto-vial-img{
