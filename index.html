@@ -421,9 +421,9 @@ html,body{max-width:100%;overflow-x:hidden}
 
 /* == CHAPTER 10: MEMBERSHIP ==
    Photo left (new \2014  not reused). Content right on bone. ONE CTA. */
-.memb{display:grid;grid-template-columns:70% 30%;margin:0 52px 80px;border-radius:24px;overflow:hidden;max-width:var(--max)}
+.memb{display:grid;grid-template-columns:70% 30%;margin:0 auto 80px;border-radius:24px;overflow:hidden;max-width:var(--max);width:calc(100% - 104px)}
 .memb-ph{position:relative;min-height:480px;height:100%}
-.memb-ph img{width:100%;height:100%;object-fit:cover;display:block}
+.memb-ph img{width:100%;height:100%;object-fit:cover;display:block;font-size:0;color:transparent}
 .memb-ovl{position:absolute;bottom:22px;left:22px;right:22px;background:rgba(10,6,2,.75);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(184,154,94,.2);border-radius:14px;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;gap:14px}
 .memb-ovl-copy{font-family:var(--sans);font-size:16px;font-weight:300;font-style:italic;color:#fff;line-height:1.4}
 .memb-ovl-price{text-align:right;flex-shrink:0}
@@ -955,7 +955,7 @@ footer{background:#070504;padding:56px 52px 28px}
     >
       <source src="foundry-member.mp4" type="video/mp4">
     </video>
-    <img id="memb-fallback" src="p-couple-outdoors.jpg" alt="Foundry RX founder" style="width:100%;height:100%;object-fit:cover;object-position:78% 35%;display:block;position:absolute;inset:0">
+    <img id="memb-fallback" src="p-founders.jpg" alt="" style="width:100%;height:100%;object-fit:cover;object-position:78% 35%;display:block;position:absolute;inset:0;font-size:0;color:transparent">
     <div class="memb-ovl">
       <div class="memb-ovl-copy">Founded by a team that believes in quality first.</div>
       <a href="https://www.legitscript.com/" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:6px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:20px;padding:6px 12px;text-decoration:none;flex-shrink:0">
