@@ -796,7 +796,8 @@ footer{background:#070504;padding:56px 52px 28px}
         <p style="font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.6;margin:0;">A dual-pathway GLP-1 to lose the weight and a personalized plan to keep it off.</p>
         <a href="https://patient-foundry-rx.uniloop.co/emr/enroll/glp-1-weight-loss" class="proto-card-btn">See if you qualify &rarr;</a>
       </div>
-      <div class="proto-card-bottom" style="background-image:url('proto-glp1-vial.png');background-size:contain;background-position:bottom right;background-repeat:no-repeat;background-color:#EDE5D8;">
+      <div class="proto-card-bottom" style="background-color:#EDE5D8;">
+        <img src="proto-glp1-vial.png" alt="" class="proto-card-img">
         <div class="proto-price-tag">
           <div class="proto-price-label">FOUNDRY RX<br>GLP-1</div>
           <div class="proto-price-num">$<span>149</span></div>
@@ -813,7 +814,8 @@ footer{background:#070504;padding:56px 52px 28px}
         <p style="font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.6;margin:0;">A smaller dose for an easy, but impactful result.</p>
         <a href="https://patient-foundry-rx.uniloop.co/emr/enroll/glp-1-weight-loss" class="proto-card-btn">See if you qualify &rarr;</a>
       </div>
-      <div class="proto-card-bottom" style="background-image:url('proto-microdose-vials.png');background-size:contain;background-position:bottom right;background-repeat:no-repeat;background-color:#E6DDD0;">
+      <div class="proto-card-bottom" style="background-color:#E6DDD0;">
+        <img src="proto-microdose-vials.png" alt="" class="proto-card-img">
         <div class="proto-price-tag">
           <div class="proto-price-label">MICRODOSE<br>GLP-1</div>
           <div class="proto-price-num">$<span>119</span></div>
@@ -830,7 +832,8 @@ footer{background:#070504;padding:56px 52px 28px}
         <p style="font-family:var(--sans);font-size:13px;color:rgba(50,35,18,.45);line-height:1.6;margin:0;font-style:italic;">Coming soon.</p>
         <div class="proto-card-btn proto-card-btn--ghost">Coming soon</div>
       </div>
-      <div class="proto-card-bottom proto-card-bottom--soon" style="background-image:url('proto-app-mockup.png');background-size:contain;background-position:bottom right;background-repeat:no-repeat;background-color:#DDD0BF;">
+      <div class="proto-card-bottom proto-card-bottom--soon" style="background-color:#DDD0BF;">
+        <img src="proto-advanced-mockup.png" alt="" class="proto-card-img">
         <div class="proto-soon-line">Advanced stacking &amp; performance protocols.</div>
       </div>
     </div>
@@ -889,15 +892,22 @@ footer{background:#070504;padding:56px 52px 28px}
   align-self:flex-start;margin-top:2px;cursor:default;
 }
 .proto-card-bottom{
-  flex:1;position:relative;overflow:hidden;min-height:280px;
+  flex:1;position:relative;overflow:hidden;min-height:280px;height:280px;
+}
+.proto-card-img{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;object-position:center;
+  display:block;
 }
 .proto-card-bottom--soon{
-  flex:1;display:flex;align-items:flex-end;
-  padding:20px 24px 24px;min-height:280px;
+  position:relative;overflow:hidden;min-height:280px;height:280px;
+  display:flex;align-items:flex-end;
+  padding:20px 24px 24px;
 }
 .proto-soon-line{
   font-family:var(--sans);font-size:13px;font-weight:300;
-  color:rgba(50,35,18,.35);line-height:1.65;letter-spacing:.01em;
+  color:rgba(50,35,18,.7);line-height:1.65;letter-spacing:.01em;
+  position:relative;z-index:2;
 }
 .proto-bg{display:none}
 .proto-vial-wrap{display:none}
