@@ -348,7 +348,7 @@ a:focus-visible,button:focus-visible{
   .hero-trust-list{display:none}
   .hero-cards{grid-template-columns:1fr;gap:8px}
   .hero-card{min-height:300px}
-  .hero-card-nad .hero-card-inner img{width:70%;height:65%;top:10%}
+  .hero-card-nad .hero-card-inner img{width:100%;height:100%;top:0;object-fit:cover;object-position:center}
   .trust{padding:14px 24px}
   .ti2{padding:5px 10px;font-size:10px}
   .intro{grid-template-columns:1fr;padding:60px 24px;gap:40px}
@@ -376,8 +376,9 @@ a:focus-visible,button:focus-visible{
   .sticky-cta-bar{display:flex}
   body{padding-bottom:72px}
   .hiw{padding:60px 24px}
-  .hiw-cards{grid-template-columns:1fr 1fr;gap:8px}
-  .hwcard{height:280px}
+  .hiw-cards{grid-template-columns:1fr;gap:8px}
+  .hwcard{height:220px}
+  .hwcard-label h3{font-size:14px}
 }
 
 /* HOW IT WORKS */
@@ -424,30 +425,12 @@ a:focus-visible,button:focus-visible{
     <div>
       <div class="hero-kicker">GLP-1 &amp; NAD+ Programs</div>
       <h1 class="hero-h1">Feel like yourself again.<br><em>but even better.</em></h1>
-      <p class="hero-sub">Physician-supervised GLP-1 and NAD+ protocols — built around your biology. Provider review in 24 hours.</p>
+      <p class="hero-sub">Physician-prescribed. USA-Compounded. Delivered to your door.</p>
       <div class="hero-actions">
         <a href="https://patient-foundry-rx.uniloop.co/emr/enroll/glp-1-weight-loss" class="btn-gold-pill">Get Started &rarr;</a>
         <a href="https://foundryrx.co/ebook.html" class="btn-ghost-pill">Free protocol guide</a>
       </div>
     </div>
-    <ul class="hero-trust-list">
-      <li>
-        <div class="htl-icon"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></div>
-        Provider-reviewed protocols, not automated systems
-      </li>
-      <li>
-        <div class="htl-icon"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></div>
-        US-licensed physicians, 503B-certified compounds
-      </li>
-      <li>
-        <div class="htl-icon"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></div>
-        Doctor visit &amp; discreet shipping included
-      </li>
-      <li>
-        <div class="htl-icon"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></div>
-        100% online — no waiting rooms
-      </li>
-    </ul>
   </div>
 
   <!-- Two asymmetric hero cards -->
