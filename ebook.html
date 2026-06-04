@@ -7,17 +7,17 @@
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://foundryrx.co/ebook">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<title>The Complete Peptide Protocol Library | Foundry RX</title>
-<meta name="description" content="Two physician-reviewed guides from Foundry RX. The Stack: GLP-1 + Peptide Therapy and the Medical Weight Loss Guide. LegitScript certified. USA-sourced. 503B compounded.">
+<title>The Stack: GLP-1 + Peptide Protocol Guide | Foundry RX</title>
+<meta name="description" content="Download The Stack — a physician-reviewed guide to GLP-1 + peptide co-therapy, body optimization, and medical weight loss. LegitScript certified. USA-sourced. 503B compounded.">
 <meta name="keywords" content="peptide therapy guide, GLP-1 peptide protocol, medical weight loss guide, physician supervised weight loss, peptide co-therapy, 503B compounding">
-<meta property="og:title" content="The Complete Peptide Protocol Library — Foundry RX">
-<meta property="og:description" content="Two physician-reviewed guides. GLP-1 + peptide co-therapy and medical weight loss. LegitScript certified. Complimentary access.">
+<meta property="og:title" content="The Stack: GLP-1 + Peptide Protocol Guide — Foundry RX">
+<meta property="og:description" content="Physician-reviewed guide to GLP-1 + peptide co-therapy. LegitScript certified. Complimentary access.">
 <meta property="og:url" content="https://foundryrx.co/ebook">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://foundryrx.co/Image_ebook.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="The Complete Peptide Protocol Library — Foundry RX">
-<meta name="twitter:description" content="Two physician-reviewed guides. GLP-1 + peptide therapy. Complimentary.">
+<meta name="twitter:title" content="The Stack: GLP-1 + Peptide Protocol Guide — Foundry RX">
+<meta name="twitter:description" content="Physician-reviewed guide to GLP-1 + peptide co-therapy. Complimentary.">
 <meta name="twitter:image" content="https://foundryrx.co/Image_ebook.jpg">
 <script type="application/ld+json">{
   "@context":"https://schema.org",
@@ -41,14 +41,14 @@ a{color:inherit;text-decoration:none}
 img{display:block;width:100%;max-width:100%;height:auto}
 :root{
   --gold:#B89A5E;
+  --gold-lt:#CCA96E;
+  --gold-dk:#8A6F3E;
+  --gold-pale:#FAF6EF;
   --bone:#F5F1EA;
   --bone-dk:#EDE9E0;
   --ink:#0D0C0A;
   --muted:#7a7672;
   --border:#E8E4DC;
-  --maroon:#7D2027;
-  --maroon-lt:#9B2D34;
-  --maroon-pale:#FBF4F4;
   --max:1140px;
 }
 
@@ -57,99 +57,134 @@ img{display:block;width:100%;max-width:100%;height:auto}
 .logo{font-size:12.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;display:flex;align-items:center;gap:9px;color:var(--ink)}
 .nav-back{font-size:12px;color:#ccc;transition:color .2s}
 .nav-back:hover{color:#111}
-.nav-cta{font-size:12px;font-weight:500;letter-spacing:.04em;color:#fff;background:var(--maroon);padding:10px 22px;border-radius:28px;transition:background .2s}
-.nav-cta:hover{background:var(--maroon-lt)}
+.nav-cta{font-size:12px;font-weight:500;letter-spacing:.04em;color:#fff;background:var(--ink);padding:10px 22px;border-radius:28px;transition:background .2s}
+.nav-cta:hover{background:var(--gold)}
 
-/* HERO */
+/* HERO — full viewport split */
 .hero{display:grid;grid-template-columns:1fr 1fr;min-height:calc(100vh - 64px)}
 .hero-img{position:relative;overflow:hidden}
 .hero-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top}
 .hero-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,rgba(13,12,10,.1),transparent 55%)}
 
 .hero-content{display:flex;flex-direction:column;justify-content:center;padding:80px 72px 80px 60px;background:#fff;position:relative}
-.hero-content::before{content:'';position:absolute;top:0;bottom:0;left:0;width:3px;background:linear-gradient(to bottom,transparent,var(--maroon) 25%,var(--maroon) 75%,transparent)}
+.hero-content::before{content:'';position:absolute;top:0;bottom:0;left:0;width:3px;background:linear-gradient(to bottom,transparent,var(--gold) 25%,var(--gold) 75%,transparent)}
 
 .legit-badge{display:inline-flex;align-items:center;gap:10px;margin-bottom:32px}
-.legit-dot{width:6px;height:6px;border-radius:50%;background:var(--maroon);flex-shrink:0}
+.legit-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0}
 .legit-label{font-size:10.5px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
-.legit-chip{font-size:10px;letter-spacing:.04em;color:var(--maroon);font-weight:500;background:var(--maroon-pale);padding:3px 10px;border-radius:20px;border:1px solid rgba(125,32,39,.15)}
+.legit-chip{font-size:10px;letter-spacing:.04em;color:var(--gold-dk);font-weight:500;background:var(--gold-pale);padding:3px 10px;border-radius:20px;border:1px solid rgba(184,154,94,.25)}
 
 .hero h1{font-size:clamp(34px,3.8vw,54px);font-weight:400;line-height:1.03;letter-spacing:-.026em;color:var(--ink);margin-bottom:20px}
 .hero h1 em{font-style:italic;font-weight:300;color:var(--muted)}
 .hero-sub{font-size:15px;color:var(--muted);line-height:1.72;margin-bottom:44px;max-width:340px}
 
-.btn-hero{display:inline-flex;align-items:center;gap:12px;background:var(--maroon);color:#fff;font-size:13px;font-weight:500;letter-spacing:.04em;padding:17px 40px;border-radius:32px;transition:all .25s cubic-bezier(.22,1,.36,1);width:fit-content}
-.btn-hero:hover{background:var(--maroon-lt);padding-right:48px}
+.btn-hero{display:inline-flex;align-items:center;gap:12px;background:var(--gold);color:#fff;font-size:13px;font-weight:500;letter-spacing:.04em;padding:17px 40px;border-radius:32px;transition:all .25s cubic-bezier(.22,1,.36,1);width:fit-content}
+.btn-hero:hover{background:var(--gold-dk);padding-right:48px}
 .hero-note{font-size:11px;color:#bbb;margin-top:12px;letter-spacing:.02em}
 
-/* TRUST BAR — bone, not dark */
+/* TRUST BAR — bone strip */
 .trust-bar{background:var(--bone);border-bottom:1px solid var(--border);padding:16px 48px}
 .trust-bar-inner{max-width:var(--max);margin:0 auto;display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap}
 .trust-item{display:flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.trust-item svg{stroke:var(--maroon);fill:none;width:13px;height:13px;flex-shrink:0}
+.trust-item svg{stroke:var(--gold);fill:none;width:13px;height:13px;flex-shrink:0}
 
-/* GUIDES */
-.guides{padding:100px 48px;background:#fff}
-.guides-header{text-align:center;max-width:460px;margin:0 auto 72px}
-.eyebrow{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
-.sec-h2{font-size:clamp(26px,3vw,42px);font-weight:400;color:var(--ink);line-height:1.06;letter-spacing:-.022em}
-.sec-h2 em{font-style:italic;font-weight:300;color:var(--muted)}
+/* HERO GUIDE — primary offer, full width */
+.hero-guide{background:var(--bone);padding:96px 48px}
+.hero-guide-inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
 
-.guides-grid{max-width:860px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.hg-label{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.hg-title{font-size:clamp(32px,3.5vw,48px);font-weight:400;color:var(--ink);line-height:1.05;letter-spacing:-.024em;margin-bottom:16px}
+.hg-title em{font-style:italic;font-weight:300;color:var(--muted)}
+.hg-desc{font-size:15px;color:var(--muted);line-height:1.75;margin-bottom:36px;max-width:420px}
 
-/* CARD — light, not dark */
-.gcard{background:var(--bone);border:1px solid var(--border);border-radius:20px;padding:52px 44px;display:flex;flex-direction:column;position:relative;overflow:hidden;transition:transform .3s cubic-bezier(.22,1,.36,1),box-shadow .3s,border-color .3s}
-.gcard:hover{transform:translateY(-4px);box-shadow:0 20px 48px rgba(13,12,10,.09);border-color:rgba(125,32,39,.2)}
-.gcard::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--maroon),rgba(125,32,39,.3))}
+/* Chapter list — collapsible on mobile, open on desktop */
+.hg-chapters-wrap{margin-top:32px}
+.hg-chapters-toggle{display:flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);cursor:pointer;list-style:none;padding:14px 0;border-top:1px solid var(--border)}
+.hg-chapters-toggle::-webkit-details-marker{display:none}
+.hg-chapters-toggle svg{transition:transform .2s;flex-shrink:0}
+details[open] .hg-chapters-toggle svg{transform:rotate(180deg)}
+.hg-chapters{display:flex;flex-direction:column;gap:0}
+.hg-chapter{display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--border)}
+.hg-chapter:first-child{border-top:1px solid var(--border)}
+.hg-ch-num{font-size:11px;font-weight:300;color:var(--gold);letter-spacing:.06em;min-width:24px}
+.hg-ch-text{font-size:13.5px;color:var(--ink);letter-spacing:-.01em}
 
-.gcard-num{font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);margin-bottom:28px;opacity:.6}
-.gcard-rule{height:.5px;background:var(--border);margin:22px 0}
-.gcard-label{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--maroon);margin-bottom:10px;font-weight:500}
-.gcard-title{font-size:clamp(22px,2.2vw,28px);font-weight:400;color:var(--ink);line-height:1.1;letter-spacing:-.018em;flex:1}
-.gcard-title em{font-style:italic;font-weight:300;color:var(--muted)}
-.gcard-desc{font-size:13px;color:var(--muted);line-height:1.75;margin-top:18px}
+/* Desktop — always show chapters above CTA, hide toggle UI */
+@media(min-width:481px){
+  .hg-chapters-wrap{margin-top:0;margin-bottom:32px}
+  .hg-chapters-toggle{display:none}
+  details.hg-chapters-wrap{open:true}
+  .hg-chapters{display:flex !important}
+  .btn-primary{margin-top:0}
+}
 
-.gcard-cta{margin-top:40px}
-.gcard-cta-note{font-size:9.5px;color:#bbb;letter-spacing:.16em;text-transform:uppercase;margin-bottom:14px}
-.btn-card{display:block;text-align:center;background:var(--maroon);color:#fff;font-size:12px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;padding:15px 28px;border-radius:28px;transition:background .2s,transform .15s}
-.btn-card:hover{background:var(--maroon-lt);transform:scale(1.02)}
+.btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:#fff;font-size:13px;font-weight:500;letter-spacing:.04em;padding:17px 44px;border-radius:32px;transition:all .25s cubic-bezier(.22,1,.36,1)}
+.btn-primary:hover{background:var(--gold-dk);padding-right:52px}
+.btn-note{font-size:11px;color:#bbb;margin-top:10px;letter-spacing:.02em}
+
+/* BOOK MOCKUP */
+.book-mockup{background:var(--ink);border-radius:20px;padding:52px 48px;position:relative;overflow:hidden}
+.book-mockup::before{content:'';position:absolute;top:-80px;right:-80px;width:320px;height:320px;border-radius:50%;background:radial-gradient(ellipse,rgba(184,154,94,.08) 0%,transparent 65%);pointer-events:none}
+.book-tag{font-size:9px;letter-spacing:.26em;text-transform:uppercase;color:rgba(184,154,94,.45);margin-bottom:24px;display:flex;align-items:center;gap:8px}
+.book-tag::before{content:'';width:18px;height:.5px;background:rgba(184,154,94,.4)}
+.book-rule{height:.5px;background:linear-gradient(90deg,rgba(184,154,94,.35),transparent);margin:22px 0}
+.book-title{font-size:clamp(26px,2.5vw,34px);font-weight:300;color:#F5F1EA;line-height:1.1;font-style:italic;letter-spacing:-.018em}
+.book-title strong{display:block;font-style:normal;font-weight:500;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:rgba(245,241,234,.4);margin-bottom:12px}
+.book-meta{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:rgba(245,241,234,.18);margin-top:20px}
+.book-cta{margin-top:40px;padding-top:28px;border-top:1px solid rgba(255,255,255,.06)}
+.book-cta-note{font-size:9.5px;color:rgba(245,241,234,.22);letter-spacing:.16em;text-transform:uppercase;margin-bottom:16px}
+.btn-book{display:block;text-align:center;background:var(--gold);color:#fff;font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:15px 28px;border-radius:28px;transition:background .2s}
+.btn-book:hover{background:var(--gold-dk)}
 
 /* PROOF */
-.proof{background:var(--bone);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:88px 48px}
+.proof{background:#fff;padding:88px 48px}
 .proof-inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:88px;align-items:center}
 .proof-quote-wrap{position:relative;padding-left:28px}
-.proof-quote-wrap::before{content:'\201C';position:absolute;left:0;top:-8px;font-size:64px;font-weight:200;color:var(--maroon);line-height:.8;opacity:.25}
+.proof-quote-wrap::before{content:'\201C';position:absolute;left:0;top:-8px;font-size:64px;font-weight:200;color:var(--gold);line-height:.8;opacity:.3}
 .proof-q{font-size:18px;font-weight:300;font-style:italic;color:var(--ink);line-height:1.55;letter-spacing:-.01em}
 .proof-attr{font-size:11px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-top:16px}
-.proof-attr strong{color:var(--maroon);font-weight:500}
+.proof-attr strong{color:var(--gold-dk);font-weight:500}
 .proof-stats{display:grid;grid-template-columns:1fr 1fr;gap:2px}
-.proof-stat{background:#fff;padding:36px 32px}
+.proof-stat{background:var(--bone);padding:36px 32px}
 .proof-num{font-size:40px;font-weight:300;color:var(--ink);line-height:1;letter-spacing:-.04em}
-.proof-num span{color:var(--maroon)}
+.proof-num span{color:var(--gold)}
 .proof-lbl{font-size:10px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-top:8px;line-height:1.5}
+
+/* SECONDARY GUIDE — smaller, below the fold */
+.secondary{background:var(--bone-dk);border-top:1px solid var(--border);padding:72px 48px}
+.secondary-inner{max-width:680px;margin:0 auto;text-align:center}
+.secondary-eyebrow{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.secondary-title{font-size:clamp(20px,2.2vw,28px);font-weight:400;color:var(--ink);line-height:1.1;letter-spacing:-.018em;margin-bottom:12px}
+.secondary-title em{font-style:italic;font-weight:300;color:var(--muted)}
+.secondary-desc{font-size:14px;color:var(--muted);line-height:1.72;margin-bottom:28px;max-width:480px;margin-left:auto;margin-right:auto}
+.btn-secondary{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--ink);border:1px solid var(--border);font-size:12.5px;font-weight:500;letter-spacing:.04em;padding:14px 36px;border-radius:28px;transition:all .2s}
+.btn-secondary:hover{border-color:var(--gold);color:var(--gold-dk)}
 
 /* CRED */
 .cred{padding:88px 48px;background:#fff}
 .cred-inner{max-width:var(--max);margin:0 auto}
+.sec-eye{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.sec-h2{font-size:clamp(24px,2.8vw,38px);font-weight:400;color:var(--ink);line-height:1.06;letter-spacing:-.022em}
+.sec-h2 em{font-style:italic;font-weight:300;color:var(--muted)}
 .cred-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:52px}
 .cred-item{background:var(--bone);padding:40px 36px;position:relative;overflow:hidden;transition:background .2s}
 .cred-item:hover{background:var(--bone-dk)}
-.cred-item::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--maroon);transition:width .4s}
+.cred-item::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--gold);transition:width .4s}
 .cred-item:hover::after{width:100%}
-.cred-icon{width:30px;height:30px;border-radius:50%;border:1px solid rgba(125,32,39,.3);display:flex;align-items:center;justify-content:center;margin-bottom:20px}
-.cred-icon svg{stroke:var(--maroon);fill:none;width:12px;height:12px;stroke-width:1.5}
+.cred-icon{width:30px;height:30px;border-radius:50%;border:1px solid rgba(184,154,94,.35);display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+.cred-icon svg{stroke:var(--gold);fill:none;width:12px;height:12px;stroke-width:1.5}
 .cred-title{font-size:13px;font-weight:500;color:var(--ink);margin-bottom:8px}
 .cred-desc{font-size:12.5px;color:var(--muted);line-height:1.7}
 
-/* FINAL CTA — only dark section */
+/* FINAL CTA */
 .fcta{background:var(--ink);padding:112px 48px;text-align:center;position:relative;overflow:hidden}
-.fcta::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:800px;height:500px;border-radius:50%;background:radial-gradient(ellipse,rgba(125,32,39,.12) 0%,transparent 65%);pointer-events:none}
-.fcta-eye{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:rgba(245,241,234,.35);margin-bottom:20px}
+.fcta::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:800px;height:500px;border-radius:50%;background:radial-gradient(ellipse,rgba(184,154,94,.06) 0%,transparent 62%);pointer-events:none}
+.fcta-eye{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:rgba(184,154,94,.5);margin-bottom:20px}
 .fcta h2{font-size:clamp(32px,5vw,62px);font-weight:400;color:#F5F1EA;line-height:1.03;letter-spacing:-.026em;margin-bottom:16px}
-.fcta h2 em{font-style:italic;font-weight:300;color:rgba(245,241,234,.4)}
-.fcta-sub{font-size:15px;color:rgba(245,241,234,.35);line-height:1.7;margin-bottom:44px;max-width:320px;margin-left:auto;margin-right:auto}
-.btn-fcta{display:inline-flex;align-items:center;gap:10px;background:var(--maroon);color:#fff;font-size:13.5px;font-weight:500;letter-spacing:.04em;padding:18px 56px;border-radius:32px;transition:background .2s}
-.btn-fcta:hover{background:var(--maroon-lt)}
+.fcta h2 em{font-style:italic;font-weight:300;color:rgba(245,241,234,.35)}
+.fcta-sub{font-size:15px;color:rgba(245,241,234,.32);line-height:1.7;margin-bottom:44px;max-width:320px;margin-left:auto;margin-right:auto}
+.btn-fcta{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:#fff;font-size:13.5px;font-weight:500;letter-spacing:.04em;padding:18px 56px;border-radius:32px;transition:background .2s}
+.btn-fcta:hover{background:var(--gold-dk)}
 .fcta-note{font-size:11px;color:rgba(245,241,234,.18);margin-top:16px;letter-spacing:.04em}
 
 /* SAFETY + FOOTER */
@@ -167,16 +202,17 @@ footer{border-top:1px solid var(--border);padding:32px 48px;display:flex;justify
   body{padding-top:56px}
   .nav{padding:0 24px;height:56px}
   .hero{grid-template-columns:1fr;min-height:auto}
-  .hero-img{height:420px;position:relative;overflow:hidden}
+  .hero-img{height:420px;position:relative}
   .hero-img img{position:absolute;width:100%;height:100%;object-fit:cover}
   .hero-content{order:2;padding:52px 36px}
   .hero-content::before{display:none}
   .trust-bar{padding:14px 24px}
   .trust-bar-inner{gap:24px}
-  .guides{padding:72px 24px}
-  .guides-grid{grid-template-columns:1fr;max-width:480px}
+  .hero-guide{padding:72px 24px}
+  .hero-guide-inner{grid-template-columns:1fr;gap:48px}
   .proof{padding:64px 24px}
   .proof-inner{grid-template-columns:1fr;gap:48px}
+  .secondary{padding:56px 24px}
   .cred{padding:64px 24px}
   .cred-grid{grid-template-columns:1fr}
   .fcta{padding:88px 24px}
@@ -192,30 +228,68 @@ footer{border-top:1px solid var(--border);padding:32px 48px;display:flex;justify
   .nav-back{display:none}
   .logo{font-size:11px}
   .nav-cta{font-size:11.5px;padding:9px 18px}
-  .hero-img{height:300px}
-  .hero-content{padding:40px 22px}
-  .legit-badge{margin-bottom:22px}
-  .hero h1{font-size:30px;margin-bottom:16px}
-  .hero-sub{font-size:14px;margin-bottom:32px;max-width:100%}
-  .btn-hero{width:100%;justify-content:center;padding:16px 24px}
-  .trust-bar-inner{gap:18px}
+
+  /* Hero image — flow element on mobile, no absolute */
+  .hero-img{height:260px;position:relative}
+  .hero-img img{position:absolute;width:100%;height:100%;object-fit:cover;object-position:center 20%}
+
+  .hero-content{padding:36px 22px}
+  .legit-badge{margin-bottom:20px}
+  .legit-label{display:none}
+  .hero h1{font-size:28px;margin-bottom:12px}
+  .hero-sub{font-size:14px;margin-bottom:28px;max-width:100%}
+  .btn-hero{width:100%;justify-content:center;padding:15px 24px;font-size:12.5px}
+  .hero-note{font-size:10.5px}
+
+  /* Trust bar — icons only on mobile */
+  .trust-bar{padding:12px 20px;overflow-x:auto}
+  .trust-bar-inner{gap:20px;justify-content:flex-start;flex-wrap:nowrap;min-width:max-content}
   .trust-item span{display:none}
-  .guides{padding:60px 20px}
-  .guides-header{margin-bottom:48px}
-  .gcard{padding:36px 28px;border-radius:16px}
-  .gcard-title{font-size:22px}
-  .proof{padding:56px 20px}
-  .proof-q{font-size:16px}
+  .trust-item svg{width:16px;height:16px}
+
+  /* Stack section */
+  .hero-guide{padding:52px 20px}
+  .hg-label{font-size:9.5px}
+  .hg-title{font-size:26px}
+  .hg-desc{font-size:14px;max-width:100%}
+  .hg-chapter{padding:12px 0}
+  .hg-ch-text{font-size:13px}
+  .btn-primary{width:100%;justify-content:center;padding:15px 24px;font-size:12.5px}
+  .btn-note{font-size:10.5px}
+
+  /* Hide book mockup on mobile — chapter list + CTA is enough */
+  .book-mockup{display:none}
+
+  /* Proof */
+  .proof{padding:52px 20px}
+  .proof-q{font-size:15.5px}
   .proof-stats{grid-template-columns:1fr 1fr}
-  .proof-num{font-size:32px}
-  .cred{padding:56px 20px}
-  .cred-item{padding:32px 24px}
-  .fcta{padding:72px 20px}
-  .fcta h2{font-size:32px}
-  .fcta-sub{font-size:14px}
-  .btn-fcta{width:100%;justify-content:center;padding:16px 24px}
+  .proof-stat{padding:24px 20px}
+  .proof-num{font-size:30px}
+  .proof-lbl{font-size:9.5px}
+
+  /* Secondary */
+  .secondary{padding:44px 20px}
+  .secondary-title{font-size:20px}
+  .secondary-desc{font-size:13.5px}
+  .btn-secondary{width:100%;justify-content:center;padding:14px 24px;font-size:12px}
+
+  /* Cred */
+  .cred{padding:52px 20px}
+  .cred-item{padding:28px 22px}
+  .cred-desc{font-size:12px}
+
+  /* Final CTA */
+  .fcta{padding:68px 20px}
+  .fcta h2{font-size:30px}
+  .fcta-sub{font-size:14px;margin-bottom:36px}
+  .btn-fcta{width:100%;justify-content:center;padding:16px 24px;font-size:13px}
+
   .safety{padding:20px}
+  .safety p{font-size:10px}
   footer{padding:24px 20px;gap:16px}
+  .foot-links{gap:14px}
+  .foot-links a{font-size:11.5px}
 }
 </style>
 </head>
@@ -244,11 +318,11 @@ footer{border-top:1px solid var(--border);padding:32px 48px;display:flex;justify
     </div>
     <h1>The complete<br>peptide protocol<br><em>library.</em></h1>
     <p class="hero-sub">Everything your provider didn't explain — in two physician-reviewed guides.</p>
-    <a href="#guides" class="btn-hero">
-      Get Both Guides
+    <a href="#stack" class="btn-hero">
+      Get The Stack
       <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><line x1="7" y1="2" x2="7" y2="12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><polyline points="4,9 7,12 10,9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
-    <p class="hero-note">Two PDFs &middot; Complimentary &middot; Instant</p>
+    <p class="hero-note">PDF &middot; Complimentary &middot; Instant</p>
   </div>
 </section>
 
@@ -278,37 +352,48 @@ footer{border-top:1px solid var(--border);padding:32px 48px;display:flex;justify
   </div>
 </div>
 
-<!-- GUIDES -->
-<section class="guides" id="guides">
-  <div class="guides-header">
-    <div class="eyebrow">Two guides. One complete picture.</div>
-    <h2 class="sec-h2">Choose one.<br><em>Or download both.</em></h2>
-  </div>
+<!-- PRIMARY OFFER: THE STACK -->
+<section class="hero-guide" id="stack">
+  <div class="hero-guide-inner">
+    <div>
+      <div class="hg-label">Guide 01 &middot; The Full Protocol</div>
+      <h2 class="hg-title"><strong style="display:block;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:400;margin-bottom:12px">The Stack</strong>GLP-1 + Peptide<br><em>Therapy Guide</em></h2>
+      <p class="hg-desc">For people who want more than weight loss. GLP-1 biology, peptide co-therapy, muscle preservation, and the complete optimization protocol your provider didn't mention.</p>
 
-  <div class="guides-grid">
-    <article class="gcard">
-      <div class="gcard-num">Guide 01</div>
-      <div class="gcard-rule"></div>
-      <div class="gcard-label">The Full Protocol</div>
-      <div class="gcard-title">The Stack —<br><em>GLP-1 + Peptide Therapy</em></div>
-      <p class="gcard-desc">For people who want more than weight loss. GLP-1 biology, peptide co-therapy, muscle preservation, and the complete optimization protocol.</p>
-      <div class="gcard-cta">
-        <div class="gcard-cta-note">Complimentary &middot; PDF &middot; Instant</div>
-        <a href="https://tally.so/r/QKYeL8" target="_blank" rel="noopener" class="btn-card">Get The Stack &rarr;</a>
-      </div>
-    </article>
+      <!-- CTA first on mobile — chapter list below -->
+      <a href="https://tally.so/r/QKYeL8" target="_blank" rel="noopener" class="btn-primary">Download The Stack &rarr;</a>
+      <p class="btn-note">PDF &middot; 19 pages &middot; Complimentary &middot; Instant access</p>
 
-    <article class="gcard">
-      <div class="gcard-num">Guide 02</div>
-      <div class="gcard-rule"></div>
-      <div class="gcard-label">The Essentials</div>
-      <div class="gcard-title">Medical Weight Loss —<br><em>The Consumer's Guide</em></div>
-      <p class="gcard-desc">What your provider didn't explain. Medication biology, sourcing standards, muscle preservation — the right foundation before you begin.</p>
-      <div class="gcard-cta">
-        <div class="gcard-cta-note">Complimentary &middot; PDF &middot; Instant</div>
-        <a href="https://tally.so/r/QKYeL8" target="_blank" rel="noopener" class="btn-card">Get the Weight Loss Guide &rarr;</a>
+      <details class="hg-chapters-wrap">
+        <summary class="hg-chapters-toggle">What's inside <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><polyline points="2,4 6,8 10,4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="hg-chapters">
+          <div class="hg-chapter"><span class="hg-ch-num">01</span><span class="hg-ch-text">Choosing a Reputable Source</span></div>
+          <div class="hg-chapter"><span class="hg-ch-num">02</span><span class="hg-ch-text">Why Use Peptide Therapy</span></div>
+          <div class="hg-chapter"><span class="hg-ch-num">03</span><span class="hg-ch-text">GLP-1 &amp; Peptide Co-Therapy</span></div>
+          <div class="hg-chapter"><span class="hg-ch-num">04</span><span class="hg-ch-text">How GLP-1 Actually Works</span></div>
+          <div class="hg-chapter"><span class="hg-ch-num">05</span><span class="hg-ch-text">Muscle Building &amp; Recovery</span></div>
+          <div class="hg-chapter"><span class="hg-ch-num">06</span><span class="hg-ch-text">Weight Loss Protocols</span></div>
+          <div class="hg-chapter"><span class="hg-ch-num">07</span><span class="hg-ch-text">Brain Function &amp; Longevity</span></div>
+          <div class="hg-chapter"><span class="hg-ch-num">08</span><span class="hg-ch-text">How to Access Your Protocol</span></div>
+        </div>
+      </details>
+    </div>
+
+    <div class="book-mockup">
+      <div class="book-tag">The Complete Protocol Library</div>
+      <div class="book-rule"></div>
+      <div class="book-title">
+        <strong>The Stack</strong>
+        GLP-1 + Peptide Therapy
       </div>
-    </article>
+      <div class="book-rule"></div>
+      <div class="book-meta">Peptides &middot; GLP-1 Co-Therapy &middot; Longevity &middot; Body Optimization</div>
+      <div class="book-meta" style="margin-top:8px">19 Pages &middot; Foundry RX &middot; 2026</div>
+      <div class="book-cta">
+        <div class="book-cta-note">Complimentary &middot; Instant access &middot; PDF</div>
+        <a href="https://tally.so/r/QKYeL8" target="_blank" rel="noopener" class="btn-book">Get The Stack &rarr;</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -340,10 +425,20 @@ footer{border-top:1px solid var(--border);padding:32px 48px;display:flex;justify
   </div>
 </section>
 
+<!-- SECONDARY OFFER: WEIGHT LOSS GUIDE -->
+<section class="secondary">
+  <div class="secondary-inner">
+    <div class="secondary-eyebrow">Also available &middot; Guide 02</div>
+    <h3 class="secondary-title">Medical Weight Loss —<br><em>The Consumer's Guide</em></h3>
+    <p class="secondary-desc">New to medical weight loss? Start here. Medication biology, sourcing standards, and how to access physician-supervised treatment — without the jargon.</p>
+    <a href="https://tally.so/r/QKYeL8" target="_blank" rel="noopener" class="btn-secondary">Download the Weight Loss Guide &rarr;</a>
+  </div>
+</section>
+
 <!-- CREDIBILITY -->
 <section class="cred">
   <div class="cred-inner">
-    <div class="eyebrow">Why Foundry RX</div>
+    <div class="sec-eye">Why Foundry RX</div>
     <h2 class="sec-h2">Built on <em>clinical standards.</em></h2>
     <div class="cred-grid">
       <div class="cred-item">
@@ -369,9 +464,9 @@ footer{border-top:1px solid var(--border);padding:32px 48px;display:flex;justify
 <section class="fcta">
   <div class="fcta-eye">Complimentary Access</div>
   <h2>Start with<br><em>understanding.</em></h2>
-  <p class="fcta-sub">Download both guides before your first consultation.</p>
-  <a href="https://tally.so/r/QKYeL8" target="_blank" rel="noopener" class="btn-fcta">Get Both Guides &rarr;</a>
-  <p class="fcta-note">Two PDFs &middot; Complimentary &middot; Instant access</p>
+  <p class="fcta-sub">Download The Stack before your first consultation.</p>
+  <a href="https://tally.so/r/QKYeL8" target="_blank" rel="noopener" class="btn-fcta">Get The Stack &rarr;</a>
+  <p class="fcta-note">PDF &middot; 19 pages &middot; Complimentary &middot; Instant access</p>
 </section>
 
 <div class="safety">
@@ -393,4 +488,11 @@ footer{border-top:1px solid var(--border);padding:32px 48px;display:flex;justify
 </footer>
 
 </body>
+<script>
+// On desktop, force chapter list open
+if(window.innerWidth > 480){
+  var d = document.querySelector('details.hg-chapters-wrap');
+  if(d) d.setAttribute('open','');
+}
+</script>
 </html>
