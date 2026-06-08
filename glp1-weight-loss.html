@@ -376,9 +376,6 @@ a:focus-visible,button:focus-visible{
   .sticky-cta-bar{display:flex}
   body{padding-bottom:72px}
   .hiw{padding:60px 24px}
-  .hiw-cards{grid-template-columns:1fr;gap:8px}
-  .hwcard{height:220px}
-  .hwcard-label h3{font-size:14px}
 }
 
 /* HOW IT WORKS */
@@ -394,6 +391,12 @@ a:focus-visible,button:focus-visible{
 .hwcard-grad--light{position:absolute;inset:0;background:linear-gradient(160deg,rgba(0,0,0,.28) 0%,transparent 50%)}
 .hwcard-label{position:absolute;top:20px;left:20px;right:20px;z-index:2}
 .hwcard-label h3{font-size:15px;font-weight:500;line-height:1.3;letter-spacing:-.01em;margin:0}
+
+@media(max-width:1000px){
+  .hiw-cards{grid-template-columns:1fr;gap:8px}
+  .hwcard{height:220px}
+  .hwcard-label h3{font-size:14px}
+}
 
 </style>
 </head>
