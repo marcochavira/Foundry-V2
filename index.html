@@ -801,16 +801,16 @@ footer{background:#070504;padding:56px 52px 28px}
         <!-- Microdose -->
         <div class="prail-card">
           <div class="prail-photo">
-            <img src="proto-microdose-vials.png" alt="Microdose Semaglutide" class="prail-img">
+            <img src="proto-microdose-vials.png" alt="Microdose Semaglutide" class="prail-img prail-img--zoomout">
           </div>
           <div class="prail-body">
             <h3 class="prail-name">Microdose</h3>
             <p class="prail-sub">Semaglutide &mdash; entry-level GLP-1</p>
+            <p class="prail-price">Starting at <span>$119</span>/month</p>
             <div class="prail-actions">
               <a href="https://patient-foundry-rx.uniloop.co/emr/enroll/glp-1-weight-loss" class="prail-btn prail-btn--primary">Get Started</a>
               <a href="glp1-weight-loss.html" class="prail-btn prail-btn--ghost">Learn more</a>
             </div>
-            <a href="glp1-weight-loss.html#faq" class="prail-isi">Important safety information</a>
           </div>
         </div>
 
@@ -822,11 +822,11 @@ footer{background:#070504;padding:56px 52px 28px}
           <div class="prail-body">
             <h3 class="prail-name">Semaglutide</h3>
             <p class="prail-sub">GLP-1 receptor agonist</p>
+            <p class="prail-price">Starting at <span>$149</span>/month</p>
             <div class="prail-actions">
               <a href="https://patient-foundry-rx.uniloop.co/emr/enroll/glp-1-weight-loss" class="prail-btn prail-btn--primary">Get Started</a>
               <a href="glp1-weight-loss.html" class="prail-btn prail-btn--ghost">Learn more</a>
             </div>
-            <a href="glp1-weight-loss.html#faq" class="prail-isi">Important safety information</a>
           </div>
         </div>
 
@@ -838,11 +838,11 @@ footer{background:#070504;padding:56px 52px 28px}
           <div class="prail-body">
             <h3 class="prail-name">Tirzepatide</h3>
             <p class="prail-sub">GLP-1 / GIP dual agonist</p>
+            <p class="prail-price">Starting at <span>$239</span>/month</p>
             <div class="prail-actions">
               <a href="https://patient-foundry-rx.uniloop.co/emr/enroll/glp-1-weight-loss" class="prail-btn prail-btn--primary">Get Started</a>
               <a href="glp1-weight-loss.html" class="prail-btn prail-btn--ghost">Learn more</a>
             </div>
-            <a href="glp1-weight-loss.html#faq" class="prail-isi">Important safety information</a>
           </div>
         </div>
 
@@ -854,11 +854,11 @@ footer{background:#070504;padding:56px 52px 28px}
           <div class="prail-body">
             <h3 class="prail-name">NAD+</h3>
             <p class="prail-sub">Cellular energy &amp; longevity</p>
+            <p class="prail-price">Starting at <span>$149</span>/month</p>
             <div class="prail-actions">
               <a href="https://patient-foundry-rx.uniloop.co/emr/enroll/nad-treatment" class="prail-btn prail-btn--primary">Get Started</a>
               <a href="glp1-weight-loss.html#nad" class="prail-btn prail-btn--ghost">Learn more</a>
             </div>
-            <a href="glp1-weight-loss.html#faq" class="prail-isi">Important safety information</a>
           </div>
         </div>
 
@@ -906,6 +906,11 @@ footer{background:#070504;padding:56px 52px 28px}
   position:absolute;inset:0;width:100%;height:100%;
   object-fit:cover;object-position:center;display:block;
 }
+.prail-img--zoomout{
+  object-fit:contain;
+  transform:scale(.85);
+  transform-origin:center;
+}
 .prail-body{display:flex;flex-direction:column}
 .prail-name{
   font-family:var(--sans);font-size:clamp(20px,2vw,26px);font-weight:400;
@@ -913,9 +918,14 @@ footer{background:#070504;padding:56px 52px 28px}
 }
 .prail-sub{
   font-family:var(--sans);font-size:13px;color:var(--muted);
+  margin:0 0 4px;letter-spacing:.005em;
+}
+.prail-price{
+  font-family:var(--sans);font-size:13px;color:var(--ink);
   margin:0 0 16px;letter-spacing:.005em;
 }
-.prail-actions{display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap}
+.prail-price span{font-weight:500;font-size:15px}
+.prail-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .prail-btn{
   font-family:var(--sans);font-size:12.5px;font-weight:500;letter-spacing:.01em;
   padding:11px 22px;border-radius:32px;text-decoration:none;
@@ -925,10 +935,6 @@ footer{background:#070504;padding:56px 52px 28px}
 .prail-btn--primary:hover{background:#333}
 .prail-btn--ghost{background:transparent;color:var(--ink);border:1px solid var(--border)}
 .prail-btn--ghost:hover{border-color:#aaa}
-.prail-isi{
-  font-family:var(--sans);font-size:11.5px;color:var(--muted);
-  text-decoration:underline;text-underline-offset:2px;
-}
 
 .prail-controls{
   display:flex;justify-content:flex-end;gap:8px;margin-top:20px;
