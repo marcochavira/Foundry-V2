@@ -786,57 +786,91 @@ footer{background:#070504;padding:56px 52px 28px}
   <p class="cin-disc">Average 20% weight loss based on physician-supervised GLP-1 protocols with diet and lifestyle modifications. Individual results vary.</p>
 </div>
 
-<!-- PROTOCOL CARDS -->
-<section class="proto-cards-section">
-  <div class="proto-cards-inner">
+<!-- PRODUCT RAIL -->
+<section class="prail-section">
+  <div class="prail-inner">
 
-    <!-- Card 1: GLP-1 Standard -->
-    <div class="proto-card">
-      <div class="proto-card-top">
-        <div class="proto-card-label">GLP-1 Standard</div>
-        <h3 class="proto-card-title">An Advanced GLP-1 Program</h3>
-        <p style="font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.6;margin:0;">A dual-pathway GLP-1 to lose the weight and a personalized plan to keep it off.</p>
-        <a href="https://patient-foundry-rx.uniloop.co/emr/enroll/glp-1-weight-loss" class="proto-card-btn">See if you qualify &rarr;</a>
-      </div>
-      <div class="proto-card-bottom">
-        <img src="proto-glp1-vial.png" alt="" class="proto-card-img">
-        <div class="proto-price-tag">
-          <div class="proto-price-label">FOUNDRY RX<br>GLP-1</div>
-          <div class="proto-price-num">$<span>149</span></div>
-          <div class="proto-price-from">from $149 &mdash; semaglutide</div>
-        </div>
-      </div>
+    <div class="prail-header">
+      <div class="sec-eye">Protocols</div>
+      <h2 class="sec-h2">Choose your<br><em>starting point.</em></h2>
     </div>
 
-    <!-- Card 2: Microdose -->
-    <div class="proto-card proto-card--mid">
-      <div class="proto-card-top">
-        <div class="proto-card-label">Microdose</div>
-        <h3 class="proto-card-title">A Low Dose Way to Start</h3>
-        <p style="font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.6;margin:0;">A smaller dose for an easy, but impactful result.</p>
-        <a href="https://patient-foundry-rx.uniloop.co/emr/enroll/glp-1-weight-loss" class="proto-card-btn">See if you qualify &rarr;</a>
-      </div>
-      <div class="proto-card-bottom">
-        <img src="proto-microdose-vials.png" alt="" class="proto-card-img">
-        <div class="proto-price-tag">
-          <div class="proto-price-label">MICRODOSE<br>GLP-1</div>
-          <div class="proto-price-num">$<span>119</span></div>
-          <div class="proto-price-from">flat rate &mdash; everything included</div>
-        </div>
-      </div>
-    </div>
+    <div class="prail-track-wrap">
+      <div class="prail-track" id="prailTrack">
 
-    <!-- Card 3: Coming Soon -->
-    <div class="proto-card proto-card--soon">
-      <div class="proto-card-top">
-        <div class="proto-card-label proto-card-label--muted">Protocols</div>
-        <h3 class="proto-card-title proto-card-title--muted">Advanced Protocols Program</h3>
-        <p style="font-family:var(--sans);font-size:13px;color:rgba(50,35,18,.45);line-height:1.6;margin:0;font-style:italic;">Coming soon.</p>
-        <div class="proto-card-btn proto-card-btn--ghost">Coming soon</div>
+        <!-- Microdose -->
+        <div class="prail-card">
+          <div class="prail-photo">
+            <img src="proto-microdose-vials.png" alt="Microdose Semaglutide" class="prail-img">
+          </div>
+          <div class="prail-body">
+            <h3 class="prail-name">Microdose</h3>
+            <p class="prail-sub">Semaglutide &mdash; entry-level GLP-1</p>
+            <div class="prail-actions">
+              <a href="https://patient-foundry-rx.uniloop.co/emr/enroll/glp-1-weight-loss" class="prail-btn prail-btn--primary">Get Started</a>
+              <a href="glp1-weight-loss.html" class="prail-btn prail-btn--ghost">Learn more</a>
+            </div>
+            <a href="glp1-weight-loss.html#faq" class="prail-isi">Important safety information</a>
+          </div>
+        </div>
+
+        <!-- Semaglutide -->
+        <div class="prail-card">
+          <div class="prail-photo">
+            <img src="proto-glp1-vial.png" alt="Compounded Semaglutide — GLP-1 receptor agonist" class="prail-img">
+          </div>
+          <div class="prail-body">
+            <h3 class="prail-name">Semaglutide</h3>
+            <p class="prail-sub">GLP-1 receptor agonist</p>
+            <div class="prail-actions">
+              <a href="https://patient-foundry-rx.uniloop.co/emr/enroll/glp-1-weight-loss" class="prail-btn prail-btn--primary">Get Started</a>
+              <a href="glp1-weight-loss.html" class="prail-btn prail-btn--ghost">Learn more</a>
+            </div>
+            <a href="glp1-weight-loss.html#faq" class="prail-isi">Important safety information</a>
+          </div>
+        </div>
+
+        <!-- Tirzepatide -->
+        <div class="prail-card">
+          <div class="prail-photo">
+            <img src="proto-tirzepatide-vial.png" alt="Compounded Tirzepatide — GLP-1/GIP dual agonist" class="prail-img">
+          </div>
+          <div class="prail-body">
+            <h3 class="prail-name">Tirzepatide</h3>
+            <p class="prail-sub">GLP-1 / GIP dual agonist</p>
+            <div class="prail-actions">
+              <a href="https://patient-foundry-rx.uniloop.co/emr/enroll/glp-1-weight-loss" class="prail-btn prail-btn--primary">Get Started</a>
+              <a href="glp1-weight-loss.html" class="prail-btn prail-btn--ghost">Learn more</a>
+            </div>
+            <a href="glp1-weight-loss.html#faq" class="prail-isi">Important safety information</a>
+          </div>
+        </div>
+
+        <!-- NAD+ -->
+        <div class="prail-card">
+          <div class="prail-photo">
+            <img src="proto-nad-vial.png" alt="NAD+ — Nicotinamide Adenine Dinucleotide" class="prail-img">
+          </div>
+          <div class="prail-body">
+            <h3 class="prail-name">NAD+</h3>
+            <p class="prail-sub">Cellular energy &amp; longevity</p>
+            <div class="prail-actions">
+              <a href="https://patient-foundry-rx.uniloop.co/emr/enroll/nad-treatment" class="prail-btn prail-btn--primary">Get Started</a>
+              <a href="glp1-weight-loss.html#nad" class="prail-btn prail-btn--ghost">Learn more</a>
+            </div>
+            <a href="glp1-weight-loss.html#faq" class="prail-isi">Important safety information</a>
+          </div>
+        </div>
+
       </div>
-      <div class="proto-card-bottom proto-card-bottom--soon">
-        <img src="proto-advanced-mockup.png" alt="" class="proto-card-img">
-        <div class="proto-soon-line">Advanced stacking &amp; performance protocols.</div>
+
+      <div class="prail-controls">
+        <button type="button" class="prail-arrow" id="prailPrev" aria-label="Previous">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button type="button" class="prail-arrow" id="prailNext" aria-label="Next">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
       </div>
     </div>
 
@@ -844,116 +878,96 @@ footer{background:#070504;padding:56px 52px 28px}
 </section>
 
 <style>
-.proto-cards-section{
+.prail-section{
   background:#fff;
   padding:52px 52px 64px;
 }
-.proto-cards-inner{
-  max-width:var(--max);margin:0 auto;
-  display:grid;grid-template-columns:repeat(3,1fr);gap:12px;
+.prail-inner{max-width:var(--max);margin:0 auto}
+.prail-header{margin-bottom:28px}
+
+.prail-track-wrap{position:relative}
+.prail-track{
+  display:grid;grid-auto-flow:column;grid-auto-columns:minmax(260px,1fr);
+  gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;
+  scrollbar-width:none;padding-bottom:4px;
 }
-.proto-card{
-  border-radius:20px;
-  background:#EDE5D8;
+.prail-track::-webkit-scrollbar{display:none}
+
+.prail-card{
+  scroll-snap-align:start;
   display:flex;flex-direction:column;
-  overflow:hidden;min-height:360px;
-  border:1px solid var(--border);
 }
-.proto-card--mid{background:#E6DDD0}
-.proto-card--soon{background:#DDD0BF}
-.proto-card-top{
-  padding:24px 24px 16px;
-  display:flex;flex-direction:column;gap:8px;
-  min-height:200px;
+.prail-photo{
+  position:relative;width:100%;aspect-ratio:1/1;
+  border-radius:16px;overflow:hidden;background:var(--bone);
+  margin-bottom:16px;
 }
-.proto-card-label{
-  font-family:var(--sans);font-size:9px;font-weight:500;
-  letter-spacing:.22em;text-transform:uppercase;color:var(--gold);
-}
-.proto-card-label--muted{color:rgba(139,103,54,.5)}
-.proto-card-title{
-  font-family:var(--sans);font-size:clamp(17px,1.6vw,21px);
-  font-weight:400;line-height:1.15;letter-spacing:-.018em;color:var(--ink);
-}
-.proto-card-title--muted{color:rgba(50,35,18,.45);font-style:italic;font-weight:300}
-.proto-card-btn{
-  display:inline-block;
-  background:var(--ink);color:#fff;
-  font-family:var(--sans);font-size:12px;font-weight:500;letter-spacing:.03em;
-  padding:11px 20px;border-radius:32px;
-  text-decoration:none;transition:background .18s;
-  align-self:flex-start;margin-top:2px;
-}
-.proto-card-btn:hover{background:#333}
-.proto-card-btn--ghost{
-  display:inline-block;
-  background:rgba(100,75,40,.12);
-  color:rgba(80,55,20,.45);
-  font-family:var(--sans);font-size:12px;font-weight:400;letter-spacing:.06em;
-  padding:10px 20px;border-radius:32px;
-  border:1px solid rgba(100,75,40,.2);
-  align-self:flex-start;margin-top:2px;cursor:default;
-}
-.proto-card-bottom{
-  position:relative;overflow:hidden;
-  height:280px;width:100%;
-  background:#F5F1EA;
-}
-.proto-card-img{
+.prail-img{
   position:absolute;inset:0;width:100%;height:100%;
-  object-fit:contain;object-position:center bottom;
-  display:block;padding:20px 16px 0;box-sizing:border-box;
+  object-fit:cover;object-position:center;display:block;
 }
-.proto-card-bottom--soon{
-  position:relative;overflow:hidden;
-  display:flex;align-items:flex-end;
-  padding:20px 24px 24px;
+.prail-body{display:flex;flex-direction:column}
+.prail-name{
+  font-family:var(--sans);font-size:clamp(20px,2vw,26px);font-weight:400;
+  letter-spacing:-.018em;color:var(--ink);margin:0 0 4px;
 }
-.proto-soon-line{
-  font-family:var(--sans);font-size:13px;font-weight:300;
-  color:rgba(50,35,18,.7);line-height:1.65;letter-spacing:.01em;
-  position:relative;z-index:2;
+.prail-sub{
+  font-family:var(--sans);font-size:13px;color:var(--muted);
+  margin:0 0 16px;letter-spacing:.005em;
 }
-.proto-bg{display:none}
-.proto-vial-wrap{display:none}
-.proto-price-tag{
-  position:absolute;left:16px;bottom:16px;
-  background:#fff;border-radius:14px;
-  padding:12px 16px;
-  box-shadow:0 2px 20px rgba(0,0,0,.1);
-  min-width:126px;max-width:44%;
-  z-index:2;
+.prail-actions{display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap}
+.prail-btn{
+  font-family:var(--sans);font-size:12.5px;font-weight:500;letter-spacing:.01em;
+  padding:11px 22px;border-radius:32px;text-decoration:none;
+  transition:all .18s;white-space:nowrap;display:inline-block;
 }
-.proto-price-label{
-  font-family:var(--sans);font-size:8px;font-weight:600;
-  letter-spacing:.18em;text-transform:uppercase;color:var(--muted);
-  margin-bottom:5px;line-height:1.4;
+.prail-btn--primary{background:var(--ink);color:#fff}
+.prail-btn--primary:hover{background:#333}
+.prail-btn--ghost{background:transparent;color:var(--ink);border:1px solid var(--border)}
+.prail-btn--ghost:hover{border-color:#aaa}
+.prail-isi{
+  font-family:var(--sans);font-size:11.5px;color:var(--muted);
+  text-decoration:underline;text-underline-offset:2px;
 }
-.proto-price-num{
-  font-family:var(--sans);font-weight:300;color:var(--ink);
-  line-height:1;letter-spacing:-.02em;font-size:38px;
+
+.prail-controls{
+  display:flex;justify-content:flex-end;gap:8px;margin-top:20px;
 }
-.proto-price-num span{font-size:38px}
-.proto-price-from{
-  font-family:var(--sans);font-size:9px;color:var(--muted);
-  letter-spacing:.02em;margin-top:5px;
+.prail-arrow{
+  width:38px;height:38px;border-radius:50%;
+  border:1px solid var(--border);background:#fff;
+  display:flex;align-items:center;justify-content:center;
+  color:var(--ink);cursor:pointer;transition:all .18s;
 }
+.prail-arrow:hover{background:var(--bone);border-color:#ccc}
+
 @media(max-width:1024px){
-  .proto-cards-inner{grid-template-columns:1fr 1fr}
-  .proto-card--soon{grid-column:1/3}
-  .proto-cards-section{padding:40px 28px 52px}
+  .prail-section{padding:40px 28px 52px}
+  .prail-track{grid-auto-columns:minmax(220px,75%)}
 }
 @media(max-width:640px){
-  .proto-cards-inner{grid-template-columns:1fr}
-  .proto-card--soon{grid-column:1}
-  .proto-cards-section{padding:32px 20px 44px}
-  .proto-card{min-height:auto}
-  .proto-card-top{padding:24px 20px 16px;min-height:auto}
-  .proto-card-bottom{height:240px}
-  .proto-price-tag{left:12px;bottom:12px;padding:10px 12px;min-width:110px}
-  .proto-price-num,.proto-price-num span{font-size:30px}
+  .prail-section{padding:32px 20px 44px}
+  .prail-track{grid-auto-columns:minmax(200px,82%);gap:14px}
+  .prail-controls{display:none}
 }
 </style>
+
+<script>
+(function(){
+  var track = document.getElementById('prailTrack');
+  var prev = document.getElementById('prailPrev');
+  var next = document.getElementById('prailNext');
+  if(!track||!prev||!next) return;
+  function scrollByCard(dir){
+    var card = track.querySelector('.prail-card');
+    var gap = parseFloat(getComputedStyle(track).gap) || 20;
+    var w = card ? card.offsetWidth + gap : 280;
+    track.scrollBy({left: dir*w, behavior:'smooth'});
+  }
+  prev.addEventListener('click', function(){ scrollByCard(-1); });
+  next.addEventListener('click', function(){ scrollByCard(1); });
+})();
+</script>
 
 <!-- ==========================================
   FOUNDER VIDEO — directly after protocols
