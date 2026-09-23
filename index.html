@@ -736,19 +736,18 @@ footer{background:#070504;padding:56px 52px 28px}
       <div class="btn-w">Explore GLP-1 &rarr;</div>
     </div>
   </a>
-  <!-- Card 2: Coming soon — full bleed cover, text top, coming soon bottom -->
-  <div class="hcard" style="background:#EDE5D5;cursor:default;overflow:hidden">
-    <img class="himg" src="protocols-coming-soon.png" alt="Advanced Protocols"
-      style="object-fit:cover;object-position:center 65%">
-    <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(237,229,213,.82) 0%,rgba(237,229,213,.4) 38%,transparent 60%)"></div>
+  <!-- Card 2: Glutathione -->
+  <a class="hcard" href="https://patient.foundryrx.co/emr/enroll/glutathione-treatment" style="background:#F4EAE1;overflow:hidden">
+    <img class="himg" src="proto-glutathione-vial.webp" alt="Glutathione vial"
+      style="object-fit:contain;object-position:center 60%">
     <div class="hcard-body hcard-body--top" style="z-index:2">
-      <div class="hcard-tag" style="color:var(--gold);letter-spacing:.22em;margin-bottom:8px">Protocols</div>
-      <h2 class="hcard-title hcard-title--lg" style="color:var(--ink)">Advanced<br>Protocols</h2>
+      <div class="hcard-tag" style="color:var(--gold);letter-spacing:.22em;margin-bottom:8px">New protocol</div>
+      <h2 class="hcard-title hcard-title--lg" style="color:var(--ink)">Glutathione<br>from $139/month</h2>
     </div>
     <div class="hcard-cta-bottom" style="z-index:3">
-      <div class="btn-w" style="opacity:.75;cursor:default;background:rgba(255,255,255,.85);backdrop-filter:blur(8px)">Coming soon</div>
+      <div class="btn-w">Get started &rarr;</div>
     </div>
-  </div>
+  </a>
 </div>
 
 <!-- ==========================================
@@ -774,16 +773,15 @@ footer{background:#070504;padding:56px 52px 28px}
   <div class="cin-bd">
     <div>
       <div class="cin-eye">Foundry</div>
-      <h2 class="cin-h2">Drop 20% of your weight.<br><em>Keep your edge.</em></h2>
+      <h2 class="cin-h2">Lose the weight.<br><em>Keep your edge.</em></h2>
       <a href="https://patient.foundryrx.co/emr/enroll/glp1-treatment" class="btn-w" style="font-size:14.5px;padding:14px 30px;border:none;cursor:pointer;text-decoration:none">Start now &rarr;</a>
     </div>
   </div>
   <div class="cin-stat">
-    <svg width="108" height="36" viewBox="0 0 108 36" fill="none" style="margin-bottom:10px"><path d="M4 6C14 6,22 10,34 20C46 30,64 28,104 22" stroke="#d4e89b" stroke-width="2.5" fill="none" stroke-linecap="round"/><circle cx="104" cy="22" r="4" fill="#d4e89b"/></svg>
-    <div class="cin-num"><span class="cin-arr">&darr;</span>20 lbs</div>
-    <div class="cin-sub">average in 90 days</div>
+    <div class="cin-num">$119</div>
+    <div class="cin-sub">all-in monthly, shipping included</div>
   </div>
-  <p class="cin-disc">Average 20% weight loss based on physician-supervised GLP-1 protocols with diet and lifestyle modifications. Individual results vary.</p>
+  <p class="cin-disc">Prescription requires evaluation by a licensed provider. Individual results vary.</p>
 </div>
 
 <!-- PRODUCT RAIL -->
@@ -862,9 +860,25 @@ footer{background:#070504;padding:56px 52px 28px}
           </div>
         </div>
 
+        <div class="prail-card">
+          <div class="prail-photo">
+            <img src="proto-glutathione-vial.webp" alt="Glutathione vial" class="prail-img">
+          </div>
+          <div class="prail-body">
+            <h3 class="prail-name">Glutathione</h3>
+            <p class="prail-sub">Master antioxidant</p>
+            <p class="prail-price">Starting at <span>$139</span>/month</p>
+            <div class="prail-actions">
+              <a href="https://patient.foundryrx.co/emr/enroll/glutathione-treatment" class="prail-btn prail-btn--primary">Get Started</a>
+              <a href="glp1-weight-loss.html#glutathione" class="prail-btn prail-btn--ghost">Learn more</a>
+            </div>
+          </div>
+        </div>
+
       </div>
 
       <div class="prail-controls">
+        <div class="prail-progress" aria-hidden="true"><span id="prailBar"></span></div>
         <button type="button" class="prail-arrow" id="prailPrev" aria-label="Previous">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
@@ -887,7 +901,7 @@ footer{background:#070504;padding:56px 52px 28px}
 
 .prail-track-wrap{position:relative}
 .prail-track{
-  display:grid;grid-auto-flow:column;grid-auto-columns:minmax(260px,1fr);
+  display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 60px) / 4.3);
   gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;
   scrollbar-width:none;padding-bottom:4px;
 }
@@ -946,6 +960,11 @@ footer{background:#070504;padding:56px 52px 28px}
   color:var(--ink);cursor:pointer;transition:all .18s;
 }
 .prail-arrow:hover{background:var(--bone);border-color:#ccc}
+.prail-arrow:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.prail-arrow:disabled{opacity:.35;cursor:default;background:#fff;border-color:var(--border)}
+.prail-controls{align-items:center}
+.prail-progress{width:96px;height:3px;border-radius:3px;background:var(--border);overflow:hidden;margin-right:8px}
+.prail-progress span{display:block;height:100%;width:30%;background:var(--gold);border-radius:3px;transition:transform .25s ease}
 
 @media(max-width:1024px){
   .prail-section{padding:40px 28px 52px}
@@ -954,7 +973,9 @@ footer{background:#070504;padding:56px 52px 28px}
 @media(max-width:640px){
   .prail-section{padding:32px 20px 44px}
   .prail-track{grid-auto-columns:minmax(200px,82%);gap:14px}
-  .prail-controls{display:none}
+  .prail-arrow{display:none}
+  .prail-controls{justify-content:center}
+  .prail-progress{margin:0}
 }
 </style>
 
@@ -972,6 +993,18 @@ footer{background:#070504;padding:56px 52px 28px}
   }
   prev.addEventListener('click', function(){ scrollByCard(-1); });
   next.addEventListener('click', function(){ scrollByCard(1); });
+  var bar = document.getElementById('prailBar');
+  function upd(){
+    var max = track.scrollWidth - track.clientWidth;
+    var r = max > 0 ? track.scrollLeft / max : 0;
+    var w = Math.max(track.clientWidth / track.scrollWidth, .2);
+    if(bar){ bar.style.width = (w*100)+'%'; bar.style.transform = 'translateX('+(r*(1/w-1)*100)+'%)'; }
+    prev.disabled = track.scrollLeft <= 2;
+    next.disabled = track.scrollLeft >= max - 2;
+  }
+  track.addEventListener('scroll', upd, {passive:true});
+  window.addEventListener('resize', upd);
+  upd();
 })();
 </script>
 
@@ -1314,6 +1347,7 @@ footer{background:#070504;padding:56px 52px 28px}
     <div class="foot-col"><h4>Protocols</h4><ul>
       <li><a href="glp1-weight-loss.html">Weight Loss &mdash; GLP-1</a></li>
       <li><a href="glp1-weight-loss.html#options">NAD+ Protocol</a></li>
+      <li><a href="glp1-weight-loss.html#glutathione">Glutathione</a></li>
       <li><a href="glp1-weight-loss.html">Full formulary</a></li>
     </ul></div>
     <div class="foot-col"><h4>Membership</h4><ul>

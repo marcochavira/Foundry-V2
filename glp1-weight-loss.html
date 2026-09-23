@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="index, follow">
 <title>GLP-1 Weight Loss & NAD+ Therapy — Semaglutide, Tirzepatide | Foundry RX</title>
-<meta name="description" content="Physician-supervised semaglutide from $129/mo, tirzepatide from $209/mo, and NAD+ therapy. Doctor visit and shipping included. US-made. 503B-certified. Medically reviewed by Theresa Vergara, DNP.">
+<meta name="description" content="Physician-supervised semaglutide from $129/mo, tirzepatide from $209/mo, NAD+ and glutathione. Doctor visit and shipping included. US-made. 503B-certified. Medically reviewed by Theresa Vergara, DNP.">
 <link rel="canonical" href="https://foundryrx.co/glp1-weight-loss">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -168,7 +168,16 @@ nav{background:#fff;border-bottom:1px solid var(--border);display:flex;align-ite
 .products-headline{font-size:clamp(32px,4vw,56px);font-weight:400;line-height:1.04;letter-spacing:-.03em;color:var(--ink)}
 .products-headline em{font-style:italic;font-weight:300;color:var(--soft)}
 .products-sub{font-size:14px;color:var(--muted);line-height:1.75;max-width:520px;margin-top:10px}
-.product-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:20px;align-items:stretch}
+.product-grid{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 60px) / 4.3);gap:20px;align-items:stretch;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:6px 2px 16px}
+.product-grid::-webkit-scrollbar{display:none}
+.product-grid .pcard{scroll-snap-align:start}
+.rail-controls{display:flex;align-items:center;justify-content:flex-end;gap:10px;margin-top:18px}
+.rail-progress{width:96px;height:3px;border-radius:3px;background:var(--border);overflow:hidden;margin-right:8px}
+.rail-progress span{display:block;height:100%;width:30%;background:var(--gold);border-radius:3px;transition:transform .25s ease}
+.rail-arrow{width:40px;height:40px;border-radius:50%;border:1px solid var(--border);background:var(--bone);color:var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .18s,border-color .18s,opacity .18s}
+.rail-arrow:hover{background:#fff;border-color:var(--gold)}
+.rail-arrow:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.rail-arrow:disabled{opacity:.35;cursor:default;background:var(--bone);border-color:var(--border)}
 
 .pcard{background:#fff;border-radius:20px;overflow:hidden;display:flex;flex-direction:column;border:1px solid #E0D8CE;transition:box-shadow .25s,transform .25s;height:100%}
 .pcard:hover{box-shadow:0 12px 40px rgba(13,12,10,.10);transform:translateY(-3px)}
@@ -353,7 +362,9 @@ a:focus-visible,button:focus-visible{
   .ti2{padding:5px 10px;font-size:10px}
   .intro{grid-template-columns:1fr;padding:60px 24px;gap:40px}
   .products{padding:60px 24px}
-  .product-grid{grid-template-columns:1fr!important}
+  .product-grid{grid-auto-columns:82%;gap:14px}
+  .rail-arrow{display:none}
+  .rail-progress{margin:0 auto}
   .proof-strip{padding:60px 24px}
   .proof-strip-inner{grid-template-columns:1fr;gap:40px}
   .proof-photo-wrap{aspect-ratio:16/9}
@@ -410,7 +421,6 @@ a:focus-visible,button:focus-visible{
     Foundry RX
   </a>
   <ul class="nav-links">
-    <li><a href="#options">Options</a></li>
     <li><a href="#options">Options</a></li>
     <li><a href="#faq">FAQ</a></li>
   </ul>
@@ -486,9 +496,10 @@ a:focus-visible,button:focus-visible{
 <section class="products" id="options">
   <div class="products-inner">
     <div class="products-header">
-      <h2 class="hiw-head">Three programs.<br><em>One clinical decision.</em></h2>
+      <h2 class="hiw-head">Every protocol.<br><em>One clinical decision.</em></h2>
     </div>
-    <div class="product-grid">
+    <div class="product-rail">
+    <div class="product-grid" id="pgTrack">
 
       <!-- MICRODOSE -->
       <div class="pcard">
@@ -574,6 +585,37 @@ a:focus-visible,button:focus-visible{
         </div>
       </div>
 
+      <!-- GLUTATHIONE -->
+      <div class="pcard" id="glutathione">
+        <div class="pcard-photo">
+          <img src="/proto-glutathione-vial.webp" alt="Glutathione vial">
+        </div>
+        <div class="pcard-body">
+          <div class="pcard-tag">Antioxidant · Recovery</div>
+          <h2 class="pcard-name">Glutathione</h2>
+          <p class="pcard-aka">Master Antioxidant</p>
+          <p class="pcard-desc">Antioxidant support for cellular health. Pairs well with NAD+.</p>
+          <div class="pcard-spacer"></div>
+          <div class="pcard-price-row">
+            <span class="pcard-from">Starting at</span>
+            <span class="pcard-price">$139</span>
+            <span class="pcard-mo">/month</span>
+          </div>
+          <a href="https://patient.foundryrx.co/emr/enroll/glutathione-treatment" class="btn-gold-pill" style="width:100%;text-align:center">Get Started &rarr;</a>
+          <p class="pcard-note">Provider review within 24 hours</p>
+        </div>
+      </div>
+
+    </div>
+    <div class="rail-controls" aria-label="Browse protocols">
+      <div class="rail-progress" aria-hidden="true"><span id="pgBar"></span></div>
+      <button type="button" class="rail-arrow" id="pgPrev" aria-label="Previous protocols">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button type="button" class="rail-arrow" id="pgNext" aria-label="Next protocols">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
     </div>
   </div>
 </section>
@@ -789,6 +831,7 @@ a:focus-visible,button:focus-visible{
       <li><a href="#options">Compounded Semaglutide — $129/mo</a></li>
       <li><a href="#options">Compounded Tirzepatide — $209/mo</a></li>
       <li><a href="#options">NAD+ Therapy — $189/mo</a></li>
+      <li><a href="#glutathione">Glutathione — $139/mo</a></li>
       <li><a href="#options">View all programs</a></li>
     </ul></div>
     <div class="foot-col"><h4>Membership</h4><ul>
@@ -821,6 +864,18 @@ const revealEls = document.querySelectorAll('.intro,.products,.proof-strip,.doct
   });
 },{threshold:0.08});
 revealEls.forEach(el => { el.style.animationPlayState='paused'; io.observe(el); });
+</script>
+<script>
+(function(){
+  var t=document.getElementById('pgTrack'),p=document.getElementById('pgPrev'),n=document.getElementById('pgNext'),b=document.getElementById('pgBar');
+  if(!t) return;
+  function step(d){var c=t.querySelector('.pcard');var gap=parseFloat(getComputedStyle(t).columnGap)||20;t.scrollBy({left:d*(c?c.offsetWidth+gap:300),behavior:'smooth'});}
+  function upd(){var max=t.scrollWidth-t.clientWidth;var r=max>0?t.scrollLeft/max:0;var w=Math.max(t.clientWidth/t.scrollWidth,.2);
+    if(b){b.style.width=(w*100)+'%';b.style.transform='translateX('+(r*(1/w-1)*100)+'%)';}
+    if(p)p.disabled=t.scrollLeft<=2; if(n)n.disabled=t.scrollLeft>=max-2;}
+  if(p)p.addEventListener('click',function(){step(-1)}); if(n)n.addEventListener('click',function(){step(1)});
+  t.addEventListener('scroll',upd,{passive:true}); window.addEventListener('resize',upd); upd();
+})();
 </script>
 </body>
 </html>
