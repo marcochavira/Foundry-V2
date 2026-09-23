@@ -382,7 +382,7 @@ html,body{max-width:100%;overflow-x:hidden}
 .ticker-wrap{background:var(--ink);padding:14px 0;overflow:hidden;margin-top:8px}
 .ticker{display:inline-flex;animation:tick 34s linear infinite}
 .ti{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.3);padding:0 22px;white-space:nowrap;display:flex;align-items:center;gap:22px}
-.ti::after{content:'&#9670;';color:var(--gold);font-size:6.5px}
+.ti::after{content:'\25C6';color:var(--gold);font-size:6.5px}
 @keyframes tick{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
 /* == CHAPTER 8: TESTIMONIAL == */
@@ -550,13 +550,13 @@ html, body { max-width:100%; overflow-x:hidden; }
 footer{background:#070504;padding:56px 52px 28px}
 .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:52px;padding-bottom:44px;border-bottom:1px solid rgba(255,255,255,.04);margin-bottom:24px}
 .foot-logo{font-family:'DM Sans',sans-serif;font-size:17px;font-weight:600;letter-spacing:.14em;color:#fff;display:flex;align-items:center;gap:7px;margin-bottom:14px}
-.foot-desc{font-size:12px;color:#3a3836;line-height:1.72;max-width:240px}
-.foot-col h4{font-size:9.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#444;margin-bottom:14px}
+.foot-desc{font-size:12px;color:#8a857e;line-height:1.72;max-width:240px}
+.foot-col h4{font-size:9.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#6b665f;margin-bottom:14px}
 .foot-col ul{list-style:none}
 .foot-col li{margin-bottom:9px}
-.foot-col a{font-size:12.5px;color:#3a3836;transition:color .15s}
-.foot-col a:hover{color:#888}
-.foot-btm{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;font-size:11px;color:#222}
+.foot-col a{font-size:12.5px;color:#a09a91;transition:color .15s}
+.foot-col a:hover{color:#fff}
+.foot-btm{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;font-size:11px;color:#5f5a54}
 
 /* Footer social/cert row */
 .foot-social{display:flex;align-items:center;gap:14px;margin-top:18px;flex-wrap:wrap}
@@ -669,7 +669,19 @@ footer{background:#070504;padding:56px 52px 28px}
   .checks li{font-size:14px}
   .sec-h2{font-size:clamp(24px,6vw,32px)}
   .pc-desc{font-size:14px}
-}</style>
+}/* == MOBILE PASS (90% of traffic) == */
+@media(max-width:640px){
+  .hero-hdr > div{padding-left:0!important}
+  .hero-cards{padding:0 16px 32px;gap:10px}
+  .hero-cards .hcard:nth-child(2){min-height:190px}
+  .trust{gap:6px 0}
+  .ti2{border-right:none;padding:4px 12px;font-size:10.5px}
+  .safety{padding:28px 20px}
+  .safety p{font-size:12px;color:#8f8a83}
+  .foot-col li{margin-bottom:0}
+  .foot-col a{display:inline-block;padding:8px 0;font-size:14px}
+}
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TPPL2BGK" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><!-- End Google Tag Manager (noscript) -->
@@ -970,11 +982,17 @@ footer{background:#070504;padding:56px 52px 28px}
 
 @media(max-width:1024px){
   .prail-section{padding:40px 28px 52px}
-  .prail-track{grid-auto-columns:minmax(220px,75%)}
+  .prail-track{grid-auto-columns:calc((100% - 20px) / 2.3)}
 }
 @media(max-width:640px){
   .prail-section{padding:32px 20px 44px}
-  .prail-track{grid-auto-columns:minmax(200px,82%);gap:14px}
+  .prail-track{grid-auto-columns:84%;gap:14px;scroll-padding-left:0}
+  .prail-name{font-size:24px}
+  .prail-sub{font-size:14px}
+  .prail-price{font-size:15px;margin-bottom:18px}
+  .prail-price span{font-size:18px}
+  .prail-actions{flex-wrap:nowrap}
+  .prail-btn{flex:1;text-align:center;justify-content:center;min-height:48px;display:flex;align-items:center}
   .prail-arrow{display:none}
   .prail-controls{justify-content:center}
   .prail-progress{margin:0}
@@ -1308,7 +1326,7 @@ footer{background:#070504;padding:56px 52px 28px}
 <!-- SAFETY -->
 <div class="safety">
   <h3>Important safety information</h3>
-  <p>GLP-1 receptor agonists including compounded semaglutide and tirzepatide may have serious side effects, including possible thyroid tumors. Do not use if you or your family have a history of medullary thyroid carcinoma (MTC) or MEN 2. All medications prescribed at independent clinical judgment of licensed physicians. Membership does not include medication cost. Individual results vary.</p>
+  <p>GLP-1 receptor agonists including compounded semaglutide and tirzepatide may have serious side effects, including possible thyroid tumors. Do not use if you or your family have a history of medullary thyroid carcinoma (MTC) or MEN 2. All medications prescribed at independent clinical judgment of licensed physicians. Individual results vary.</p>
 </div>
 
 <!-- FOOTER CTA -->
