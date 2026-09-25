@@ -171,6 +171,13 @@ nav{background:#fff;border-bottom:1px solid var(--border);display:flex;align-ite
 .product-grid{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 60px) / 4.3);gap:20px;align-items:stretch;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:6px 2px 16px}
 .product-grid::-webkit-scrollbar{display:none}
 .product-grid .pcard{scroll-snap-align:start}
+.product-grid .pcard[hidden]{display:none}
+.cat-tabs{display:inline-flex;gap:6px;padding:5px;background:var(--bone);border:1px solid #E0D8CE;border-radius:40px;margin-bottom:28px}
+.cat-tab{font-family:inherit;font-size:13.5px;font-weight:500;letter-spacing:-.005em;color:var(--muted);background:transparent;border:0;border-radius:32px;padding:11px 24px;cursor:pointer;transition:background .2s,color .2s;white-space:nowrap}
+.cat-tab:hover{color:var(--ink)}
+.cat-tab[aria-selected="true"]{background:var(--ink);color:#fff}
+.cat-tab:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.cat-sub{font-size:13.5px;color:var(--muted);line-height:1.6;margin:-14px 0 24px;max-width:520px}
 .rail-controls{display:flex;align-items:center;justify-content:flex-end;gap:10px;margin-top:18px}
 .rail-progress{width:96px;height:3px;border-radius:3px;background:var(--border);overflow:hidden;margin-right:8px}
 .rail-progress span{display:block;height:100%;width:30%;background:var(--gold);border-radius:3px;transition:transform .25s ease}
@@ -329,8 +336,6 @@ footer{background:#070504;padding:52px 64px 28px}
 .proof-stat-div{width:1px;background:var(--border);align-self:stretch;flex-shrink:0}
 
 /* ── APPLE-QUALITY GLOBAL REFINEMENTS ───────── */
-/* Smooth section entrances */
-.intro,.products,.proof-strip,.doctor,
 .intro{animation-delay:.05s}
 .products{animation-delay:.1s}
 .proof-strip{animation-delay:.08s}
@@ -341,7 +346,8 @@ footer{background:#070504;padding:52px 64px 28px}
 
 /* Respect reduced motion */
 @media(prefers-reduced-motion:reduce){
-  .intro,.products,.proof-strip,.doctor,
+  .product-grid{scroll-behavior:auto}
+  .pcard,.pcard:hover{transition:none;transform:none}
 }
 
 /* Apple-style focus rings */
@@ -363,6 +369,8 @@ a:focus-visible,button:focus-visible{
   .intro{grid-template-columns:1fr;padding:60px 24px;gap:40px}
   .products{padding:60px 24px}
   .product-grid{grid-auto-columns:82%;gap:14px}
+  .cat-tabs{display:flex;width:100%}
+  .cat-tab{flex:1;padding:12px 10px;font-size:13px;min-height:44px}
   .rail-arrow{display:none}
   .rail-progress{margin:0 auto}
   .proof-strip{padding:60px 24px}
@@ -498,19 +506,24 @@ a:focus-visible,button:focus-visible{
     <div class="products-header">
       <h2 class="hiw-head">Every protocol.<br><em>One clinical decision.</em></h2>
     </div>
+    <div class="cat-tabs" role="tablist" aria-label="Browse by goal">
+      <button type="button" class="cat-tab" role="tab" id="tab-weight-loss" data-cat="weight-loss" aria-selected="true" aria-controls="pgTrack">Weight Loss</button>
+      <button type="button" class="cat-tab" role="tab" id="tab-longevity" data-cat="longevity" aria-selected="false" aria-controls="pgTrack" tabindex="-1">Longevity &amp; Energy</button>
+    </div>
+    <p class="cat-sub" id="catSub">Provider-guided GLP-1 programs, with NAD+ to support your energy along the way.</p>
     <div class="product-rail">
-    <div class="product-grid" id="pgTrack">
+    <div class="product-grid" id="pgTrack" role="tabpanel" aria-labelledby="tab-weight-loss">
 
       <!-- MICRODOSE -->
-      <div class="pcard">
+      <div class="pcard" data-cat="weight-loss">
         <div class="pcard-photo">
           <img src="/proto-microdose-vials.png" alt="Microdose Semaglutide">
         </div>
         <div class="pcard-body">
           <div class="pcard-tag">GLP-1 Starter Protocol</div>
-          <h2 class="pcard-name">Microdose</h2>
-          <p class="pcard-aka">Entry-level GLP-1</p>
-          <p class="pcard-desc">The ideal starting point. Lower dose, fewer side effects, full clinical support.</p>
+          <h2 class="pcard-name">GLP-1 Microdose</h2>
+          <p class="pcard-aka">Compounded semaglutide, low dose</p>
+          <p class="pcard-desc">A gentle starting point. Lower starting dose, adjusted by your provider as you go.</p>
           <div class="pcard-spacer"></div>
           <div class="pcard-price-row">
             <span class="pcard-from">Starting at</span>
@@ -523,15 +536,15 @@ a:focus-visible,button:focus-visible{
       </div>
 
       <!-- SEMAGLUTIDE -->
-      <div class="pcard">
+      <div class="pcard" data-cat="weight-loss">
         <div class="pcard-photo">
           <img src="/proto-glp1-vial.png" alt="Compounded semaglutide — GLP-1 receptor agonist 10mg/2mL">
         </div>
         <div class="pcard-body">
           <div class="pcard-tag">GLP-1 Receptor Agonist</div>
-          <h2 class="pcard-name">Semaglutide</h2>
-          <p class="pcard-aka">GLP-1 Receptor Agonist</p>
-          <p class="pcard-desc">Regulates appetite and fullness. Strong clinical track record for sustained weight loss.</p>
+          <h2 class="pcard-name">GLP-1</h2>
+          <p class="pcard-aka">Compounded semaglutide</p>
+          <p class="pcard-desc">Helps regulate appetite and fullness. Dosing guided by your provider.</p>
           <div class="pcard-spacer"></div>
           <div class="pcard-price-row">
             <span class="pcard-from">Starting at</span>
@@ -544,15 +557,15 @@ a:focus-visible,button:focus-visible{
       </div>
 
       <!-- TIRZEPATIDE -->
-      <div class="pcard">
+      <div class="pcard" data-cat="weight-loss">
         <div class="pcard-photo">
           <img src="/proto-tirzepatide-vial.png" alt="Compounded tirzepatide — GLP-1/GIP dual agonist 10mg/2mL">
         </div>
         <div class="pcard-body">
           <div class="pcard-tag">GLP-1 / GIP Dual Agonist</div>
-          <h2 class="pcard-name">Tirzepatide</h2>
-          <p class="pcard-aka">GLP-1 / GIP Dual Agonist</p>
-          <p class="pcard-desc">Dual-pathway protocol. Higher average weight loss in clinical trials. Provider-determined.</p>
+          <h2 class="pcard-name">GLP-1/GIP</h2>
+          <p class="pcard-aka">Compounded tirzepatide</p>
+          <p class="pcard-desc">Works on two appetite pathways. Your provider decides if it is the right fit.</p>
           <div class="pcard-spacer"></div>
           <div class="pcard-price-row">
             <span class="pcard-from">Starting at</span>
@@ -564,8 +577,8 @@ a:focus-visible,button:focus-visible{
         </div>
       </div>
 
-      <!-- NAD+ -->
-      <div class="pcard">
+      <!-- NAD+ (appears in both tabs) -->
+      <div class="pcard" id="nad" data-cat="weight-loss longevity">
         <div class="pcard-photo">
           <img src="/proto-nad-vial.png" alt="NAD+ — Nicotinamide Adenine Dinucleotide 1000mg/10mL">
         </div>
@@ -585,8 +598,30 @@ a:focus-visible,button:focus-visible{
         </div>
       </div>
 
+      <!-- NAD+ NASAL SPRAY -->
+      <!-- Confirm LegitScript coverage (Kyle) before deploying -->
+      <div class="pcard" id="nad-spray" data-cat="longevity">
+        <div class="pcard-photo">
+          <img src="/proto-nad-spray.webp" alt="NAD+ nasal spray bottle" loading="lazy">
+        </div>
+        <div class="pcard-body">
+          <div class="pcard-tag">Cellular Energy · Needle-free</div>
+          <h2 class="pcard-name">NAD+ Nasal Spray</h2>
+          <p class="pcard-aka">Daily nasal spray</p>
+          <p class="pcard-desc">NAD+ without injections. Your provider sets the dose and schedule.</p>
+          <div class="pcard-spacer"></div>
+          <div class="pcard-price-row">
+            <span class="pcard-from">Starting at</span>
+            <span class="pcard-price">$139</span>
+            <span class="pcard-mo">/month</span>
+          </div>
+          <a href="https://patient.foundryrx.co/emr/enroll/nad-nasal-spray-treatment" class="btn-gold-pill" style="width:100%;text-align:center">Get Started &rarr;</a>
+          <p class="pcard-note">Provider review within 24 hours</p>
+        </div>
+      </div>
+
       <!-- GLUTATHIONE -->
-      <div class="pcard" id="glutathione">
+      <div class="pcard" id="glutathione" data-cat="longevity">
         <div class="pcard-photo">
           <img src="/proto-glutathione-vial.webp" alt="Glutathione vial">
         </div>
@@ -602,6 +637,28 @@ a:focus-visible,button:focus-visible{
             <span class="pcard-mo">/month</span>
           </div>
           <a href="https://patient.foundryrx.co/emr/enroll/glutathione-treatment" class="btn-gold-pill" style="width:100%;text-align:center">Get Started &rarr;</a>
+          <p class="pcard-note">Provider review within 24 hours</p>
+        </div>
+      </div>
+
+      <!-- SERMORELIN -->
+      <!-- Confirm LegitScript coverage (Kyle) before deploying -->
+      <div class="pcard" id="sermorelin" data-cat="longevity">
+        <div class="pcard-photo">
+          <img src="/proto-sermorelin-vial.webp" alt="Sermorelin vial" loading="lazy">
+        </div>
+        <div class="pcard-body">
+          <div class="pcard-tag">Growth Hormone Signaling</div>
+          <h2 class="pcard-name">Sermorelin</h2>
+          <p class="pcard-aka">GHRH peptide</p>
+          <p class="pcard-desc">Prompts your body's own growth hormone release. Your provider decides if it fits your goals.</p>
+          <div class="pcard-spacer"></div>
+          <div class="pcard-price-row">
+            <span class="pcard-from">Starting at</span>
+            <span class="pcard-price">$139</span>
+            <span class="pcard-mo">/month</span>
+          </div>
+          <a href="https://patient.foundryrx.co/emr/enroll/sermorelin-treatment" class="btn-gold-pill" style="width:100%;text-align:center">Get Started &rarr;</a>
           <p class="pcard-note">Provider review within 24 hours</p>
         </div>
       </div>
@@ -830,7 +887,7 @@ a:focus-visible,button:focus-visible{
       <li><a href="#options">Microdose Semaglutide — $119/mo</a></li>
       <li><a href="#options">Compounded Semaglutide — $129/mo</a></li>
       <li><a href="#options">Compounded Tirzepatide — $209/mo</a></li>
-      <li><a href="#options">NAD+ Therapy — $189/mo</a></li>
+      <li><a href="#nad">NAD+ Therapy — $189/mo</a></li>
       <li><a href="#glutathione">Glutathione — $139/mo</a></li>
       <li><a href="#options">View all programs</a></li>
     </ul></div>
@@ -859,11 +916,34 @@ a:focus-visible,button:focus-visible{
 </div>
 
 <script>
-// Scroll-triggered section reveals
-const revealEls = document.querySelectorAll('.intro,.products,.proof-strip,.doctor,
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll('.cat-tab')),t=document.getElementById('pgTrack'),sub=document.getElementById('catSub');
+  if(!t||!tabs.length) return;
+  var cards=[].slice.call(t.querySelectorAll('.pcard'));
+  var copy={'weight-loss':'Provider-guided GLP-1 programs, with NAD+ to support your energy along the way.','longevity':'Treatments for cellular energy, recovery, and healthy aging. Your provider tailors each one.'};
+  function show(cat,track){
+    tabs.forEach(function(b){var on=b.dataset.cat===cat;b.setAttribute('aria-selected',on);b.tabIndex=on?0:-1;if(on)t.setAttribute('aria-labelledby',b.id);});
+    cards.forEach(function(c){c.hidden=(' '+c.dataset.cat+' ').indexOf(' '+cat+' ')<0;});
+    if(sub)sub.textContent=copy[cat];
+    t.scrollLeft=0;t.dispatchEvent(new Event('scroll'));
+    if(track){window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'category_tab_click',category_tab:cat});}
+  }
+  tabs.forEach(function(b,i){
+    b.addEventListener('click',function(){show(b.dataset.cat,true);history.replaceState(null,'',b.dataset.cat==='longevity'?'#longevity':location.pathname+location.search);});
+    b.addEventListener('keydown',function(e){var k=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;if(!k)return;e.preventDefault();var n=tabs[(i+k+tabs.length)%tabs.length];n.focus();n.click();});
   });
-},{threshold:0.08});
-revealEls.forEach(el => { el.style.animationPlayState='paused'; io.observe(el); });
+  function fromHash(){
+    var h=location.hash.slice(1);if(!h)return show('weight-loss',false);
+    if(h==='longevity')return show('longevity',false);
+    var c=document.getElementById(h);
+    if(c&&c.classList.contains('pcard')){
+      var cats=c.dataset.cat.split(' ');var cur=(tabs.filter(function(b){return b.getAttribute('aria-selected')==='true';})[0]||{}).dataset;
+      show(cats.indexOf(cur&&cur.cat)>=0?cur.cat:cats[0],false);
+      setTimeout(function(){c.scrollIntoView({behavior:'smooth',block:'nearest',inline:'start'});},50);
+    }
+  }
+  window.addEventListener('hashchange',fromHash);fromHash();
+})();
 </script>
 <script>
 (function(){
