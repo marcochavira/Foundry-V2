@@ -172,11 +172,14 @@ nav{background:#fff;border-bottom:1px solid var(--border);display:flex;align-ite
 .product-grid::-webkit-scrollbar{display:none}
 .product-grid .pcard{scroll-snap-align:start}
 .product-grid .pcard[hidden]{display:none}
-.cat-tabs{display:inline-flex;gap:6px;padding:5px;background:var(--bone);border:1px solid #E0D8CE;border-radius:40px;margin-bottom:28px}
-.cat-tab{font-family:inherit;font-size:13.5px;font-weight:500;letter-spacing:-.005em;color:var(--muted);background:transparent;border:0;border-radius:32px;padding:11px 24px;cursor:pointer;transition:background .2s,color .2s;white-space:nowrap}
-.cat-tab:hover{color:var(--ink)}
-.cat-tab[aria-selected="true"]{background:var(--ink);color:#fff}
-.cat-tab:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.cat-tabs{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:28px}
+.cat-tab{font-family:inherit;font-size:16px;font-weight:500;letter-spacing:-.01em;color:var(--ink);background:var(--bone);border:1.5px solid #DCD2C3;border-radius:40px;padding:15px 30px;min-height:52px;cursor:pointer;transition:background .2s,color .2s,border-color .2s;white-space:nowrap}
+.cat-tab:hover{border-color:var(--gold)}
+.cat-tab[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.cat-tab:focus{outline:none}
+.cat-tab:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.pcard-alt{font-size:12.5px;color:var(--ink);margin-top:-6px;margin-bottom:14px}
+.pcard-alt a{color:var(--gold);text-decoration:underline;text-underline-offset:3px}
 .cat-sub{font-size:13.5px;color:var(--muted);line-height:1.6;margin:-14px 0 24px;max-width:520px}
 .rail-controls{display:flex;align-items:center;justify-content:flex-end;gap:10px;margin-top:18px}
 .rail-progress{width:96px;height:3px;border-radius:3px;background:var(--border);overflow:hidden;margin-right:8px}
@@ -369,8 +372,8 @@ a:focus-visible,button:focus-visible{
   .intro{grid-template-columns:1fr;padding:60px 24px;gap:40px}
   .products{padding:60px 24px}
   .product-grid{grid-auto-columns:82%;gap:14px}
-  .cat-tabs{display:flex;width:100%}
-  .cat-tab{flex:1;padding:12px 10px;font-size:13px;min-height:44px}
+  .cat-tabs{flex-wrap:nowrap;gap:8px}
+  .cat-tab{flex:1;padding:13px 10px;font-size:14.5px;min-height:48px}
   .rail-arrow{display:none}
   .rail-progress{margin:0 auto}
   .proof-strip{padding:60px 24px}
@@ -587,6 +590,8 @@ a:focus-visible,button:focus-visible{
           <h2 class="pcard-name">NAD+</h2>
           <p class="pcard-aka">Cellular Longevity</p>
           <p class="pcard-desc">Cellular energy and metabolism support. Pairs well with GLP-1 protocols.</p>
+          <!-- Remove this line if the nasal spray card is held for LegitScript -->
+          <p class="pcard-alt">Prefer no needles? <a href="#nad-spray">See the nasal spray</a></p>
           <div class="pcard-spacer"></div>
           <div class="pcard-price-row">
             <span class="pcard-from">Starting at</span>
