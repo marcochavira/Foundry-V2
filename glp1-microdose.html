@@ -470,6 +470,26 @@ b,strong{font-weight:600}
 }
 @media (min-width:761px) and (max-width:1000px){.nav-r .login{display:inline-flex;align-items:center;min-height:44px}.nav-r .btn{min-height:44px}.logo{min-height:44px}.toggle button{min-height:44px}input[type=range]{height:44px}.eyebrow{font-size:11px}.chip-k{font-size:10.5px}.doc-reviewed{font-size:10.5px}}
 @media (max-width:600px){.nav-r .login{display:none}}
+/* v2: smaller floating bottles, shorter photo row, centered offer */
+.photo-grid{grid-template-columns:1.7fr 1fr;height:440px}
+.photo-grid>img{height:440px;aspect-ratio:auto!important;object-position:30% 50%}
+.prod-tile{aspect-ratio:auto;height:440px}
+.prod-tile img{object-fit:contain;padding:64px 28px 28px;object-position:center 60%}
+.close-center{display:flex;flex-direction:column;align-items:center;text-align:center}
+.close-head{max-width:34em;margin-bottom:32px}
+.close-head h2{font-size:clamp(22px,2.4vw,32px);font-weight:400;line-height:1.12;letter-spacing:-.02em}
+.close-head p{font-size:14px;color:var(--muted);margin:12px 0 0}
+.offer{width:100%;max-width:520px}
+.offer-visual{height:280px}
+.offer-visual img{object-fit:contain;padding:18px 0 14px;object-position:38% 60%}
+.offer-visual .chip{right:7%}
+@media (max-width:760px){
+  .photo-grid{height:auto}
+  .photo-grid>img{height:auto;aspect-ratio:4/3!important}
+  .prod-tile{height:340px}
+  .prod-tile img{padding:70px 20px 20px}
+  .offer-visual{height:250px}
+}
 </style>
 </head>
 <body>
@@ -676,10 +696,10 @@ b,strong{font-weight:600}
 </section>
 
 <section class="close" id="start">
-  <div class="wrap close-grid">
-    <div>
+  <div class="wrap close-center">
+    <div class="close-head">
       <h2>Start in<span class="accent">five minutes.</span></h2>
-      <p style="margin:24px 0 0;color:var(--ink-2);max-width:24em">Reviewed by a licensed provider within 24 hours. $99/month, with no teaser pricing.</p>
+      <p>Reviewed by a licensed provider within 24 hours. No teaser pricing.</p>
     </div>
     <div class="offer">
       <h3 class="offer-h">The low-dose<br>way to start</h3>
@@ -774,6 +794,16 @@ let a = true, b = false;
 const upd = () => sticky.classList.toggle("show", !a && !b);
 new IntersectionObserver(e => { a = e[0].isIntersecting; upd(); }).observe(document.getElementById("top"));
 new IntersectionObserver(e => { b = e[0].isIntersecting; upd(); }).observe(document.getElementById("start"));
+
+// Match product panels to the vial photo's own background so no square edge shows
+(function(){
+  document.querySelectorAll('.prod-tile img,.offer-visual img').forEach(img=>{
+    const apply=()=>{try{const c=document.createElement('canvas');c.width=c.height=1;const x=c.getContext('2d');
+      x.drawImage(img,2,2,1,1,0,0,1,1);const d=x.getImageData(0,0,1,1).data;
+      if(d[3]>200) img.parentElement.style.background=`rgb(${d[0]},${d[1]},${d[2]})`;}catch(e){}};
+    img.complete?apply():img.addEventListener('load',apply);
+  });
+})();
 </script>
 </body>
 </html>
