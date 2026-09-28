@@ -222,7 +222,7 @@ footer b{color:var(--ink)}
 .sticky .btn{padding:14px 22px}
 @media (max-width:760px){.sticky{display:flex}}
 /* mobile polish */
-html,body{overflow-x:hidden}
+html,body{overflow-x:clip}
 body{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 .btn,.opt,summary,.toggle button{min-height:48px}
 .toggle button{min-height:40px}
@@ -440,6 +440,36 @@ b,strong{font-weight:600}
 .prod-meta sup{font-size:9px;margin-left:1px}
 @media (max-width:600px){.offer{padding:36px 20px 0}.offer-foot{margin:0 -20px}.offer-visual{height:260px}.chip{right:4%;width:136px}.chip-p{font-size:44px}}
 .close{background:#fff}
+/* product photo full-bleed (image has its own background) */
+.prod-tile{background:#EDE4D8}
+.prod-tile img{inset:0;top:0;bottom:0;width:100%;height:100%;padding:0;object-fit:cover;object-position:40% 60%}
+.prod-tile .chip{top:20px;bottom:auto;right:18px}
+.offer{padding-bottom:0}
+.offer-visual{margin:28px -32px 0;height:340px;overflow:hidden;background:#EDE4D8}
+.offer-visual img{inset:0;left:0;bottom:0;transform:none;width:100%;height:100%;max-width:none;object-fit:cover;object-position:40% 55%}
+.offer-visual .chip{top:24px;right:8%}
+.offer-foot{position:relative;margin:0 -32px}
+@media (max-width:760px){.prod-tile{height:360px}.prod-tile img{top:0;height:100%}}
+@media (max-width:600px){.offer-visual{margin:24px -20px 0;height:300px}.offer-foot{margin:0 -20px}}
+.chip{text-align:center}
+@media (max-width:600px){.chip{width:144px}}
+/* mobile touch targets + legibility */
+@media (max-width:760px){
+  .logo{min-height:44px}
+  .nav-r .btn{min-height:44px;padding:12px 20px}
+  .nav-r .login{display:inline-flex;align-items:center;min-height:44px}
+  .toggle button{min-height:44px;padding:12px 18px}
+  input[type=range]{height:44px}
+  .eyebrow,.num-grid .eyebrow{font-size:11px}
+  .chip-k{font-size:10.5px}
+  .chip-s{font-size:11.5px}
+  .doc-reviewed{font-size:10.5px}
+  .doc-npi{font-size:11.5px}
+  .safety-line{font-size:12px}
+  footer{font-size:12px}
+}
+@media (min-width:761px) and (max-width:1000px){.nav-r .login{display:inline-flex;align-items:center;min-height:44px}.nav-r .btn{min-height:44px}.logo{min-height:44px}.toggle button{min-height:44px}input[type=range]{height:44px}.eyebrow{font-size:11px}.chip-k{font-size:10.5px}.doc-reviewed{font-size:10.5px}}
+@media (max-width:600px){.nav-r .login{display:none}}
 </style>
 </head>
 <body>
@@ -496,7 +526,11 @@ b,strong{font-weight:600}
       <img src="microdose-hero.webp" alt="Woman in her forties and a friend smiling while holding an arm balance on yoga mats outdoors" width="1600" height="1067" fetchpriority="high" decoding="async">
       <a class="prod-tile enroll" href="https://patient.foundryrx.co/emr/enroll/glp1-treatment">
         <img src="proto-microdose-vials.png" alt="GLP-1 Microdose vials" loading="eager" decoding="async">
-        <span class="prod-meta"><b>GLP-1 Microdose</b><span>$99/month<sup>1</sup></span></span>
+        <div class="chip">
+          <span class="chip-k">Microdose<br>GLP-1 Program</span>
+          <span class="chip-p"><sup>$</sup>99<sup class="fn">1</sup></span>
+          <span class="chip-s">per month<br>same price all 3 months</span>
+        </div>
       </a>
     </div>
   </div>
@@ -697,7 +731,7 @@ b,strong{font-weight:600}
 
 <div class="sticky" id="sticky">
   <span class="st-copy"><b>$99/month</b><span>24-hour provider review</span></span>
-  <a class="btn enroll" href="https://patient.foundryrx.co/emr/enroll/glp1-treatment">Start now</a>
+  <a class="btn enroll" href="https://patient.foundryrx.co/emr/enroll/glp1-treatment">See if you qualify</a>
 </div>
 
 <script>
