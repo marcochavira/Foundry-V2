@@ -490,6 +490,69 @@ b,strong{font-weight:600}
   .prod-tile img{padding:70px 20px 20px}
   .offer-visual{height:250px}
 }
+/* v3: full-width closing band */
+.close{background:#fff;padding:96px 0}
+.band{display:grid;grid-template-columns:1fr 1fr;background:var(--bone);border-radius:24px;overflow:hidden;min-height:520px}
+.band-copy{padding:64px 56px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+.band-copy h2{font-size:clamp(30px,3.4vw,46px);font-weight:400;line-height:1.05;letter-spacing:-.028em;margin:0}
+.band-sub{font-size:15px;color:#444;margin:16px 0 26px;max-width:26em}
+.band-list{list-style:none;margin:0 0 30px;padding:0;width:100%;max-width:400px}
+.band-list li{display:flex;align-items:center;gap:11px;padding:11px 0;border-top:1px solid rgba(13,12,10,.08);font-size:13.5px;color:#444}
+.band-list li:last-child{border-bottom:1px solid rgba(13,12,10,.08)}
+.band-list b{font-weight:500;color:#111}
+.band-list svg{flex:none}
+.band-note{font-size:12px;color:var(--muted);margin:12px 0 0}
+.band-visual{position:relative;aspect-ratio:1/1;min-height:100%;overflow:hidden;background:#EDE4D8}
+.band-visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.band-visual .chip{top:28px;right:28px;width:156px}
+@media (max-width:900px){
+  .band{grid-template-columns:1fr;min-height:0}
+  .band-copy{padding:40px 24px 32px}
+  .band-visual{aspect-ratio:1/1;min-height:0}
+  .band-visual .chip{top:16px;right:16px;width:140px}
+  .band .btn{width:100%}
+  .close{padding:64px 0}
+}
+.band .eyebrow{color:var(--gold);font-size:10px;letter-spacing:.2em;margin:0 0 12px}
+.band .band-sub{font-size:15px;color:#444;line-height:1.6}
+.band .band-note{font-size:12px}
+@media (max-width:760px){.band .eyebrow{font-size:11px}}
+@media (max-width:900px){.band-visual{order:-1;aspect-ratio:4/3}.band-visual img{object-position:center 60%}}
+/* v4 mobile UX */
+.offer-note{font-size:12px;color:var(--muted);margin:10px 0 0}
+.close{background:#fff}
+@media (max-width:760px){
+  /* hero: tighter, no repeats */
+  .hero{padding:28px 0 20px}
+  .eyebrow{margin-bottom:10px}
+  .lede{font-size:15px;margin-top:12px}
+  .ctas{margin-top:22px;gap:6px}
+  .ctas .btn.ghost{flex:0 0 auto;width:100%;border:0;background:none;min-height:44px;text-decoration:underline;text-underline-offset:3px;padding:10px 0;font-size:13px}
+  .cta-note{margin-top:6px;justify-content:center;width:100%}
+  .hero-grid{gap:24px}
+  .proof li:first-child{display:none}
+  .proof li:nth-child(2){padding-top:0;border-top:0}
+  /* photo row: stack properly */
+  .photo-grid{grid-template-columns:1fr;height:auto;gap:8px}
+  .photo-grid>img{height:auto;aspect-ratio:4/3!important}
+  .prod-tile{height:auto;aspect-ratio:4/3}
+  .prod-tile img{padding:56px 24px 16px}
+  .prod-tile .chip{top:14px;right:14px;width:138px;padding:10px 8px}
+  .prod-tile .chip-p{font-size:38px}
+  /* How it works: swipeable row with a peek of the next card */
+  .hiw{padding:44px 0 44px 16px}
+  .hiw-head{padding-right:16px}
+  .hiw-cards{display:grid;grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:78%;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-right:16px;scrollbar-width:none}
+  .hiw-cards::-webkit-scrollbar{display:none}
+  .hwcard{height:400px;scroll-snap-align:start}
+  .hiw-swipe{display:block}
+  /* closing card */
+  .close{padding:56px 0}
+  .offer-visual{height:auto;aspect-ratio:1/1;margin-top:22px}
+  .offer .btn{width:100%}
+}
+.hiw-swipe{display:none;font-size:12px;color:var(--muted);margin:12px 16px 0 0}
+@media (max-width:760px){.benefits{margin:12px 16px 0}.prod-tile .chip{width:150px}.photo-sec::after{top:auto;height:60%}}
 </style>
 </head>
 <body>
@@ -626,7 +689,7 @@ b,strong{font-weight:600}
     </div>
 
     <div class="hwcard" style="background:#EAE0D4;overflow:hidden">
-      <img src="chatgpt-app-mockup-warm.png" alt="Track your progress" style="object-fit:cover;object-position:center center;position:absolute;inset:0;width:100%;height:100%;display:block">
+      <img src="chatgpt-vials-warm.png" alt="Track your progress" style="object-fit:cover;object-position:center center;position:absolute;inset:0;width:100%;height:100%;display:block">
       <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.35) 0%,transparent 45%)"></div>
       <div class="hwcard-label" style="position:absolute;top:20px;left:20px;right:20px;z-index:2">
         <h3 style="color:#fff">Track your progress</h3>
@@ -634,7 +697,7 @@ b,strong{font-weight:600}
     </div>
 
     <div class="hwcard" style="background:#EDE5D5;overflow:hidden">
-      <img src="chatgpt-vials-warm.png" alt="US-made · 503B certified" style="object-fit:cover;object-position:center center;position:absolute;inset:0;width:100%;height:100%;display:block">
+      <img src="chatgpt-app-mockup-warm.png" alt="US-made · 503B certified" style="object-fit:cover;object-position:center center;position:absolute;inset:0;width:100%;height:100%;display:block">
       <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.32) 0%,transparent 45%)"></div>
       <div class="hwcard-label" style="position:absolute;top:20px;left:20px;right:20px;z-index:2">
         <h3 style="color:#fff">US-made · 503B certified</h3>
@@ -650,6 +713,8 @@ b,strong{font-weight:600}
     </div>
 
   </div>
+  <p class="hiw-swipe">Swipe to see more →</p>
+
 </section>
 
 <!-- Provider card, same as index -->
@@ -697,14 +762,11 @@ b,strong{font-weight:600}
 
 <section class="close" id="start">
   <div class="wrap close-center">
-    <div class="close-head">
-      <h2>Start in<span class="accent">five minutes.</span></h2>
-      <p>Reviewed by a licensed provider within 24 hours. No teaser pricing.</p>
-    </div>
     <div class="offer">
       <h3 class="offer-h">The low-dose<br>way to start</h3>
       <p class="offer-sub">A smaller dose for an easier start.</p>
       <a class="btn enroll" href="https://patient.foundryrx.co/emr/enroll/glp1-treatment">See if you qualify</a>
+      <p class="offer-note">Takes about five minutes</p>
       <div class="offer-visual">
         <img src="proto-microdose-vials.png" alt="GLP-1 Microdose vials" loading="lazy" decoding="async">
         <div class="chip">
@@ -715,7 +777,6 @@ b,strong{font-weight:600}
       </div>
       <p class="offer-foot">24-hour provider review · Consultation included</p>
     </div>
-  </div>
   </div>
 </section>
 
