@@ -197,6 +197,15 @@ html,body{max-width:100%;overflow-x:hidden}
 .hp{position:absolute;inset:0;background-size:cover;transition:transform .65s cubic-bezier(.22,.44,.44,1)}
 .hcard:hover .hp{transform:scale(1.04)}
 .hcard img.himg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+/* Microdose hero card: square vial shot shown whole, pulled back to match the rail */
+.hcard img.himg--micro{
+  left:auto;right:0;width:78%;height:100%;
+  object-fit:contain;object-position:right bottom;
+  transform:scale(.88);transform-origin:right bottom;
+  -webkit-mask-image:linear-gradient(to right,transparent 0%,#000 22%);
+  mask-image:linear-gradient(to right,transparent 0%,#000 22%);
+}
+@media (max-width:760px){.hcard img.himg--micro{width:100%;transform:scale(.92)}}
 .hs{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.38) 0%,rgba(0,0,0,.02) 35%,rgba(0,0,0,.02) 60%,rgba(0,0,0,.52) 100%)}
 .hcard-body{position:absolute;bottom:0;left:0;right:0;z-index:2;padding:22px 24px}
 .hcard-body--top{top:0;bottom:auto;padding:22px 24px 0}
@@ -461,6 +470,24 @@ html,body{max-width:100%;overflow-x:hidden}
 .btn-fcta{background:var(--gold);color:#fff;font-size:14px;font-weight:500;padding:15px 44px;border-radius:32px;border:none;cursor:pointer;position:relative;transition:background .18s}
 .btn-fcta:hover{background:#9a7d42}
 
+/* == GUIDE LEAD CAPTURE == inline Tally (QKYeL8), same form as ebook.html */
+.lead{background:#EDE4D8;padding:96px 52px}
+.lead-in{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.05fr 1fr;gap:72px;align-items:center}
+.lead-k{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-dk);margin-bottom:18px}
+.lead-h{font-family:var(--sans);font-size:clamp(32px,3.8vw,52px);font-weight:400;line-height:1.04;letter-spacing:-.028em;color:var(--ink);margin-bottom:20px}
+.lead-h em{font-style:italic;font-weight:300}
+.lead-p{font-size:15px;line-height:1.7;color:#5c5750;max-width:420px;margin-bottom:28px}
+.lead-meta{display:flex;flex-wrap:wrap;gap:8px}
+.lead-meta span{font-size:12px;color:var(--ink);background:rgba(255,255,255,.55);border-radius:32px;padding:7px 14px}
+.lead-form{background:var(--bone);border-radius:16px;padding:36px 32px 20px}
+.lead-form-h{font-size:17px;color:var(--ink);margin-bottom:4px}
+.lead-form-s{font-size:13px;color:var(--muted);margin-bottom:12px}
+.lead-form iframe{width:100%;border:0;min-height:220px}
+@media (max-width:900px){
+  .lead{padding:64px 20px}
+  .lead-in{grid-template-columns:1fr;gap:32px}
+  .lead-form{padding:28px 20px 12px}
+}
 /* == PROTOCOL GUIDE == */
 /* == JOURNAL == */
 .rx-journal{background:#F5F0E8;padding:120px 52px}
@@ -752,8 +779,7 @@ footer{background:#070504;padding:56px 52px 28px}
   </a>
   <!-- Card 2: GLP-1 Microdose — full bleed vials, matches glp1-microdose.html -->
   <a class="hcard" href="glp1-microdose.html" style="background:#EDE4D8">
-    <img class="himg" src="proto-microdose-vials.png" alt="GLP-1 Microdose"
-      style="object-fit:cover;object-position:40% 60%">
+    <img class="himg himg--micro" src="proto-microdose-vials.png" alt="GLP-1 Microdose">
     <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(237,228,216,.82) 0%,rgba(237,228,216,.4) 38%,transparent 60%)"></div>
     <div class="hcard-body hcard-body--top" style="z-index:2">
       <div class="hcard-tag" style="color:var(--gold);letter-spacing:.22em;margin-bottom:8px">GLP-1 Microdose</div>
@@ -1315,6 +1341,33 @@ footer{background:#070504;padding:56px 52px 28px}
 
   </div>
 </section>
+
+<!-- ==========================================
+  GUIDE LEAD CAPTURE: research visitors not ready for intake
+========================================== -->
+<section class="lead" id="guide">
+  <div class="lead-in">
+    <div>
+      <div class="lead-k">Free guide</div>
+      <h2 class="lead-h">Not ready to start?<br><em>Start informed.</em></h2>
+      <p class="lead-p">The Consumer's Guide to Weight Loss Therapy covers how GLP-1 treatment works, what to expect, and how to choose a licensed provider.</p>
+      <div class="lead-meta"><span>19 pages</span><span>Free</span><span>Sent to your inbox</span></div>
+    </div>
+    <div class="lead-form">
+      <div class="lead-form-h">Get the guide</div>
+      <div class="lead-form-s">Enter your email and we'll send it right over.</div>
+      <iframe data-tally-src="https://tally.so/embed/QKYeL8?hideTitle=1&transparentBackground=1&dynamicHeight=1&utm_medium=homepage" loading="lazy" title="Get the free guide"></iframe>
+    </div>
+  </div>
+</section>
+<script src="https://tally.so/widgets/embed.js" async onload="Tally.loadEmbeds()"></script>
+<script>
+window.addEventListener('message',function(e){
+  if(typeof e.data==='string'&&e.data.indexOf('Tally.FormSubmitted')>-1){
+    (window.dataLayer=window.dataLayer||[]).push({event:'guide_signup',guide_source:'homepage'});
+  }
+});
+</script>
 
 <!-- TRUST -->
 <div class="trust">
