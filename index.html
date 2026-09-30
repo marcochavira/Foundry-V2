@@ -471,23 +471,31 @@ html,body{max-width:100%;overflow-x:hidden}
 .btn-fcta:hover{background:#9a7d42}
 
 /* == GUIDE LEAD CAPTURE == inline Tally (QKYeL8), same form as ebook.html */
-.lead{background:#EDE4D8;padding:96px 52px}
-.lead-in{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.05fr 1fr;gap:72px;align-items:center}
-.lead-k{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-dk);margin-bottom:18px}
-.lead-h{font-family:var(--sans);font-size:clamp(32px,3.8vw,52px);font-weight:400;line-height:1.04;letter-spacing:-.028em;color:var(--ink);margin-bottom:20px}
-.lead-h em{font-style:italic;font-weight:300}
-.lead-p{font-size:15px;line-height:1.7;color:#5c5750;max-width:420px;margin-bottom:28px}
-.lead-meta{display:flex;flex-wrap:wrap;gap:8px}
-.lead-meta span{font-size:12px;color:var(--ink);background:rgba(255,255,255,.55);border-radius:32px;padding:7px 14px}
-.lead-form{background:var(--bone);border-radius:16px;padding:36px 32px 20px}
-.lead-form-h{font-size:17px;color:var(--ink);margin-bottom:4px}
-.lead-form-s{font-size:13px;color:var(--muted);margin-bottom:12px}
-.lead-form iframe{width:100%;border:0;min-height:220px}
+.lead{background:#fff;padding:24px 52px 96px}
+.lead-band{position:relative;max-width:var(--max);margin:0 auto;border-radius:24px;overflow:hidden;min-height:520px;display:flex;align-items:center;background:#cfc3b2}
+.lead-band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:40% 55%}
+.lead-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,12,10,.72) 0%,rgba(13,12,10,.5) 38%,rgba(13,12,10,.05) 70%)}
+.lead-copy{position:relative;padding:56px;max-width:540px;color:#fff}
+.lead-k{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#E9D9B4;margin-bottom:18px}
+.lead-h{font-family:var(--sans);font-size:clamp(30px,3.4vw,46px);font-weight:400;line-height:1.04;letter-spacing:-.028em;color:#fff;margin:0}
+.lead-h em{font-style:italic;font-weight:300;color:rgba(255,255,255,.8)}
+.lead-p{font-size:14px;color:rgba(255,255,255,.85);margin:14px 0 20px}
+.lead-list{list-style:none;margin:0 0 26px;padding:0}
+.lead-list li{display:flex;gap:14px;padding:10px 0;border-top:1px solid rgba(255,255,255,.2);font-size:13.5px;color:rgba(255,255,255,.92)}
+.lead-list li:last-child{border-bottom:1px solid rgba(255,255,255,.2)}
+.lead-list span{color:#E9D9B4;font-size:11px;font-weight:500;letter-spacing:.12em;padding-top:2px}
+.lead-btn{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--ink);font-size:14px;font-weight:500;padding:15px 30px;border-radius:32px;text-decoration:none;transition:background .18s}
+.lead-btn:hover{background:var(--bone)}
+.lead-btn:focus-visible{outline:2px solid #E9D9B4;outline-offset:3px}
 @media (max-width:900px){
-  .lead{padding:64px 20px}
-  .lead-in{grid-template-columns:1fr;gap:32px}
-  .lead-form{padding:28px 20px 12px}
+  .lead{padding:8px 20px 56px}
+  .lead-band{min-height:0;align-items:flex-end}
+  .lead-band img{object-position:40% 70%}
+  .lead-shade{background:linear-gradient(180deg,rgba(13,12,10,.15) 0%,rgba(13,12,10,.6) 35%,rgba(13,12,10,.85) 100%)}
+  .lead-copy{padding:180px 22px 28px}
+  .lead-btn{width:100%;justify-content:center}
 }
+.prail-card[hidden]{display:none!important}
 /* == PROTOCOL GUIDE == */
 /* == JOURNAL == */
 .rx-journal{background:#F5F0E8;padding:120px 52px}
@@ -720,7 +728,7 @@ footer{background:#070504;padding:56px 52px 28px}
 
 <!-- NAV -->
 <nav class="nav">
-  <a href="#" class="logo">
+  <a href="/" class="logo">
     <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
       <line x1="6.5" y1="1" x2="6.5" y2="12" stroke="#B89A5E" stroke-width="1.3"/>
       <line x1="1" y1="6.5" x2="12" y2="6.5" stroke="#B89A5E" stroke-width="1.3"/>
@@ -828,7 +836,7 @@ footer{background:#070504;padding:56px 52px 28px}
 </div>
 
 <!-- PRODUCT RAIL -->
-<section class="prail-section">
+<section class="prail-section" id="protocols">
   <div class="prail-inner">
 
     <div class="prail-header">
@@ -914,6 +922,52 @@ footer{background:#070504;padding:56px 52px 28px}
             <div class="prail-actions">
               <a href="https://patient.foundryrx.co/emr/enroll/glutathione-treatment" class="prail-btn prail-btn--primary">Get Started</a>
               <a href="glp1-weight-loss.html#glutathione" class="prail-btn prail-btn--ghost">Learn more</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PENDING LEGITSCRIPT CONFIRMATION (Kyle). Remove the "hidden" attribute on each card to go live. -->
+        <div class="prail-card" data-pending="legitscript" hidden>
+          <div class="prail-photo">
+            <img src="proto-nad-nasal.webp" alt="NAD+ nasal spray" class="prail-img">
+          </div>
+          <div class="prail-body">
+            <h3 class="prail-name">NAD+ Nasal Spray</h3>
+            <p class="prail-sub">Needle-free cellular energy</p>
+            <p class="prail-price">Starting at <span>$139</span>/month</p>
+            <div class="prail-actions">
+              <a href="https://patient.foundryrx.co/emr/enroll/nad-nasal-spray-treatment" class="prail-btn prail-btn--primary">Get Started</a>
+              <a href="glp1-weight-loss.html" class="prail-btn prail-btn--ghost">Learn more</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="prail-card" data-pending="legitscript" hidden>
+          <div class="prail-photo">
+            <img src="proto-sermorelin-vial.webp" alt="Sermorelin vial" class="prail-img">
+          </div>
+          <div class="prail-body">
+            <h3 class="prail-name">Sermorelin</h3>
+            <p class="prail-sub">Sleep, recovery &amp; body composition</p>
+            <p class="prail-price">Starting at <span>$139</span>/month</p>
+            <div class="prail-actions">
+              <a href="https://patient.foundryrx.co/emr/enroll/sermorelin-treatment" class="prail-btn prail-btn--primary">Get Started</a>
+              <a href="glp1-weight-loss.html" class="prail-btn prail-btn--ghost">Learn more</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="prail-card" data-pending="legitscript" hidden>
+          <div class="prail-photo">
+            <img src="proto-lipob-vial.webp" alt="Lipo-B vial" class="prail-img">
+          </div>
+          <div class="prail-body">
+            <h3 class="prail-name">Lipo-B</h3>
+            <p class="prail-sub">Metabolic support injection</p>
+            <p class="prail-price">Starting at <span>$TBD</span>/month</p>
+            <div class="prail-actions">
+              <a href="https://patient.foundryrx.co/emr/enroll/lipo-b-treatment" class="prail-btn prail-btn--primary">Get Started</a>
+              <a href="glp1-weight-loss.html" class="prail-btn prail-btn--ghost">Learn more</a>
             </div>
           </div>
         </div>
@@ -1346,26 +1400,25 @@ footer{background:#070504;padding:56px 52px 28px}
   GUIDE LEAD CAPTURE: research visitors not ready for intake
 ========================================== -->
 <section class="lead" id="guide">
-  <div class="lead-in">
-    <div>
+  <div class="lead-band">
+    <img src="playbook-band.webp" alt="" loading="lazy" decoding="async">
+    <div class="lead-shade"></div>
+    <div class="lead-copy">
       <div class="lead-k">Free guide</div>
       <h2 class="lead-h">Not ready to start?<br><em>Start informed.</em></h2>
-      <p class="lead-p">The Consumer's Guide to Weight Loss Therapy covers how GLP-1 treatment works, what to expect, and how to choose a licensed provider.</p>
-      <div class="lead-meta"><span>19 pages</span><span>Free</span><span>Sent to your inbox</span></div>
-    </div>
-    <div class="lead-form">
-      <div class="lead-form-h">Get the guide</div>
-      <div class="lead-form-s">Enter your email and we'll send it right over.</div>
-      <iframe data-tally-src="https://tally.so/embed/QKYeL8?hideTitle=1&transparentBackground=1&dynamicHeight=1&utm_medium=homepage" loading="lazy" title="Get the free guide"></iframe>
+      <p class="lead-p">19 pages. Free. Sent to your inbox.</p>
+      <ul class="lead-list">
+        <li><span>01</span>How GLP-1 treatment works</li>
+        <li><span>02</span>What to expect once you start</li>
+        <li><span>03</span>How to choose a licensed provider</li>
+      </ul>
+      <a class="lead-btn" href="https://tally.so/r/QKYeL8?source=homepage" target="_blank" rel="noopener">Get the Guide &rarr;</a>
     </div>
   </div>
 </section>
-<script src="https://tally.so/widgets/embed.js" async onload="Tally.loadEmbeds()"></script>
 <script>
-window.addEventListener('message',function(e){
-  if(typeof e.data==='string'&&e.data.indexOf('Tally.FormSubmitted')>-1){
-    (window.dataLayer=window.dataLayer||[]).push({event:'guide_signup',guide_source:'homepage'});
-  }
+document.querySelectorAll('a[href*="tally.so/r/QKYeL8"]').forEach(function(a){
+  a.addEventListener('click',function(){(window.dataLayer=window.dataLayer||[]).push({event:'guide_click',guide_source:'homepage'});});
 });
 </script>
 
@@ -1465,6 +1518,16 @@ window.addEventListener('scroll',function(){
   ids.forEach(function(id){var el=document.getElementById(id);if(el&&window.scrollY+90>=el.offsetTop)act=id});
   an.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+act)});
 });
+</script>
+<script>
+(function(){
+  var q=new URLSearchParams(location.search),o=new URLSearchParams();
+  ['gclid','gbraid','wbraid','utm_source','utm_medium','utm_campaign','utm_term','utm_content'].forEach(function(k){if(q.get(k))o.set(k,q.get(k));});
+  document.querySelectorAll('a[href*="patient.foundryrx.co/emr/enroll/"]').forEach(function(a){
+    if(o.toString())a.href=a.href.split('?')[0]+'?'+o.toString();
+    a.addEventListener('click',function(){(window.dataLayer=window.dataLayer||[]).push({event:'begin_enrollment',intake:a.href.split('/enroll/')[1].split('?')[0],cta_location:'homepage'});});
+  });
+})();
 </script>
 </body>
 </html>
