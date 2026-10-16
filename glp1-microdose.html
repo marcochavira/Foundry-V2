@@ -282,11 +282,18 @@ details p{margin:0 0 20px;font-size:15.5px;line-height:1.75;color:var(--muted)}
 .band-note{font-size:14px;color:var(--muted);margin:12px 0 0}
 .band-visual{position:relative;min-height:440px;background:var(--sand)}
 .band-visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:72px 28px 24px}
+.band-visual.founders{background:#2a2622;overflow:hidden}
+.band-visual.founders img,.band-visual.founders video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:78% 35%;padding:0;display:block}
+.band-visual.founders video{opacity:0;transition:opacity .5s}
+.band-visual.founders video.on{opacity:1}
+.founders-ovl{position:absolute;left:0;right:0;bottom:0;padding:48px 24px 20px;background:linear-gradient(180deg,rgba(13,12,10,0),rgba(13,12,10,.6));color:#fff;font-size:15px;line-height:1.4}
 
 /* playbook */
-.guide{padding:0 0 96px}
-.guide-band{background:var(--bone);border-radius:24px;padding:56px}
-.guide-copy{max-width:620px}
+.guide{padding:96px 0 0}
+.guide-band{display:grid;grid-template-columns:1.1fr 1fr;background:var(--bone);border-radius:24px;overflow:hidden}
+.guide-photo{position:relative;min-height:560px;background:var(--sand)}
+.guide-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:40% 60%}
+.guide-copy{padding:56px;display:flex;flex-direction:column;justify-content:center}
 .guide h2{font-size:clamp(30px,3.4vw,46px);line-height:1.05;letter-spacing:-.032em}
 .guide-sub{font-size:17px;color:var(--body);margin:14px 0 18px}
 .guide-list{list-style:none;margin:0 0 24px;padding:0}
@@ -326,11 +333,19 @@ dialog::backdrop{background:rgba(13,12,10,.45)}
 /* ---------- responsive ---------- */
 @media (max-width:1180px){.nav ul{display:none}}
 @media (max-width:1000px){
+  /* bigger tap areas on standalone text links, no layout shift */
+  .banner a{display:inline-block;padding:13px 6px;margin:-13px -6px}
+  .proof a{display:inline-block;padding:12px 0;margin:-12px 0}
+  .fine a,.safety-line a,details p a,.compare a{display:inline-block;padding:12px 0;margin:-12px 0}
+  .nav-r .login{display:inline-block;padding:12px 0}
+  .chip-k{font-size:11px}.chip-s{font-size:12px}
   :root{--pad:24px}
   .hero-grid,.check-grid,.why-grid,.split{grid-template-columns:1fr;gap:36px}
   .steps{grid-template-columns:1fr 1fr}
   .prov-grid{grid-template-columns:1fr}
   .band{grid-template-columns:1fr}
+  .guide-band{grid-template-columns:1fr}
+  .guide-photo{min-height:0;aspect-ratio:3/2}
   .band-visual{order:-1;min-height:320px}
   .band-copy{padding:40px 28px}
   .timeline{grid-template-columns:1fr;gap:32px;padding:36px 28px}
@@ -356,11 +371,10 @@ dialog::backdrop{background:rgba(13,12,10,.45)}
   .prod-tile img{padding:20px 150px 12px 12px;object-position:30% 60%}
   .chip{top:14px;right:14px;width:140px;padding:10px 8px}
   .chip-p{font-size:40px}
-  .chip-k{font-size:11.5px}.chip-s{font-size:12.5px}
-  /* bigger tap areas on standalone text links, no layout shift */
-  .banner a{display:inline-block;padding:13px 6px;margin:-13px -6px}
-  .proof a{display:inline-block;padding:12px 0;margin:-12px 0}
-  .fine a,.safety-line a,details p a,.compare a{display:inline-block;padding:12px 0;margin:-12px 0}
+  .chip-k{font-size:12px}.chip-s{font-size:12.5px}
+  .eyebrow{font-size:12px}
+  .chart .tk{font-size:19px}
+  .chart .zl{font-size:17px}
   .photo-sec::after{top:auto;height:55%}
   .benefits{grid-template-columns:1fr;margin:12px 0 0;padding:6px 20px;text-align:left}
   .benefits>div{display:flex;align-items:center;gap:16px;padding:14px 0;border-top:1px solid var(--line)}
@@ -387,11 +401,13 @@ dialog::backdrop{background:rgba(13,12,10,.45)}
   .avatar{width:48px;height:48px}
   .plans{grid-template-columns:1fr}
   .plan.pick{order:-1}
-  .guide-band{padding:32px 20px}
+  .guide{padding:56px 0 0}
+  .guide-photo{min-height:0;aspect-ratio:5/4}
+  .guide-photo img{object-position:34% 70%}
+  .guide-copy{padding:28px 20px 32px}
   .inline-form{flex-direction:column}
   .inline-form .btn{width:100%}
   .sticky{display:flex}
-  .eyebrow{font-size:11px}
   footer{font-size:12px}
 }
 </style>
@@ -557,6 +573,34 @@ dialog::backdrop{background:rgba(13,12,10,.45)}
   </div>
 </section>
 
+<!-- 4b. PLAYBOOK: mid-page catch for visitors who never reach the bottom -->
+<section class="guide" id="guide">
+  <div class="wrap">
+    <div class="guide-band">
+      <div class="guide-photo"><img src="microdose-playbook.webp" alt="Two women smiling in headstands on yoga mats by a pool" width="1800" height="1200" loading="lazy" decoding="async"></div>
+      <div class="guide-copy">
+        <p class="eyebrow">The Microdosing Playbook</p>
+        <h2>Not ready yet?<span class="accent">Start with the playbook.</span></h2>
+        <p class="guide-sub">13 pages. Sourced. Free, straight to your inbox.</p>
+        <ul class="guide-list">
+          <li><span>01</span>Why lower doses are the new conversation</li>
+          <li><span>02</span>How to keep muscle while you lose weight</li>
+          <li><span>03</span>10 questions to ask any GLP-1 provider</li>
+        </ul>
+        <form class="pb-form" data-source="playbook-inline" novalidate>
+          <div class="inline-form">
+            <input type="email" name="email" autocomplete="email" inputmode="email" placeholder="you@email.com" aria-label="Email" required>
+            <button class="btn" type="submit">Send me the playbook</button>
+          </div>
+          <p class="err" role="alert">Enter a valid email, like name@example.com.</p>
+          <p class="privacy">Free. Unsubscribe anytime.</p>
+        </form>
+        <div class="done" role="status"><b>Check your inbox.</b> The playbook is on its way.<br><a class="btn" href="#check" data-cta="playbook-done">See if you qualify</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- 5. WHY MICRODOSE -->
 <section class="why" id="why">
   <div class="wrap why-grid">
@@ -581,11 +625,11 @@ dialog::backdrop{background:rgba(13,12,10,.45)}
         <button type="button" data-m="micro" aria-pressed="true">Microdose</button>
         <button type="button" data-m="std" aria-pressed="false">Standard</button>
       </div>
-      <svg viewBox="0 0 480 260" role="img" aria-label="Illustrative chart: a standard dose steps up over three months while a microdose levels off in a lower target range">
+      <svg viewBox="0 0 480 264" role="img" aria-label="Illustrative chart: a standard dose steps up over three months while a microdose levels off in a lower target range">
         <rect class="zone" x="40" y="140" width="430" height="56" rx="8"/>
         <text class="zl" x="54" y="162">TARGET RANGE</text>
         <line class="ax" x1="40" y1="228" x2="470" y2="228"/>
-        <text class="tk" x="40" y="250">Start</text><text class="tk" x="190" y="250">Month 1</text><text class="tk" x="325" y="250">Month 2</text><text class="tk" x="436" y="250">Month 3</text>
+        <text class="tk" x="40" y="252">Start</text><text class="tk" x="190" y="252" text-anchor="middle">Month 1</text><text class="tk" x="330" y="252" text-anchor="middle">Month 2</text><text class="tk" x="470" y="252" text-anchor="end">Month 3</text>
         <path class="ghost" id="ghost" d="M40 216 L120 216 L120 178 L200 178 L200 130 L280 130 L280 84 L360 84 L360 42 L470 42"/>
         <path class="live" id="live" d="M40 224 C 110 220,150 202,200 188 S 300 172,350 168 S 430 166,470 166"/>
       </svg>
@@ -698,39 +742,15 @@ dialog::backdrop{background:rgba(13,12,10,.45)}
         <a class="btn" href="#check" data-cta="final">See if you qualify</a>
         <p class="band-note">Takes about 5 minutes</p>
       </div>
-      <div class="band-visual">
-        <img src="proto-microdose-vials.png" alt="Microdose program vials" loading="lazy" decoding="async">
+      <div class="band-visual founders">
+        <img class="poster" src="p-founders.jpg" alt="" loading="lazy" decoding="async">
+        <video id="foundersVideo" muted loop playsinline preload="none" poster="p-founders.jpg" aria-label="Foundry RX founders video, no audio"></video>
+        <div class="founders-ovl"><span>Founded by a team that believes in quality first.</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 9. PLAYBOOK: the safety net -->
-<section class="guide" id="guide">
-  <div class="wrap">
-    <div class="guide-band">
-      <div class="guide-copy">
-        <p class="eyebrow">The Microdosing Playbook</p>
-        <h2>Not ready yet?<span class="accent">Start with the playbook.</span></h2>
-        <p class="guide-sub">13 pages. Sourced. Free, straight to your inbox.</p>
-        <ul class="guide-list">
-          <li><span>01</span>Why lower doses are the new conversation</li>
-          <li><span>02</span>How to keep muscle while you lose weight</li>
-          <li><span>03</span>10 questions to ask any GLP-1 provider</li>
-        </ul>
-        <form class="pb-form" data-source="playbook-inline" novalidate>
-          <div class="inline-form">
-            <input type="email" name="email" autocomplete="email" inputmode="email" placeholder="you@email.com" aria-label="Email" required>
-            <button class="btn" type="submit">Send me the playbook</button>
-          </div>
-          <p class="err" role="alert">Enter a valid email, like name@example.com.</p>
-          <p class="privacy">Free. Unsubscribe anytime.</p>
-        </form>
-        <div class="done" role="status"><b>Check your inbox.</b> The playbook is on its way.<br><a class="btn" href="#check" data-cta="playbook-done">See if you qualify</a></div>
-      </div>
-    </div>
-  </div>
-</section>
 </main>
 
 <footer id="safety">
@@ -880,7 +900,22 @@ document.querySelectorAll(".toggle button").forEach(b => b.addEventListener("cli
 /* ===== Sticky bar: hidden over the hero, the form, and the final CTA ===== */
 const sticky = document.getElementById("sticky"), vis = new Map();
 const io = new IntersectionObserver(es => { es.forEach(x => vis.set(x.target.id, x.isIntersecting)); sticky.classList.toggle("show", ![...vis.values()].some(Boolean)); });
-["top","qualifyForm","start"].forEach(id => io.observe(document.getElementById(id)));
+["top","qualifyForm","guide","start"].forEach(id => io.observe(document.getElementById(id)));
+
+/* ===== Founders video: loads only near the viewport, plays only while visible ===== */
+(() => {
+  const v = document.getElementById("foundersVideo");
+  if (!v || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return; // poster image only
+  let loaded = false;
+  v.addEventListener("canplay", () => v.classList.add("on"), {once:true});
+  v.addEventListener("error", () => v.remove(), true);
+  new IntersectionObserver(es => es.forEach(x => {
+    if (x.isIntersecting) {
+      if (!loaded) { loaded = true; const src = document.createElement("source"); src.src = "foundry-member.mp4"; src.type = "video/mp4"; src.onerror = () => v.remove(); v.appendChild(src); v.load(); track("founders_video_view"); }
+      v.play().catch(() => {});
+    } else if (loaded) v.pause();
+  }), {rootMargin:"200px 0px"}).observe(v);
+})();
 
 /* ===== Section tabs: highlight the section in view ===== */
 const tabs = [...document.querySelectorAll(".subnav a")];
@@ -899,7 +934,7 @@ const sio = new IntersectionObserver(es => es.forEach(x => { if (x.isIntersectin
 ["check","why","how","providers","pricing","faq","guide"].forEach(id => sio.observe(document.getElementById(id)));
 
 /* Match the vial tile background to the photo's own edge color */
-document.querySelectorAll(".prod-tile img,.band-visual img").forEach(img => {
+document.querySelectorAll(".prod-tile img").forEach(img => {
   const apply = () => { try { const c = document.createElement("canvas"); c.width = c.height = 1; const x = c.getContext("2d");
     x.drawImage(img, 2, 2, 1, 1, 0, 0, 1, 1); const d = x.getImageData(0, 0, 1, 1).data;
     if (d[3] > 200) img.parentElement.style.background = `rgb(${d[0]},${d[1]},${d[2]})`; } catch(e){} };
