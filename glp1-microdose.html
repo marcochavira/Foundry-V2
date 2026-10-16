@@ -232,6 +232,12 @@ select{padding-right:34px;-webkit-appearance:none;appearance:none;background-ima
 .chip-tag.ok{background:#E3F1E8;color:#1f5a38}
 .plan.pick .chip-tag:not(.new):not(.ok){background:var(--white)}
 
+/* podcast */
+.pod{padding:0 0 96px}
+.pod-card{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;background:var(--bone);border-radius:24px;padding:48px}
+.pod-sub{font-size:17px;color:var(--body);line-height:1.6;margin:14px 0 24px;max-width:28em}
+.pod iframe{width:100%;height:175px;border:0;border-radius:16px;background:var(--white);display:block}
+
 /* providers */
 .providers{background:var(--bone);padding:72px 0}
 .prov-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:28px}
@@ -345,6 +351,7 @@ dialog::backdrop{background:rgba(13,12,10,.45)}
   .prov-grid{grid-template-columns:1fr}
   .band{grid-template-columns:1fr}
   .guide-band{grid-template-columns:1fr}
+  .pod-card{grid-template-columns:1fr;gap:28px;padding:32px 28px}
   .guide-photo{min-height:0;aspect-ratio:3/2}
   .band-visual{order:-1;min-height:320px}
   .band-copy{padding:40px 28px}
@@ -402,6 +409,9 @@ dialog::backdrop{background:rgba(13,12,10,.45)}
   .plans{grid-template-columns:1fr}
   .plan.pick{order:-1}
   .guide{padding:56px 0 0}
+  .pod{padding-bottom:64px}
+  .pod-card{padding:28px 20px}
+  .pod .btn{width:100%}
   .guide-photo{min-height:0;aspect-ratio:5/4}
   .guide-photo img{object-position:34% 70%}
   .guide-copy{padding:28px 20px 32px}
@@ -577,7 +587,7 @@ dialog::backdrop{background:rgba(13,12,10,.45)}
 <section class="guide" id="guide">
   <div class="wrap">
     <div class="guide-band">
-      <div class="guide-photo"><img src="microdose-playbook.webp" alt="Two women smiling in headstands on yoga mats by a pool" width="1800" height="1200" loading="lazy" decoding="async"></div>
+      <div class="guide-photo"><img src="microdose-playbook.webp" alt="Two women smiling in headstands on yoga mats by a pool" width="1800" height="1200" loading="lazy" decoding="async" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='playbook-band.webp'}else{this.closest('.guide-photo').remove()}"></div>
       <div class="guide-copy">
         <p class="eyebrow">The Microdosing Playbook</p>
         <h2>Not ready yet?<span class="accent">Start with the playbook.</span></h2>
@@ -634,6 +644,22 @@ dialog::backdrop{background:rgba(13,12,10,.45)}
         <path class="live" id="live" d="M40 224 C 110 220,150 202,200 188 S 300 172,350 168 S 430 166,470 166"/>
       </svg>
       <p class="fine">Illustrative dose over time. Your provider sets your dose.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 5b. PODCAST: third-party authority for the low-dose idea -->
+<section class="pod" id="podcast">
+  <div class="wrap">
+    <div class="pod-card">
+      <div>
+        <p class="eyebrow">From the Boundless Life podcast</p>
+        <h2 class="sec-h">The idea everyone<span class="accent">is talking about.</span></h2>
+        <p class="pod-sub">Dr. Tyna Moore joins Ben Greenfield to make the case for lower doses: lose the fat, keep the muscle.</p>
+        <a class="btn" href="#check" data-cta="podcast">See if you qualify</a>
+        <p class="fine">Shared for education. Foundry RX is not affiliated with or endorsed by Boundless Life, Ben Greenfield, or Dr. Tyna Moore.</p>
+      </div>
+      <iframe loading="lazy" title="Boundless Life episode on GLP-1 microdosing" allow="autoplay *; encrypted-media *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.podcasts.apple.com/us/podcast/how-to-microdose-glp-1s-correctly-lose-the-fat-and/id283908977?i=1000791739331"></iframe>
     </div>
   </div>
 </section>
@@ -741,6 +767,8 @@ dialog::backdrop{background:rgba(13,12,10,.45)}
         <p class="band-sub">$99/month on a 3-month plan. Provider review within 24 hours. Consultation included.</p>
         <a class="btn" href="#check" data-cta="final">See if you qualify</a>
         <p class="band-note">Takes about 5 minutes</p>
+        <!-- RISK REVERSAL: uncomment only if true in Uniloop billing
+        <p class="band-note">You're only charged if a provider prescribes treatment.</p> -->
       </div>
       <div class="band-visual founders">
         <img class="poster" src="p-founders.jpg" alt="" loading="lazy" decoding="async">
@@ -931,7 +959,7 @@ tabs.forEach(t => t.addEventListener("click", () => track("tab_click", {tab: t.g
 /* ===== Scroll-depth milestones ===== */
 const seen = new Set();
 const sio = new IntersectionObserver(es => es.forEach(x => { if (x.isIntersecting && !seen.has(x.target.id)) { seen.add(x.target.id); track("section_view", {section:x.target.id}); } }), {threshold:.35});
-["check","why","how","providers","pricing","faq","guide"].forEach(id => sio.observe(document.getElementById(id)));
+["check","why","how","podcast","providers","pricing","faq","guide"].forEach(id => sio.observe(document.getElementById(id)));
 
 /* Match the vial tile background to the photo's own edge color */
 document.querySelectorAll(".prod-tile img").forEach(img => {
